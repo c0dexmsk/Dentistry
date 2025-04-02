@@ -1,0 +1,43 @@
+.header {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+}
+.header__container {
+    width: 1119px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__container__icons img {
+    height: 16px;
+    width: 16px;
+}   
+.header__container__logo img {
+    height: 33px;
+    width: 75px;
+}
+.header__container__text {
+    width: 743px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 39px;
+}
+.header__container__text select {
+    border: none;
+    background-color: transparent;
+}
+.header__container__text a {
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+.header__container__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 23px;
+}

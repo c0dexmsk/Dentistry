@@ -1,0 +1,14 @@
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.experience {
+    margin-top: 130px;
+    width: 1120px;
+    height: 446px;
+}
+.experience p {
+    width: 570px;
+    height: 48px;
+}
