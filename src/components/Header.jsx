@@ -25,6 +25,7 @@ export default function Header () {
                     <select>
                         <option value="one">Услуги</option>
                         <option value="two">Two option</option>
+                        <option value="two">Three option</option>
                     </select>
                     <Link to="/"> Прайс </Link>
                     <Link to="/"> Контакты </Link>
