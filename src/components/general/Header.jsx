@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.svg";
-import glasses from "../assets/glasses.svg";
-import phone from "../assets/phone.svg";
-import profile from "../assets/profile.svg";
-import "../styles/Header.css";
+import logo from "../../assets/logo.svg";
+import glasses from "../../assets/glasses.svg";
+import phone from "../../assets/phone.svg";
+import profile from "../../assets/profile.svg";
+import "../../styles/general/Header.css";
 
 export default function Header () {
 

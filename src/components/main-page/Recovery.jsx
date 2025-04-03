@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
-import smile from "../assets/smile.svg"
-import "../styles/Recovery.css";
+import smile from "../../assets/smile.svg"
+import "../../styles/main-page/Recovery.css";
 
 export default function Recovery() {
 

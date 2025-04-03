@@ -1,8 +1,8 @@
 
-import numbers from "../assets/nums-logo.svg";
-import heart from "../assets/heart-logo.svg";
-import safety from "../assets/safety.svg";
-import openness from "../assets/openness.svg";
+import numbers from "../../assets/nums-logo.svg";
+import heart from "../../assets/heart-logo.svg";
+import safety from "../../assets/safety.svg";
+import openness from "../../assets/openness.svg";
 
 
 export default function Metrics () {

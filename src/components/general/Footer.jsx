@@ -1,10 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom";
-import logoBig from "../assets/logoBig.svg";
-import glasses from "../assets/glasses.svg";
-import phone from "../assets/phone.svg";
-import profile from "../assets/profile.svg";
-import "../styles/Footer.css";
+import logoBig from "../../assets/logoBig.svg";
+import "../../styles/general/Footer.css";
 
 export default function Footer () {
 

@@ -5,13 +5,13 @@ import 'swiper/css/navigation';
 
 import PersonalReview from "./PersonalReview";
 import {React} from "react";
-import "../styles/Review.css";
+import "../../styles/main-page/Review.css";
 
-import yandexIcon from "../assets/yandexMapIcon.svg";
-import gis2 from "../assets/GIS2Icon.svg";
-import proDoctorov from "../assets/ProDoctorovIcon.svg";
-import arrowPrev from "../assets/arrow-prev.svg";
-import arrowNext from "../assets/arrow-next.svg";
+import yandexIcon from "../../assets/yandexMapIcon.svg";
+import gis2 from "../../assets/GIS2Icon.svg";
+import proDoctorov from "../../assets/ProDoctorovIcon.svg";
+import arrowPrev from "../../assets/arrow-prev.svg";
+import arrowNext from "../../assets/arrow-next.svg";
 
 const SwiperButtons = () => {
     const swiper = useSwiper(); // Получаем экземпляр Swiper

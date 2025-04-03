@@ -1,12 +1,12 @@
 import React from 'react';
 import Service from './Service'; 
-import Button from './Button';  
-import tooth from '../assets/tooth.svg'; 
-import lamp from '../assets/lamp.svg';
-import scaler from '../assets/dental_scaler.svg'; 
-import loupe from '../assets/loupe.svg';
-import chair from '../assets/dental_chair.svg'; 
-import sciccors from '../assets/sciccors.svg';
+import Button from '../general/Button';  
+import tooth from '../../assets/tooth.svg'; 
+import lamp from '../../assets/lamp.svg';
+import scaler from '../../assets/dental_scaler.svg'; 
+import loupe from '../../assets/loupe.svg';
+import chair from '../../assets/dental_chair.svg'; 
+import sciccors from '../../assets/sciccors.svg';
 
 const ServicesSection = () => {
   // Массив с данными услуг

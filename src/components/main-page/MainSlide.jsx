@@ -1,7 +1,7 @@
 
-import Zainap from "../assets/Zainap.png";
-import Button from './Button';
-import roundTooth from "../assets/round-tooth.png"
+import Zainap from "../../assets/Zainap.png";
+import Button from '../general/Button';
+import roundTooth from "../../assets/round-tooth.png"
 
 export default function MainSlide () {
 

@@ -79,7 +79,7 @@
     transition: .3s;
     z-index: 100;
 
-    background-image: url("../assets/plus.svg");
+    background-image: url("../../assets/plus.svg");
 }
 
 .FAQ__dropdown > details[open]::after {

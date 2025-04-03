@@ -1,9 +1,9 @@
 import React from 'react';
-import MainSlide from "../components/MainSlide"
+import MainSlide from "./MainSlide"
 import 'swiper/css/pagination'
 import { Swiper, SwiperSlide } from "swiper/react"; 
 import 'swiper/css';  // Основные стили
-import "../styles/MainPageSwiper.css";
+import "../../styles/main-page/MainPageSwiper.css";
 import {Pagination} from 'swiper/modules';
 import 'swiper/css/pagination';
 

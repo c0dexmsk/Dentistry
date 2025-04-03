@@ -3,7 +3,7 @@ import reportWebVitals from './reportWebVitals';
 import ReactDOM from 'react-dom/client';
 import MainPage from './pages/MainPage.jsx';
 import React from 'react';
-import './styles/Normalize.css';
+import './styles/general/Normalize.css';
 import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

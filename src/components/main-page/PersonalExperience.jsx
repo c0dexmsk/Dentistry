@@ -1,4 +1,4 @@
-import "../styles/PersonalExperience.css";
+import "../../styles/main-page/PersonalExperience.css";
 import Review from "./Review";
 import React from "react";
 

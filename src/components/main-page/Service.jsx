@@ -1,4 +1,4 @@
-import "../styles/Service.css"
+import "../../styles/main-page/Service.css"
 
 export default function Service ({title, description, image, alt}) {
 

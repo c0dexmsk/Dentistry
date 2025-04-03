@@ -1,11 +1,11 @@
 
 import { Link } from 'react-router-dom';
-import blackArrow from '../assets/black-arrow.svg';
-import whiteArrow from '../assets/white-arrow.svg';
-import femalePhoto from '../assets/female-photo.svg';
-import kidPhoto from '../assets/kid-photo.svg';
+import blackArrow from '../../assets/black-arrow.svg';
+import whiteArrow from '../../assets/white-arrow.svg';
+import femalePhoto from '../../assets/female-photo.svg';
+import kidPhoto from '../../assets/kid-photo.svg';
 import React from 'react';
-import "../styles/DepartmentSection.css";
+import "../../styles/main-page/DepartmentSection.css";
 
 export default function DepartmentSection () {
     

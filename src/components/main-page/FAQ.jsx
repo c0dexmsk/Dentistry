@@ -1,7 +1,7 @@
 
-import faq from "../assets/FAQ.svg"
+import faq from "../../assets/FAQ.svg"
 import FAQDropdown from "./FAQDropdown";
-import "../styles/FAQ.css";
+import "../../styles/main-page/FAQ.css";
 
 export default function FAQ() {
 
