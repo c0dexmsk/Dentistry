@@ -8,45 +8,13 @@ import roundTooth from "../assets/round-tooth.png"
 
 export default function MainPageSwiper () {
 
-  // document.addEventListener('DOMContentLoaded', function() {
-
-  //   const swiper = new Swiper('.swiper', {
-  //     // Основные параметры
-  //     loop: true,
-  //     slidesPerView: 1,
-  //     spaceBetween: 30,
-  //     centeredSlides: true,
-      
-  //     // Автопрокрутка
-  //     autoplay: {
-  //       delay: 2500,
-  //       disableOnInteraction: false,
-  //     },
-      
-  //     // Пагинация (точки)
-  //     pagination: {
-  //       el: '.swiper-pagination',
-  //       clickable: true,
-  //     },
-      
-  //     // Навигация (стрелки)
-  //     navigation: {
-  //       nextEl: '.swiper-button-next',
-  //       prevEl: '.swiper-button-prev',
-  //     },
-      
-  //     // Эффекты (опционально)
-  //     effect: 'slide', // можно использовать 'fade', 'cube', 'coverflow' и др.
-  //   });
-  // });
-  
-  
+    
   return (
     <>
-      <div className='swiper-wrapper'>
-        <div className="swiper-slide">
+      <div className='main-swiper-wrapper'>
+        <div className="main-swiper-slide">
         
-          <div className='swiper-slide__text'>
+          <div className='main-swiper-slide__text'>
             <h1>
             Вам улыбается Зайнап
             </h1>

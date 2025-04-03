@@ -1,0 +1,89 @@
+.review-swiper {
+    height: 378px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: 53px;
+
+    position: relative;
+    top: -61px;
+}
+.review-swiper > div {
+    height: initial;
+}
+.review-swiper__slide {
+    width: 360px;
+    height: 280px;
+
+    background-color: white;
+    padding: 25px 37px 20px 28px;
+    box-sizing: border-box;
+    font-size: 12px;   
+    
+
+    border-radius: 10px;
+}
+
+/*Стилизация для кнопок свайпера*/
+
+.swiper-buttons {
+    width: 110px;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.swiper-buttons > button {
+    background-color: white;
+    border-radius: 100%;
+    height: 45px;
+    aspect-ratio: 1/1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Стилизация отдельного компонента (Отзыва)*/
+
+.personal-review {
+    display: flex;
+    flex-direction: column;
+
+    width: 295px;
+    height: 235px;
+}
+
+.personal-review h3{
+    font-size: 16px;
+    margin-bottom: 9px;
+}
+.personal-review p {
+    width: 295px;
+    margin-bottom: 5px;
+    line-height: 100%;
+}
+.personal-review > p:first-of-type {
+    font-weight: bold;
+}
+.personal-review__stars  > img {
+    height: 24px;
+}
+.personal-review__stars {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    gap: 7px;
+}
+.personal-review__place {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+    margin-top: 10px;
+    font-weight: bold;
+
+}
+.personal-review__place > img {
+    height: 31px;
+}

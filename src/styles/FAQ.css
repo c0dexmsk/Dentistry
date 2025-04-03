@@ -1,0 +1,126 @@
+
+.FAQ {
+    width: 1120px;
+    height: 400px;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+    gap: 76px;
+}
+.FAQ  > div:first-of-type > div > img{
+    width: 280px;
+    height: 170px;
+}
+.FAQ  > div:first-of-type > div{
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+}
+.FAQ  > div:first-of-type > p {
+    font-size: 1rem;
+}
+.FAQ  > div:first-of-type > div > h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.FAQ  > div:first-of-type {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+.FAQ  > div:last-of-type {
+    width: 645px;
+}
+
+
+
+/*Стилизация аккордеона*/
+
+.FAQ__dropdown {
+    background-color: var(--dark-gray);
+    color: white;
+    line-height: 150%;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    
+    
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    vertical-align: middle;
+
+}
+.FAQ__dropdown > details {
+    min-height: 120px;
+    box-sizing: border-box;
+
+    position: relative;
+    display: block;
+    max-width: 650px;
+    border-radius: 5px;
+    transition: 0.3s;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.FAQ__dropdown > details::after {
+    position: absolute;
+    right: 32px;
+    top: 45px;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    transform: rotate(0deg);
+    transform-origin: center;
+    transition: .3s;
+    z-index: 100;
+
+    background-image: url("../assets/plus.svg");
+}
+
+.FAQ__dropdown > details[open]::after {
+    transform: rotate(90deg);
+}
+
+.FAQ__dropdown > details[open] {
+    padding-bottom: 120px;
+}
+
+.FAQ__dropdown > details[open] .details__title {
+    margin-bottom: 32px;
+}
+
+.details__title {
+
+    border-radius: 5px;
+    padding: 12px 24px;
+    font-size: 20px;
+    cursor: pointer;
+    list-style: none;
+    font-weight: 700;
+    transition: .3s;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.details__title::-webkit-details-marker {
+display: none;
+}
+
+.details__content {
+padding: 0 32px;
+font-size: 18px;
+margin-bottom: -60px;
+}
+
+.details__content p:last-child {
+margin-bottom: 0;
+}
+.details__content p:first-child {
+margin-top: 0;
+}

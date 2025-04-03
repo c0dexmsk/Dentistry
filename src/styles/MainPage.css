@@ -3,16 +3,18 @@
     grid-template-rows: auto 1fr auto;
     /* height: 100vh; */
     
-    background: rgb(222,229,239);
+    /* background: rgb(222,229,239);
     background: linear-gradient(300deg, rgba(222,229,239,0.5) 0%, rgba(238,234,232,0.5) 40%, rgba(245,236,229,0.5) 100%);
-    background-image: url("../assets/background-texture.png");
+    background-color: #F1EBE8;
+    background-image: url("../assets/background-texture.png"); */
+
+    background-image: 
+    linear-gradient(rgba(241, 235, 232, 0.7), rgba(241, 235, 232, 0.7)), 
+    url("../assets/background-texture.png");
+
     background-repeat: repeat-y;
     background-size: cover;
 }
-/* section {
-    height: 800px;
-    width: 700px;
-} */
 .metrics {
     background-color: #2E2E2E;
     color: white;
@@ -50,7 +52,6 @@
     gap: 25px 20px;
     align-items: flex-start;
     align-content: flex-start;
-    /* width: 206px; */
 }
 .metrics > div > div > img {
     height: 43px;

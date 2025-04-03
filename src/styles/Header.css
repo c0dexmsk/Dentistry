@@ -30,10 +30,10 @@
 .header__container__text select {
     border: none;
     background-color: transparent;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 .header__container__text a {
-    font-size: 14px;
+    font-size: 0.875rem;
     text-decoration: none;
     color: black;
 }

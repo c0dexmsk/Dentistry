@@ -8,6 +8,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   --dark-gray: #2E2E2E;
+
+  line-height: 150%;
 }
 
 code {

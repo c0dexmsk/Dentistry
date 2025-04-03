@@ -144,6 +144,7 @@ html {
     font-family: Montserrat, serif;
     font-weight: bolder;  
     margin: 1rem 0;
+    line-height: normal;
   }
   h2 {
     font-size: 2rem;

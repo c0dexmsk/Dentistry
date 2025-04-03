@@ -27,6 +27,7 @@
 }
 .service__card p{
     font-size: 12px;
+    line-height: 140%;
 }
 .service__card h3 {
     font-size: 20px;
