@@ -1,59 +1,43 @@
 import React from 'react';
-// import Swiper from 'react-id-swiper';
-// import 'swiper/css/swiper.css'; // Важно для v5
-import Zainap from "../assets/Zainap.png";
+import MainSlide from "../components/MainSlide"
+import 'swiper/css/pagination'
+import { Swiper, SwiperSlide } from "swiper/react"; 
+import 'swiper/css';  // Основные стили
 import "../styles/MainPageSwiper.css";
-import Button from './Button';
-import roundTooth from "../assets/round-tooth.png"
+import {Pagination} from 'swiper/modules';
+import 'swiper/css/pagination';
 
 export default function MainPageSwiper () {
 
-    
   return (
     <>
-      <div className='main-swiper-wrapper'>
-        <div className="main-swiper-slide">
-        
-          <div className='main-swiper-slide__text'>
-            <h1>
-            Вам улыбается Зайнап
-            </h1>
+      
+      <Swiper
+          className="main-swiper"
+          spaceBetween={0}
+          slidesPerView={1}
+          onSlideChange={() => console.log('main slide change')}
+          onSwiper={(swiper) => console.log(swiper)}
+          modules={[Pagination]}
+          pagination={{ 
+            clickable: true,
+            type: 'bullets' 
+          }}
+          >
+              
+          <SwiperSlide>
+            <MainSlide />
+          </SwiperSlide>
 
-            <p>
-              История Зайнап — это путь от неуверенности
-              к ослепительному сиянию. Раньше она словно прятала
-              свою уникальность, теперь же её лицо излучает гармонию
-              и спокойствие.
-            </p>
+          <SwiperSlide>
+            <MainSlide />
+          </SwiperSlide>
 
-            <Button> Посмотреть кейс </Button>
+          <SwiperSlide>
+            <MainSlide />
+          </SwiperSlide>
 
-            <div>
-              <img src={roundTooth} alt="Зубы" />
-              <p>
-                <span> 88% </span>
-                Возвращаются к нам с семьей
-              </p>
-            </div>
-          </div>
-
-          <img src={Zainap} alt="Зайнап" />
-        </div>
-      </div>
+      </Swiper>
     </>
   )
 };
-
-
-
-{/* <section className="swiper">
-  <div className="swiper-wrapper">
-    
-  </div>
-      // <div className="swiper-slide">Слайд 2</div>
-      // <div className="swiper-slide">Слайд 3</div> *
-
-  <div className="swiper-pagination"></div>
-  <div className="swiper-button-next"></div>
-  <div className="swiper-button-prev"></div>
-</section> */}
