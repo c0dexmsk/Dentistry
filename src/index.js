@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-import ReactDOM from 'react-dom/client';
 import MainPage from './pages/MainPage.jsx';
-import React from 'react';
+import AboutUs from './pages/AboutUs.jsx';
+import ReactDOM from 'react-dom/client';
 import './styles/general/Normalize.css';
+import React from 'react';
 import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,6 +13,8 @@ root.render(
       <Router>
           <Routes>
               <Route path="/" element={<MainPage />} />
+              <Route path="/main" element={<MainPage />} />
+              <Route path="/about" element={<AboutUs />} />
               <Route path="*" element={<MainPage />} />
           </Routes>
       </Router>

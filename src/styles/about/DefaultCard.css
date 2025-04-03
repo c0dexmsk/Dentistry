@@ -1,0 +1,41 @@
+.default-card {
+    width: 1120px;
+    height: 748px;
+    margin-top: 100px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 45px;
+}
+.default-card__text {
+    width: 525px;
+    height: 312px;
+}
+.default-card__text h2 {
+    margin-bottom: 30px;
+}
+.default-card__text hr {
+    border-color: rgba(255, 255, 255, 0.5);
+    margin: 40px 0px;
+}
+.default-card__text__icons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.default-card__text__icons > div {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+.default-card__text__icons img {
+    height: 43px;
+    aspect-ratio: 1/1;
+}
+.default-card__photo > img {
+    width: 550px;
+    border-radius: 10px;
+    /* height: 500px; */
+}

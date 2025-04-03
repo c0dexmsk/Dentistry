@@ -1,0 +1,21 @@
+.full-cycle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 150px; */
+}
+.full-cycle__button {
+    position: relative;
+    top: -217px;
+    width: 1120px;
+    display: flex;
+    justify-content: flex-end;
+}
+.full-cycle .default-card {
+    flex-direction: row-reverse;
+    margin-top: 0;
+}
+.full-cycle .default-card__text__icons > div {
+    flex-direction: row;
+    align-items: center;
+}

@@ -1,0 +1,12 @@
+.video {
+    /* width:  1120px; */
+    /* border-radius: 10px; */
+    width: 100%;
+    background-image: url("../../assets/video_preview.png");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 680px;
+    margin-top: 70px;
+}

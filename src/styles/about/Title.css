@@ -1,0 +1,21 @@
+
+
+.title {
+    width: 1120px;
+    height: 458px;
+    margin-top: 90px;
+
+    display: flex;
+    flex-direction: column;
+}
+.title h1 {
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: bolder;
+}
+.title h2 {
+    margin-bottom: 23px;
+}
+.title p {
+    font-weight: bold;
+}

@@ -1,0 +1,43 @@
+.future {
+    background-color: var(--dark-gray);
+    color: white;
+}
+.future__technology {
+    width: 1120px;
+    height: 748px;
+    margin-top: 100px;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    gap: 45px;
+}
+.future__technology__text {
+    width: 525px;
+    height: 312px;
+}
+.future__technology__text h2 {
+    margin-bottom: 30px;
+}
+.future__technology__text hr {
+    border-color: rgba(255, 255, 255, 0.5);
+    margin: 40px 0px;
+}
+.future__technology__text__icons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.future__technology__text__icons > div {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.future__technology__text__icons img {
+    height: 43px;
+    aspect-ratio: 1/1;
+}
+.future__technology__photo > img {
+    width: 550px;
+    height: 500px;
+}

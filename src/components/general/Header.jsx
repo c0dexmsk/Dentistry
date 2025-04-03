@@ -18,7 +18,7 @@ export default function Header () {
                 </div>
 
                 <div className="header__container__text">
-                    <Link to="/"> О клинике </Link>
+                    <Link to="/about"> О клинике </Link>
                     <Link to="/kids"> Дети </Link>
                     <Link to="/"> Врачи </Link>
                     <Link to="/"> Кейсы </Link>
