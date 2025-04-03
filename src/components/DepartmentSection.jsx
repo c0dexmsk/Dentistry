@@ -12,7 +12,7 @@ export default function DepartmentSection () {
 
     return (
         <>
-            <div className='department'>
+            <section className='department'>
                 <div>
                     <h2> Отделения </h2>
 
@@ -48,7 +48,7 @@ export default function DepartmentSection () {
 
                     </div>
                 </div>              
-            </div> 
+            </section> 
         </>
     )
 }
