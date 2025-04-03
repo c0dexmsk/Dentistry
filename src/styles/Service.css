@@ -21,13 +21,6 @@
     flex-wrap: wrap;
     height: 520px;
     gap: 20px;
-    /* display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: stretch;
-    grid-template-rows: auto auto;
-    align-items: stretch; */
-    /* grid-template-columns: auto 210px repeat(2, auto) ; */
-    /* grid-template-columns: repeat(auto-fill, 270px); */
 }
 .service__card p, .service__card h3 {
     z-index: 100;
@@ -57,25 +50,53 @@
     right: 0;
     z-index: 0;
 }
+.service__card:nth-child(4) > img {
+    bottom: -50px;
+}
 .service__card:hover {
     background-color: var(--dark-gray);
     color: white;
 }
+
+/*Добавление уникальных размеров и отсутпов для блоков*/
+
 .service__card:nth-child(1) {
     width: 312px;
 }
+.service__card:nth-child(1) > p {
+    width: 174px;
+}
+
 .service__card:nth-child(2), .service__card:nth-child(7)  {
     width: 210px;
 }
+.service__card:nth-child(2) > p, .service__card:nth-child(7) > p  {
+    width: 134px;
+}
+
 .service__card:nth-child(3), .service__card:nth-child(4), .service__card:nth-child(5) {
     width: 265px
 }
+.service__card:nth-child(3) > p, .service__card:nth-child(4) >p, .service__card:nth-child(5) >p {
+    width: 200px
+}
+
 .service__card:nth-child(6) {
     width: 360px;
 }
+.service__card:nth-child(6) > p{
+    width: 214px;
+}
+
 .service__card:nth-child(8) {
     width: 216px;
 }
+.service__card:nth-child(8) > p {
+    width: 142px;
+}
+
+/*Позиционирование кнопки по центру*/
+
 .service__button-container {
     display: flex;
     justify-content: center;
