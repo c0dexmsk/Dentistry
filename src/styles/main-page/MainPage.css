@@ -13,6 +13,7 @@
 
     background-repeat: repeat-y;
     background-size: cover;
+    /* z-index: -100; */
 }
 .metrics {
     background-color: #2E2E2E;
@@ -23,6 +24,7 @@
 
     display: flex;
     justify-content: center;
+    line-height: 100%;
 }
 .metrics > div {
     display: flex;

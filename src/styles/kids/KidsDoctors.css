@@ -1,0 +1,40 @@
+.kids-doctors {
+    width: 1120px;
+    margin-top: 150px;
+}
+.kids-doctors__grid {
+    margin-top: 50px;
+}
+.kids-doctors__grid {
+    width: 1120px;
+}
+.kids-doctors__grid__card {
+    max-width: 235px;
+}
+.kids-doctors__grid__card img {
+    width: 215px;
+    height: 345px;
+}
+.kids-doctors__grid__card * {
+    max-width: 235px;
+}
+.kids-doctors__grid__card > button {
+    background-color: #C3D4DE;
+    color: black;
+}
+.kids-doctors a {
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid var(--dark-gray);
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 100px;
+    padding: 22px 0;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+.kids-doctors a:hover {
+    border-color: #C3D4DE;
+    color: initial;
+    background-color: #C3D4DE;
+}

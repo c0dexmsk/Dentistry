@@ -1,0 +1,15 @@
+.details-button{
+    background-color: #2E2E2E;
+    color: white;
+    font-weight: 500;
+    border: none;
+    font-size: 16px;
+    border-radius: 100px;
+    height: 32px;
+    width: 93px;
+    font-size: 0.75rem;
+}
+.details-button:hover {
+    background-color: white;
+    color: #2E2E2E;
+}
