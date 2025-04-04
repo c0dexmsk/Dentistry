@@ -1,0 +1,9 @@
+.cases {
+    width: 1120px;
+    margin-top: 90px;
+}
+.patient-story-card {
+    background-color: transparent;
+    border: none !important;
+    box-shadow: none !important;
+}

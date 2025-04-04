@@ -21,7 +21,7 @@ export default function Header () {
                     <Link to="/about"> О клинике </Link>
                     <Link to="/kids"> Дети </Link>
                     <Link to="/doctors"> Врачи </Link>
-                    <Link to="/"> Кейсы </Link>
+                    <Link to="/cases"> Кейсы </Link>
                     <select>
                         <option value="one">Услуги</option>
                         <option value="two">Two option</option>

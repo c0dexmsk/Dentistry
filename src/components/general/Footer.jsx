@@ -22,7 +22,7 @@ export default function Footer () {
                 </div>  
 
                 <div className="footer__container__column2">
-                    <Link to="/"> Кейсы </Link>
+                    <Link to="/cases"> Кейсы </Link>
                     <select>
                         <option value="one">Услуги</option>
                         <option value="two">Two option</option>
