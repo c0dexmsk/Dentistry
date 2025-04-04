@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import DoctorProfile from "./pages/DoctorProfile.jsx"
 import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -21,6 +22,7 @@ root.render(
               <Route path="/about" element={<AboutUs />} />
               <Route path="/kids" element={<Kids />} />
               <Route path="/doctors" element={<Doctors />} />
+              <Route path="/doctors/:slug" element={<DoctorProfile />} />
               <Route path="*" element={<MainPage />} />
           </Routes>
       </Router>
