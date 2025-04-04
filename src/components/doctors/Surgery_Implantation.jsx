@@ -12,21 +12,25 @@ export default function Surgery_Implantation () {
             photo: aizanat,
             name: "Гитихмаев Юсуф Магомедович",
             profession: "Стоматолог-хирург Челюстно-лицевой хирург",
+            link: "gitihmaev-yusuf"
         },
         {
             photo: dina,
             name: "Ибрагимов Гаджи Бахмудович",
             profession: "Стоматолог-имплантолог",
+            link: "ibragimov-gadzhi"
         },
         {
             photo: kamila,
             name: "Сулейманов Шамиль Гусейнович",
             profession: "Стоматолог-хирург",
+            link: "suleymanov-shamil"
         },
         {
             photo: siadat,
             name: "Нурудинов Нурудин Муртазалиевич",
             profession: "Стоматолог-хирург",
+            link: "nurudinov-nurudin"
         },
     ]  
 
@@ -42,6 +46,7 @@ export default function Surgery_Implantation () {
                                 photo={element.photo}
                                 name={element.name}
                                 profession={element.profession}
+                                link={element.link}
                             />
                         )
                     })}

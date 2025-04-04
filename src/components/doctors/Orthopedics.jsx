@@ -13,16 +13,19 @@ export default function Orthopedics () {
             photo: aizanat,
             name: "Абдулжалилов Абдулла Аминуллаевич",
             profession: "Стоматолог-ортопед",
+            link: "abduljalilov-abdulla"
         },
         {
             photo: "dina",
             name: "Абдуллаев Дауд Абдулхаликович",
             profession: "Стоматолог-ортопед",
+            link: ""
         },
         {
             photo: kamila,
             name: "Абдуллаев Магомед Гаджиахмедович",
             profession: "Стоматолог-ортопед",
+            link: "abdulaev-magomed"
         },
         {
             photo: "siadat",
@@ -33,6 +36,7 @@ export default function Orthopedics () {
             photo: elina,
             name: "Маликов Малик Шарапудинович",
             profession: "Стоматолог-ортопед",
+            link: "malikov-malik"
         },
     ]  
 
@@ -48,6 +52,7 @@ export default function Orthopedics () {
                                 photo={element.photo}
                                 name={element.name}
                                 profession={element.profession}
+                                link={element.link}
                             />
                         )
                     })}

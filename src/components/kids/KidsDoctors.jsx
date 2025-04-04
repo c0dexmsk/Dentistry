@@ -2,7 +2,7 @@
 import KidsDoctorsCard from "./KidsDoctorsCard";
 import "../../styles/kids/KidsDoctors.css";
 
-export default function KidsDoctors ({kidsDoctors}) {
+export default function KidsDoctors ({kidsDoctors, link}) {
 
     return (
         <section>
@@ -16,6 +16,7 @@ export default function KidsDoctors ({kidsDoctors}) {
                                 photo={element.photo}
                                 name={element.name}
                                 profession={element.profession}
+                                link={element.link}
                             />
                         )
                     })}

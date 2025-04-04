@@ -21,55 +21,63 @@ export default function Therapy () {
             photo: aizanat,
             name: "Ахмедов Гарша Дамаданович",
             profession: "Стоматолог-эндодонтист",
+            link: "akhmedov-garsha"
         },
         {
             photo: dina,
             name: "Дадаева Кинанат Магомедовна",
             profession: "Стоматолог-эндодонтист",
+            link: "dadaeva-kinanat"
         },
         {
             photo: "zurab",
             name: "Куннаев Зураб Магомедович",
             profession: "Стоматолог-терапевт",
+            link: "kunnaev-zurab"
         },
         {
             photo: arsen,
             name: "Курбанов Арсен Магомедкамилович",
             profession: "Стоматолог-эндодонтист",
+            link: "kurbanov-arsen"
         },
-
         {
             photo: fatima,
             name: "Курбанова Фатима Абдулмаликовна",
             profession: "Стоматолог-эндодонтист",
+            link: "kurbanova-fatima"
         },
         {
             photo: alil,
             name: "Кутиев Алил Казбекович",
             profession: "Стоматолог-терапевт",
+            link: "kutiev-alil"
         },
         {
             photo: naila,
             name: "Магомедова Наиля Алиевна",
             profession: "Стоматолог-эндодонтист",
+            link: "magomedova-nailya"
         },
         {
             photo: siadat,
             name: "Меджидова Саидат Меджидовна",
             profession: "Стоматолог-эндодонтист",
+            link: "medzhidova-saidat"
         },
-
         {
             photo: kamil,
             name: "Омаров Камиль Гусейнович",
             profession: "Стоматолог-терапевт",
+            link: "omarov-kamil"
         },
         {
             photo: patimat,
             name: "Саидова Патимат Ахмедовна",
             profession: "Стоматолог-эндодонтист",
+            link: "saidova-patimat"
         },
-    ]  
+    ];
 
     return( 
         <section>
@@ -83,6 +91,7 @@ export default function Therapy () {
                                 photo={element.photo}
                                 name={element.name}
                                 profession={element.profession}
+                                link={element.link}
                             />
                         )
                     })}

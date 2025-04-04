@@ -35,5 +35,7 @@
 }
 #all-kids-doctors-container .details-button {
     background-color: var(--dark-gray);
+}
+#all-kids-doctors-container .details-button a {
     color: white;
 }

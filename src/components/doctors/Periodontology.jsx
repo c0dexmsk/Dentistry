@@ -10,11 +10,13 @@ export default function Periodontology () {
             photo: tamila,
             name: "Магадова Замира Кутбутиновна",
             profession: "Пародонтолог",
+            link: "magadova-zamira",
         },
         {
             photo: gamid,
             name: "Муртазалиева Жарият Муртазалиевна",
             profession: "Стоматолог-гигиенист",
+            link : "murtazalieva-jariyat-hygienist"
         },
     ]  
 

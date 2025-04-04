@@ -9,12 +9,14 @@ export default function Anesthesiologists () {
         {
             photo: "tamila",
             name: "Рамазанова Милейсат Гаджиевна",
-            profession: "Врач анестезиолог -реаниматолог",
+            profession: "Врач анестезиолог-реаниматолог",
+            link: "ramazanova-mileysat"
         },
         {
             photo: "gamid",
             name: "Гелачев Шамиль Гаирбегович",
-            profession: "Врач анестезиолог -реаниматолог",
+            profession: "Врач анестезиолог-реаниматолог",
+            link: "gelachev-shamil"
         },
     ]  
 

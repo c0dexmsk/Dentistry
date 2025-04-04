@@ -10,11 +10,13 @@ export default function Orthodontics () {
             photo: tamila,
             name: "Асланова Тамила Замрутдиновна",
             profession: "Стоматолог-ортодонт",
+            link: 'aslanova-tamila',
         },
         {
             photo: gamid,
             name: "Хуцаев Гамид Магаманд-алиевич",
             profession: "Стоматолог-ортодонт",
+            link: 'khutsaev-gamid'
         },
     ]  
 
