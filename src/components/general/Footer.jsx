@@ -18,7 +18,7 @@ export default function Footer () {
                  <div className="footer__container__column1">
                     <Link to="/about"> О клинике </Link>
                     <Link to="/kids"> Дети </Link>
-                    <Link to="/"> Врачи </Link>
+                    <Link to="/doctors"> Врачи </Link>
                 </div>  
 
                 <div className="footer__container__column2">

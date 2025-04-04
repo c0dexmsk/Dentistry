@@ -18,11 +18,64 @@ import rainbow from "../assets/rainbowPicture.svg"
 import star2 from "../assets/starPicture2.svg"
 import comfort from "../assets/comfotrable.svg"
 import tool from "../assets/toolPhoto.png"
+import { Link } from "react-router-dom";
 import goal from "../assets/goal.svg"
 import safe from "../assets/safe.svg"
 import "../styles/kids/Kids.css";
 
+import aizanat from "../assets/doctors/aizanat.png";
+import dina from "../assets/doctors/dina.png";
+import kamila from "../assets/doctors/kamilla.png";
+import siadat from "../assets/doctors/siadat.png";
+import elina from "../assets/doctors/elina.png";
+import muslim from "../assets/doctors/muslim.png";
+import asiat from "../assets/doctors/asiat.png";
+import malikat from "../assets/doctors/malikat.png";
+
 export default function Kids() {
+
+    const kidsDoctors = [
+        {
+            photo: aizanat,
+            name: "Абдурахманова Айзанат",
+            profession: "Детский стоматолог",
+        },
+        {
+            photo: dina,
+            name: "Гасанова Дина Абдулгаджиевна",
+            profession: "Подростковый ортопед",
+        },
+        {
+            photo: kamila,
+            name: "Даудова Камила Гамзатовна",
+            profession: "Детский стоматолог",
+        },
+        {
+            photo: siadat,
+            name: "Ибрагимова Сиядат Магомедовна",
+            profession: "Детский стоматолог",
+        },
+        {
+            photo: elina,
+            name: "Курбанова Элина Багарчиевна",
+            profession: "Детский стоматолог",
+        },
+        {
+            photo: muslim,
+            name: "Мурзабеков Муслим Мурзабекович",
+            profession: "Детский стоматолог",
+        },
+        {
+            photo: asiat,
+            name: "Мурилова Асият Магомедовна",
+            profession: "Детский стоматолог",
+        },
+        {
+            photo: malikat,
+            name: "Мусаева Маликат Магомедшапиевна",
+            profession: "Детский стоматолог",
+        },
+    ] 
 
     return (
         <>
@@ -68,7 +121,15 @@ export default function Kids() {
                         </section>
 
                         <ServicesAndPrice />
-                        <KidsDoctors />
+                        <KidsDoctors 
+                            kidsDoctors={kidsDoctors}
+                        />
+
+                        <div className="service__button-container">
+                            <Link to="/kids">
+                                Все десткие врачи
+                            </Link>
+                        </div>
 
                     </div>
                 <Footer />

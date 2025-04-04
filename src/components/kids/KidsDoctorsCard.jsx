@@ -4,7 +4,7 @@ import DetailsButton from "../general/DetailsButton"
 export default function KidsDoctorsCard ({photo, name, profession}) {
 
     return (
-        <div className="kids-doctors__grid__card col-lg-3 col-md-3 col-sm-6 mx-3 my-5">
+        <div className="kids-doctors__grid__card doctor-card col-lg-3 col-md-3 col-sm-6 mx-3 my-5">
             <img src={photo} alt={name} className="img-fluid" />
             <h3> {name} </h3>
             <p> {profession} </p>

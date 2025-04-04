@@ -8,21 +8,21 @@
 .kids-doctors__grid {
     width: 1120px;
 }
-.kids-doctors__grid__card {
+.doctor-card {
     max-width: 235px;
 }
-.kids-doctors__grid__card img {
+.doctor-card img {
     width: 215px;
     height: 345px;
 }
-.kids-doctors__grid__card * {
+.doctor-card * {
     max-width: 235px;
 }
-.kids-doctors__grid__card > button {
+.kids-doctors__grid button {
     background-color: #C3D4DE;
     color: black;
 }
-.kids-doctors a {
+.kids a {
     text-decoration: none;
     background-color: transparent;
     border: 1px solid var(--dark-gray);
@@ -33,7 +33,7 @@
     text-transform: uppercase;
     box-sizing: border-box;
 }
-.kids-doctors a:hover {
+.kids a:hover {
     border-color: #C3D4DE;
     color: initial;
     background-color: #C3D4DE;
