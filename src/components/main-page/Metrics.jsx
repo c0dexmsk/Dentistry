@@ -7,9 +7,9 @@ import openness from "../../assets/openness.svg";
 
 export default function Metrics () {
 
-    return ( 
+    return (
         <>
-            <section className="metrics">
+            <section className="metrics container-fluid">
                 <div>
                     <div className="metrics__numbers">
                         <img src={numbers} alt="numbers logo" />
@@ -22,7 +22,7 @@ export default function Metrics () {
                     <div className="metrics__confession">
                         <img src={heart} alt="heart logo" />
                         <h3> Признание </h3>
-                        <p> 
+                        <p>
                         Обладатели премии
                         Best Dental Awards
                         в номинации “Семейная стоматология года”
@@ -32,7 +32,7 @@ export default function Metrics () {
                     <div className="metrics__safety">
                         <img src={safety} alt="safety logo" />
                         <h3> Безопасность </h3>
-                        <p> 
+                        <p>
                             Европейский стандарт стерилизации, соответствие всем ГОСТам, международный сертификат ISO-11
                         </p>
                     </div>
@@ -40,7 +40,7 @@ export default function Metrics () {
                     <div className="metrics__openness">
                         <img src={openness} alt="openness logo" />
                         <h3> Открытость </h3>
-                        <p> 
+                        <p>
                         Регулярно участвуем в международных профессиональных конференциях
                         и входим в Российскую Ассоциацию Стоматологов
                         </p>

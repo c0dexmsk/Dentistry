@@ -9,7 +9,7 @@ import network from "../../assets/network.svg";
 export default function Comfort () {
 
     return (
-        <section>
+        <section className="container">
             <div className="comfort">
 
                 <div>
@@ -63,7 +63,7 @@ export default function Comfort () {
                         Раширяем присутствие
                     </h3>
                     <p>
-                        Экосистема, обеспечивающая бесперебойную работу всех подразделений клиники 
+                        Экосистема, обеспечивающая бесперебойную работу всех подразделений клиники
                     </p>
                 </div>
 

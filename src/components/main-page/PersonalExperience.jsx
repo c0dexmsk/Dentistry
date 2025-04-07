@@ -6,7 +6,7 @@ export default function PersonalExperience() {
 
     return (
         <>
-            <section>
+            <section className="container">
                 <div className="experience">
                     <h2>
                         Личный опыт

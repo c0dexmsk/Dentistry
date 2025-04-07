@@ -1,6 +1,6 @@
 import '../../styles/about/FullCycle.css'
 import DefautCard from "./DefaultCard";
-import fullCycle from "../../assets/FullCycle.png";   
+import fullCycle from "../../assets/FullCycle.png";
 import lab from "../../assets/lab.svg";
 import begomarket from "../../assets/begomarket.svg";
 import academy from "../../assets/academy.svg";
@@ -9,8 +9,8 @@ import Button from "../general/Button";
 export default function FullCycle () {
 
     return (
-        <section className="full-cycle">
-            <DefautCard 
+        <section className="full-cycle container">
+            <DefautCard
                 title="Полный цикл"
                 description1="Собственная зуботехническая лаборатория обеспечивает оперативное изготовление сложных ортопедических конструкций, Bego Маркет снабжает стоматологов
                     и зубных техников всем необходимым для работы,

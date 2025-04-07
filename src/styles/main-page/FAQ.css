@@ -35,22 +35,79 @@
 
 
 /*Стилизация аккордеона*/
-
 .FAQ__dropdown {
+    margin-bottom: 20px;
+    border: none;
+    overflow: hidden; /* Важно: предотвращает "выползание" контента */
+}
+
+/* Стиль заголовка */
+.FAQ__dropdown__header {
+    background-color: var(--dark-gray);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px !important;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+.FAQ__dropdown {
+    background-color: var(--dark-gray);
+    color: white;
+}
+/* Стиль для открытого заголовка */
+.FAQ__dropdown__header:not(.collapsed) {
+    background-color: var(--dark-gray);
+    color: white;
+}
+.FAQ__dropdown__header .accordion-button {
+    background-color: var(--dark-gray);
+    color: white;
+}.FAQ__dropdown__header .accordion-button {
+    background-color: var(--dark-gray);
+    color: white;
+}
+/* Стиль тела аккордеона */
+.FAQ__dropdown__body {
+    background-color: var(--darker-gray);
+    color: white;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+}
+
+/* Дополнительный враппер для контента */
+.FAQ__dropdown__content {
+    line-height: 150%;
+}
+
+.FAQ__dropdown-icon {
+    transition: transform 0.3s ease;
+}
+.accordion-button:not(.collapsed) .FAQ__dropdown-icon {
+    transform: rotate(45deg);
+}
+/* .accordion .FAQ__dropdown.accordion-item{
     background-color: var(--dark-gray);
     color: white;
     line-height: 150%;
     font-weight: bold;
     font-size: 20px;
     border-radius: 10px;
-    
-    
+    height: 120px;
+
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
     vertical-align: middle;
 
 }
+.FAQ__dropdown__header {
+    background-color: var(--dark-gray);
+    color: white;
+    height: 120px;
+} */
 .FAQ__dropdown > details {
     min-height: 120px;
     box-sizing: border-box;
@@ -81,7 +138,11 @@
 
     background-image: url("../../assets/plus.svg");
 }
-
+.FAQ__dropdown__header div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
 .FAQ__dropdown > details[open]::after {
     transform: rotate(90deg);
 }

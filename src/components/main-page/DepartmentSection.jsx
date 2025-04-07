@@ -8,16 +8,16 @@ import React from 'react';
 import "../../styles/main-page/DepartmentSection.css";
 
 export default function DepartmentSection () {
-    
+
 
     return (
         <>
-            <section className='department'>
+            <section className='department container'>
                 <div>
                     <h2> Отделения </h2>
 
                     <div className='department-inner'>
-                        
+
                         <div className='department__adults'>
                             <div className='department__adults__links'>
                                 <Link to="/adults">
@@ -33,7 +33,7 @@ export default function DepartmentSection () {
                         </div>
 
                         <div className='department__kids'>
-                            <div className='department__kids__links'> 
+                            <div className='department__kids__links'>
                                 <Link to="/kids">
                                     <h3>
                                         Детское
@@ -41,14 +41,14 @@ export default function DepartmentSection () {
                                 </Link>
                                 <Link to="/adults">
                                     <img src={whiteArrow} alt="blackArrow" />
-                                </Link>     
+                                </Link>
                             </div>
                             <img src={kidPhoto} alt="Ребёнок" />
                         </div>
 
                     </div>
-                </div>              
-            </section> 
+                </div>
+            </section>
         </>
     )
 }

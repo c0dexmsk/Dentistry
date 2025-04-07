@@ -16,10 +16,10 @@ export default function Anesthesiologists () {
             name: "Гелачев Шамиль Гаирбегович",
             profession: "Врач анестезиолог -реаниматолог",
         },
-    ]  
+    ]
 
-    return( 
-        <section>
+    return(
+        <section className="container">
             <div className="doctors-branch">
                 <h2> Анестезиологи </h2>
                 <div className="doctors-branch__grid row p-0 row border-box">

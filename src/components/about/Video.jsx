@@ -4,7 +4,7 @@ import "../../styles/about/Video.css";
 
 export default function Video () {
     return (
-        <section>
+        <section className="container">
             <div className="video">
                 <button>
                     <img src={videoPlay} alt="Видео кнопка" />

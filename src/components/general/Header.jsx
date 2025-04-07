@@ -9,10 +9,10 @@ import "../../styles/general/Header.css";
 export default function Header () {
 
     return (
-        <header className="header">
+        <header className="header container-fluid">
             <div className="header__container">
                 <div className="header__container__logo">
-                    <button> 
+                    <button>
                         <img src={logo} alt="logo" />
                     </button>
                 </div>
@@ -30,16 +30,16 @@ export default function Header () {
                     <Link to="/"> Прайс </Link>
                     <Link to="/"> Контакты </Link>
                     <Link to="/"> Записаться </Link>
-                </div>  
+                </div>
 
                 <div className="header__container__icons">
-                    <button> 
+                    <button>
                         <img src={glasses} alt="glasses" />
                     </button>
-                    <button> 
+                    <button>
                         <img src={phone} alt="phone" />
                     </button>
-                    <button> 
+                    <button>
                         <img src={profile} alt="profile" />
                     </button>
                 </div>

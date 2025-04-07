@@ -1,5 +1,7 @@
 .default-card {
-    width: 1120px;
+
+    max-width: 1120px;
+    width: 77%;
     height: 748px;
     margin-top: 100px;
 
@@ -8,15 +10,18 @@
     gap: 45px;
 }
 .default-card__text {
-    width: 525px;
-    height: 312px;
+    /* width: 525px; */
+    /* height: 312px; */
+    max-width: 525px;
+    width: 36.5%;
+    height: auto;
 }
 .default-card__text h2 {
     margin-bottom: 30px;
 }
 .default-card__text hr {
     border-color: rgba(255, 255, 255, 0.5);
-    margin: 40px 0px;
+    /* margin: 40px 0px; */
 }
 .default-card__text__icons {
     display: flex;
@@ -35,7 +40,9 @@
     aspect-ratio: 1/1;
 }
 .default-card__photo > img {
-    width: 550px;
+    /* width: 550px; */
+    max-width: 550px;
+    width: 360%;
     border-radius: 10px;
     /* height: 500px; */
 }

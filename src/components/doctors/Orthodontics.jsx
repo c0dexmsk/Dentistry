@@ -16,10 +16,10 @@ export default function Orthodontics () {
             name: "Хуцаев Гамид Магаманд-алиевич",
             profession: "Стоматолог-ортодонт",
         },
-    ]  
+    ]
 
-    return( 
-        <section>
+    return(
+        <section className="container">
             <div className="doctors-branch">
                 <h2> Ортодонтия </h2>
                 <div className="doctors-branch__grid row p-0 row border-box">

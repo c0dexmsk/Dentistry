@@ -69,10 +69,10 @@ export default function Therapy () {
             name: "Саидова Патимат Ахмедовна",
             profession: "Стоматолог-эндодонтист",
         },
-    ]  
+    ]
 
-    return( 
-        <section>
+    return(
+        <section className="container">
             <div className="doctors-branch">
                 <h2> Терапия </h2>
                 <div className="doctors-branch__grid row p-0 row border-box">

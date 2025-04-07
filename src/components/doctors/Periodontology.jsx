@@ -16,10 +16,10 @@ export default function Periodontology () {
             name: "Муртазалиева Жарият Муртазалиевна",
             profession: "Стоматолог-гигиенист",
         },
-    ]  
+    ]
 
-    return( 
-        <section>
+    return(
+        <section className="container">
             <div className="doctors-branch">
                 <h2> Пародонтология </h2>
                 <div className="doctors-branch__grid row p-0 row border-box">

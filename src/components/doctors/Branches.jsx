@@ -1,8 +1,8 @@
 
 export default function Branches () {
 
-    return( 
-        <section>
+    return(
+        <section className="container">
             <div className="doctors column">
                 <h1> Врачи </h1>
                 <div className="doctors__branches">

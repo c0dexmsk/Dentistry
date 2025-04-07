@@ -28,7 +28,7 @@ export default function ServicesAndPrice () {
     ]
 
     return(
-        <section>
+        <section className="container">
             <div className="kids-services">
                 <h2> Услуги и стоимость </h2>
 

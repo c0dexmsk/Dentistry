@@ -3,7 +3,7 @@ import "../../styles/main-page/Contacts.css";
 export default function Contacts () {
 
     return (
-        <section>
+        <section className="container">
             <div className="contacts">
 
                 <h2> Контакты </h2>
@@ -42,7 +42,7 @@ export default function Contacts () {
 
                     </div>
                 </div>
-                
+
             </div>
         </section>
     )

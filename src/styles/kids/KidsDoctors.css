@@ -1,12 +1,13 @@
 .kids-doctors {
-    width: 1120px;
+    max-width: 1120px;
+    width: 77%;
     margin-top: 150px;
 }
 .kids-doctors__grid {
     margin-top: 50px;
 }
 .kids-doctors__grid {
-    width: 1120px;
+    width: 100%;
 }
 .doctor-card {
     max-width: 235px;
