@@ -1,4 +1,3 @@
-import '../../styles/about/FullCycle.css'
 import DefautCard from "./DefaultCard";
 import fullCycle from "../../assets/FullCycle.png";
 import lab from "../../assets/lab.svg";

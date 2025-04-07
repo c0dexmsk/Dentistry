@@ -5,7 +5,6 @@ import whiteArrow from '../../assets/white-arrow.svg';
 import femalePhoto from '../../assets/female-photo.svg';
 import kidPhoto from '../../assets/kid-photo.svg';
 import React from 'react';
-import "../../styles/main-page/DepartmentSection.css";
 
 export default function DepartmentSection () {
 

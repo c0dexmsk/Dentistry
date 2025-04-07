@@ -10,9 +10,9 @@ export default function Footer () {
             <div className="footer__container">
 
                 <div className="footer__container__logo">
-                    <button>
+                    <Link to="/main">
                         <img src={logoBig} alt="logo" />
-                    </button>
+                    </Link>
                 </div>
 
                  <div className="footer__container__column1">

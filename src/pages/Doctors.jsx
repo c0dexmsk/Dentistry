@@ -7,7 +7,6 @@ import Orthodontics from "../components/doctors/Orthodontics";
 import Periodontology from "../components/doctors/Periodontology";
 import KidsDoctorsBranch from "../components/doctors/KidsDoctorsBranch";
 import Anesthesiologists from "../components/doctors/Anesthesiologists"
-import "../styles/doctors/Doctors.css"
 import Header from "../components/general/Header";
 import Footer from "../components/general/Footer";
 
@@ -18,8 +17,8 @@ export default function Doctors () {
             <div id="main-page-wrapper">
                 <Header />
                 <div>
-                    
-                    <Branches />
+
+                    <Branches Title={"Врачи"}/>
                     <Orthopedics />
                     <Surgery_Implantation />
                     <Therapy />

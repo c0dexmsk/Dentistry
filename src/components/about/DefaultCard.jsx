@@ -1,5 +1,3 @@
-import "../../styles/about/DefaultCard.css";
-
 
 export default function DefautCard ({title, description1, description2, image, icon1, icon2, icon3, icon1Title, icon2Title, icon3Title}) {
 

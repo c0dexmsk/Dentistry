@@ -1,4 +1,3 @@
-import "../../styles/about/Title.css"
 
 export default function Title ({titleh1, titleh2, description1, description2}) {
 

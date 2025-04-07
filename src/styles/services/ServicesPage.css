@@ -1,0 +1,70 @@
+.list-of-services {
+    max-width: 1120px;
+    width: 77%;
+}
+.list-of-services__title h2 {
+    font-size: 2rem;
+}
+.item-01 h3 {
+    font-size: 2rem;
+}
+.item-02 h3 {
+    font-size: 1.25rem;
+}
+.item-01 p {
+    padding-right: 52px;
+}
+.item-01, .item-02 {
+    font-weight: bold;
+    padding: 30px;
+    font-size: 0.75rem;
+    box-sizing: border-box;
+    line-height: 140%;
+
+    /* min-height: 350px; */
+    height: auto;
+
+}
+.item-02 > div > div {
+
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+/* .item-02 > div {
+    box-sizing: content-box;
+} */
+.item-01 {
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+
+}
+.item-02 {
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    align-items: flex-start;
+}
+.item-01 a , .item-02 a{
+    font-size: 0.75rem;
+    background-color: var(--dark-gray);
+    border-radius: 30px;
+    padding: 8px 8px;
+    color: white;
+    height: auto;
+    width: auto;
+}
+.item-01 a {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+}
+.item-02 a:first-child {
+    /* margin-bottom: 30px; */
+    max-width: 90px;
+}
+.item-02 .big-link {
+    height:60px;
+    font-size: 1rem;
+    text-transform: uppercase;
+}

@@ -1,5 +1,6 @@
 .comfort {
-    width: 1120px;
+    width: 77%;
+    max-width: 1120px;
     height: 196px;
     display: flex;
     flex-direction: row;

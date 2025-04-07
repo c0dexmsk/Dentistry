@@ -1,5 +1,4 @@
 
-import "../../styles/kids/ServicesAndPrice.css";
 import { Link } from "react-router-dom";
 
 export default function ServicesAndPrice () {

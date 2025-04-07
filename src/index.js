@@ -8,6 +8,7 @@ import Doctors from './pages/Doctors.jsx';
 import ReactDOM from 'react-dom/client';
 import './styles/general/Normalize.css';
 import Kids from './pages/Kids.jsx';
+import Services from './pages/ServicesPage.jsx';
 import React from 'react';
 import './index.css';
 
@@ -21,6 +22,7 @@ root.render(
               <Route path="/about" element={<AboutUs />} />
               <Route path="/kids" element={<Kids />} />
               <Route path="/doctors" element={<Doctors />} />
+              <Route path="/services" element={<Services />} />
               <Route path="*" element={<MainPage />} />
           </Routes>
       </Router>

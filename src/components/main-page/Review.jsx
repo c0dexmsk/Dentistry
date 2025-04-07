@@ -1,11 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useSwiper } from 'swiper/react';  // Теперь хук берется из основного пакета
 import 'swiper/css';  // Основные стили
-import 'swiper/css/navigation'; 
+import 'swiper/css/navigation';
 
 import PersonalReview from "./PersonalReview";
 import {React} from "react";
-import "../../styles/main-page/Review.css";
 
 import yandexIcon from "../../assets/yandexMapIcon.svg";
 import gis2 from "../../assets/GIS2Icon.svg";
@@ -15,7 +14,7 @@ import arrowNext from "../../assets/arrow-next.svg";
 
 const SwiperButtons = () => {
     const swiper = useSwiper(); // Получаем экземпляр Swiper
-  
+
     return (
       <div className="swiper-buttons">
         <button onClick={() => swiper.slidePrev()}>
@@ -59,7 +58,7 @@ export default function Review () {
     ]
 
     return (
-        <>    
+        <>
              <Swiper
                 className="review-swiper"
                 spaceBetween={20}
@@ -69,7 +68,7 @@ export default function Review () {
                 >
 
                 <SwiperButtons />
-                    
+
                 {reviewData.map((review, index) => {
                     return (
                         <SwiperSlide>

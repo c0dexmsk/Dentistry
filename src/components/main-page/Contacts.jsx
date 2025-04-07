@@ -1,4 +1,3 @@
-import "../../styles/main-page/Contacts.css";
 
 export default function Contacts () {
 

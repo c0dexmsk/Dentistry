@@ -1,6 +1,5 @@
 
 import KidsDoctorsCard from "./KidsDoctorsCard";
-import "../../styles/kids/KidsDoctors.css";
 
 export default function KidsDoctors ({kidsDoctors}) {
 

@@ -1,7 +1,6 @@
 
 import faq from "../../assets/FAQ.svg"
 import FAQDropdown from "./FAQDropdown";
-import "../../styles/main-page/FAQ.css";
 import Accordion from 'react-bootstrap/Accordion';
 
 export default function FAQ() {

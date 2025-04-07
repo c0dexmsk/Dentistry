@@ -21,7 +21,6 @@ import tool from "../assets/toolPhoto.png"
 import { Link } from "react-router-dom";
 import goal from "../assets/goal.svg"
 import safe from "../assets/safe.svg"
-import "../styles/kids/Kids.css";
 
 import aizanat from "../assets/doctors/aizanat.png";
 import dina from "../assets/doctors/dina.png";

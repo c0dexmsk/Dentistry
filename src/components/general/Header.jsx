@@ -12,9 +12,9 @@ export default function Header () {
         <header className="header container-fluid">
             <div className="header__container">
                 <div className="header__container__logo">
-                    <button>
+                    <Link to="/main">
                         <img src={logo} alt="logo" />
-                    </button>
+                    </Link>
                 </div>
 
                 <div className="header__container__text">

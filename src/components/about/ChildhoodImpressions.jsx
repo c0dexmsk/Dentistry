@@ -1,4 +1,3 @@
-import "../../styles/about/ChildhoodImpressions.css";
 import DefautCard from "./DefaultCard";
 import childhoodImpressions from "../../assets/ChildhoodImpressions.png";
 import play from "../../assets/play.svg";

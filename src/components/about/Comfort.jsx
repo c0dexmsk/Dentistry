@@ -1,4 +1,3 @@
-import "../../styles/about/Comfort.css"
 import place from "../../assets/place.svg";
 import child from "../../assets/child.svg";
 import europe from "../../assets/europe.svg";

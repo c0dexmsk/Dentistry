@@ -1,4 +1,3 @@
-import "../../styles/about/FutureTechnology.css";
 import DefautCard from "./DefaultCard";
 import futureTechnology from "../../assets/futureTechnology.png";
 import zeiss from "../../assets/ZEISS.svg";
@@ -8,7 +7,7 @@ import airflow from "../../assets/AIRFLOW.svg";
 export default function FutureTechnology () {
 
     return (
-        <section className="future container">
+        <section className="future container-fluid">
             <DefautCard
                 title="Технологии будущего"
                 description1="Bego использует технологии, чтобы сделать лечение более эффективным и комфортным. Цифровое сканирование немецким аппаратом позволяет создавать точные

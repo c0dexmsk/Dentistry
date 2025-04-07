@@ -19,12 +19,6 @@ export default function FAQDropdown ({title, description, eventKey}) {
                         </div>
                     </Accordion.Body>
             </Accordion.Item>
-            {/* <div className="FAQ__dropdown">
-                <details name="faq">
-                    <summary className="details__title"> {title}</summary>
-                    <p className="details__content">{description}</p>
-                </details>
-            </div> */}
 
         </>
     )
