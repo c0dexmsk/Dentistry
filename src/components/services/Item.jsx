@@ -39,7 +39,6 @@ export default function Item ({title, backgroundColor, link,description,innerSer
                                 <h3> {el.title} </h3>
                                 <p> {el.description} </p>
                                 <Link to={`/${link}`}> Подробнее </Link>
-                                { console.log( index)}
                             </div>
                                 { index===1 ? <Link style={{ backgroundColor: selectedStyle.color3, color: selectedStyle.color4 }} to="/services" className="big-link w-100 text-center mt-4 d-flex justify-content-center align-items-center"> Все услуги </Link> : null}
                         </div>

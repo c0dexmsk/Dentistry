@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ServicesPattern from './pages/ServicesPattern.jsx';
 import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -23,6 +24,7 @@ root.render(
               <Route path="/kids" element={<Kids />} />
               <Route path="/doctors" element={<Doctors />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/services/:id" element={<ServicesPattern />} />
               <Route path="*" element={<MainPage />} />
           </Routes>
       </Router>
