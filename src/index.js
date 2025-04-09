@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MainPage from './pages/MainPage.jsx';
+import History from "./pages/History.jsx";
 import AboutUs from './pages/AboutUs.jsx';
 import Doctors from './pages/Doctors.jsx';
 import ReactDOM from 'react-dom/client';
@@ -31,6 +32,7 @@ root.render(
               <Route path="/doctors/:slug" element={<DoctorProfile />} />
               <Route path="/cases" element={<Cases />} />
               <Route path="/cases/:slug" element={<CasesProfile />} />
+              <Route path="/history" element={<History />} />
               <Route path="*" element={<MainPage />} />
           </Routes>
       </Router>

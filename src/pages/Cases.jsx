@@ -24,17 +24,19 @@ export default function Cases() {
                         <h1 className="text-center"> Кейсы </h1>
                         <h2> Ортопедия </h2>
 
-                        <div className="cases row">
-                            {casesList.map((el,index) => {
-                                return (
-                                    <Case 
-                                        name={el.name}
-                                        image={el.image}
-                                        description={el.description}
-                                    />    
-                                )
-                            })}
-                        </div>
+                        <section className="case-section container">
+                            <div className="cases">
+                                {casesList.map((el,index) => {
+                                    return (
+                                        <Case 
+                                            name={el.name}
+                                            image={el.image}
+                                            description={el.description}
+                                        />    
+                                    )
+                                })}
+                            </div>
+                        </section>
                     </div>
                 </section>
                 <Footer />

@@ -24,6 +24,8 @@
 
 @import "./styles/services/ServicesPage.css";
 
+@import "./styles/history/History.css";
+
 
 body {
   margin: 0;

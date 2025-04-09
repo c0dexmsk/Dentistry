@@ -7,3 +7,7 @@
     border: none !important;
     box-shadow: none !important;
 }
+.cases .card-title { 
+    font-size: 2rem;
+    font-weight: bold;
+}
