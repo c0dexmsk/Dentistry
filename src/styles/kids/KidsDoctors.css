@@ -23,7 +23,7 @@
     background-color: #C3D4DE;
     color: black;
 }
-.kids a {
+.kids .service__button-container a {
     text-decoration: none;
     background-color: transparent;
     border: 1px solid var(--dark-gray);

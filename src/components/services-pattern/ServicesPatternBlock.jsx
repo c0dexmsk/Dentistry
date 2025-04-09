@@ -1,5 +1,7 @@
+import Accordion from 'react-bootstrap/Accordion';
 import xray from "./images/rentgen-person.png";
 import icon from "./images/block-icon.svg"
+import { Link } from "react-router-dom";
 
 export default function ServicesPatternBlock ({content}) {
 
@@ -152,6 +154,64 @@ export default function ServicesPatternBlock ({content}) {
                     </div>
                 </div>
 
+                <div className="margin100 pattern-block__services">
+
+                    <div className="row align-items-center justify-content-between">
+                        <h2 className="col-8"> Услуги и стоимость </h2>
+                        <Link to="/price" className="col text-end"> Прайс на все услуги </Link>
+                    </div>
+
+                    <div className="row g-3 mt-4 align-items-center">
+                        {content.services.map((el,index) => {
+                            return (
+                                <div className="col-4 element" key={index}>
+                                    <div>
+                                        <h3> {el.name} </h3>
+                                        <div>
+                                            <h3> {el.price} </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        })}
+
+                        <div className="col-4 all-price-el">
+                            <div>
+                                <Link to="/price"> Полный прайс </Link>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div className="margin100 pattern-block__questions">
+                    <h2>Ваши вопросы</h2>
+                    <div className="pattern-block__questions__accordeon mt-5">
+                        <Accordion defaultActiveKey={["0", "1", "2"]} alwaysOpen>
+                            <Accordion.Item eventKey="0">
+                                <Accordion.Header>{content.questions[0].question}</Accordion.Header>
+                                <Accordion.Body>
+                                    {content.questions[0].answer}
+                                </Accordion.Body>
+                            </Accordion.Item>
+
+                            <Accordion.Item eventKey="1">
+                            <Accordion.Header>{content.questions[1].question}</Accordion.Header>
+                                <Accordion.Body>
+                                    {content.questions[1].answer}
+                                </Accordion.Body>
+                            </Accordion.Item>
+
+                            <Accordion.Item eventKey="2">
+                            <Accordion.Header>{content.questions[2].question}</Accordion.Header>
+                                <Accordion.Body>
+                                    {content.questions[2].answer}
+                                </Accordion.Body>
+                            </Accordion.Item>
+
+                            </Accordion>
+                    </div>
+                </div>
             </div>
         </section>
     )
