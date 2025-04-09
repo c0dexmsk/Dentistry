@@ -35,92 +35,62 @@
 
 
 /*Стилизация аккордеона*/
+.FAQ__dropdown {
+    margin-bottom: 20px;
+    border: none;
+    overflow: hidden; /* Важно: предотвращает "выползание" контента */
+}
 
+/* Стиль заголовка */
+.FAQ__dropdown__header {
+    background-color: var(--dark-gray);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px !important;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
 .FAQ__dropdown {
     background-color: var(--dark-gray);
     color: white;
+}
+/* Стиль для открытого заголовка */
+.FAQ__dropdown__header:not(.collapsed) {
+    background-color: var(--dark-gray);
+    color: white;
+}
+.FAQ__dropdown__header .accordion-button {
+    background-color: var(--dark-gray);
+    color: white;
+}.FAQ__dropdown__header .accordion-button {
+    background-color: var(--dark-gray);
+    color: white;
+}
+/* Стиль тела аккордеона */
+.FAQ__dropdown__body {
+    background-color: var(--darker-gray);
+    color: white;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+}
+
+/* Дополнительный враппер для контента */
+.FAQ__dropdown__content {
     line-height: 150%;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 10px;
-    
-    
+}
+
+.FAQ__dropdown-icon {
+    transition: transform 0.3s ease;
+}
+.accordion-button:not(.collapsed) .FAQ__dropdown-icon {
+    transform: rotate(45deg);
+}
+
+.FAQ__dropdown__header div {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    vertical-align: middle;
-
-}
-.FAQ__dropdown > details {
-    min-height: 120px;
-    box-sizing: border-box;
-
-    position: relative;
-    display: block;
-    max-width: 650px;
-    border-radius: 5px;
-    transition: 0.3s;
-    overflow: hidden;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.FAQ__dropdown > details::after {
-    position: absolute;
-    right: 32px;
-    top: 45px;
-    content: "";
-    display: block;
-    width: 20px;
-    height: 20px;
-    transform: rotate(0deg);
-    transform-origin: center;
-    transition: .3s;
-    z-index: 100;
-
-    background-image: url("../../assets/plus.svg");
-}
-
-.FAQ__dropdown > details[open]::after {
-    transform: rotate(90deg);
-}
-
-.FAQ__dropdown > details[open] {
-    padding-bottom: 120px;
-}
-
-.FAQ__dropdown > details[open] .details__title {
-    margin-bottom: 32px;
-}
-
-.details__title {
-
-    border-radius: 5px;
-    padding: 12px 24px;
-    font-size: 20px;
-    cursor: pointer;
-    list-style: none;
-    font-weight: 700;
-    transition: .3s;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.details__title::-webkit-details-marker {
-display: none;
-}
-
-.details__content {
-padding: 0 32px;
-font-size: 18px;
-margin-bottom: -60px;
-}
-
-.details__content p:last-child {
-margin-bottom: 0;
-}
-.details__content p:first-child {
-margin-top: 0;
+    justify-content: space-between;
 }

@@ -1,11 +1,11 @@
 import React from 'react';
-import Service from './Service'; 
-import Button from '../general/Button';  
-import tooth from '../../assets/tooth.svg'; 
+import Service from './Service';
+import Button from '../general/Button';
+import tooth from '../../assets/tooth.svg';
 import lamp from '../../assets/lamp.svg';
-import scaler from '../../assets/dental_scaler.svg'; 
+import scaler from '../../assets/dental_scaler.svg';
 import loupe from '../../assets/loupe.svg';
-import chair from '../../assets/dental_chair.svg'; 
+import chair from '../../assets/dental_chair.svg';
 import sciccors from '../../assets/sciccors.svg';
 
 const ServicesSection = () => {
@@ -58,18 +58,18 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="service">
-        
+    <section className="service container">
+
       <div>
         <h2>Услуги</h2>
-        
+
         <div className="service-flex">
           {servicesData.map((service, index) => (
-            <Service 
-              key={index} 
+            <Service
+              key={index}
               title={service.title}
               description={service.description}
-              image={service.image} 
+              image={service.image}
               alt={service.alt}
             />
           ))}

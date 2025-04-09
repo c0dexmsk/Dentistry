@@ -21,7 +21,6 @@ import tool from "../assets/toolPhoto.png"
 import { Link } from "react-router-dom";
 import goal from "../assets/goal.svg"
 import safe from "../assets/safe.svg"
-import "../styles/kids/Kids.css";
 
 import aizanat from "../assets/doctors/aizanat.png";
 import dina from "../assets/doctors/dina.png";
@@ -75,7 +74,7 @@ export default function Kids() {
             name: "Мусаева Маликат Магомедшапиевна",
             profession: "Детский стоматолог",
         },
-    ] 
+    ]
 
     return (
         <>
@@ -97,7 +96,7 @@ export default function Kids() {
                             <img className="rainbow-picture" src={rainbow} alt="Фотография Радуги" />
                             <img className="star2-picture" src={star2} alt="Фотография Звезды" />
                         </div>
-                        <Title 
+                        <Title
                             titleh1="Дети"
                             titleh2="Bego Kids"
                             description1="Все виды детской стоматологии: от чистки до лечения сложных случаев. Используем современные методы и материалы, чтобы сохранить зубки здоровыми и гарантировать лучший результат.  Комфорт и безопасность каждого ребенка – особый приоритет нашей команды. "
@@ -105,8 +104,8 @@ export default function Kids() {
                         />
                         <Video />
 
-                        <section>
-                            <DefautCard 
+                        <section className="container">
+                            <DefautCard
                                 title="Современное оборудование"
                                 description1="Отделение оснащено передовым оборудованием для точной диагностики и безболезненного лечения. Микроскопы ZEISS позволяют врачам проводить сложнейшие манипуляции (например, эндодонтическое лечение) максимально выверенно."
                                 description2="Безопасная седация с помощью аппаратов Drager и Matrx, а также щадящая чистка AIRFLOW® Prophylaxis Master гарантируют комфорт даже самым маленьким пациентам."
@@ -121,7 +120,7 @@ export default function Kids() {
                         </section>
 
                         <ServicesAndPrice />
-                        <KidsDoctors 
+                        <KidsDoctors
                             kidsDoctors={kidsDoctors}
                         />
 

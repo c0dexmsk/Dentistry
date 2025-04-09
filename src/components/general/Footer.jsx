@@ -6,20 +6,20 @@ import "../../styles/general/Footer.css";
 export default function Footer () {
 
     return (
-        <footer className="footer">
+        <footer className="footer container-fluid">
             <div className="footer__container">
 
                 <div className="footer__container__logo">
-                    <button> 
+                    <Link to="/main">
                         <img src={logoBig} alt="logo" />
-                    </button>
+                    </Link>
                 </div>
 
                  <div className="footer__container__column1">
                     <Link to="/about"> О клинике </Link>
                     <Link to="/kids"> Дети </Link>
                     <Link to="/doctors"> Врачи </Link>
-                </div>  
+                </div>
 
                 <div className="footer__container__column2">
                     <Link to="/cases"> Кейсы </Link>
@@ -29,7 +29,7 @@ export default function Footer () {
                         <option value="two">Three option</option>
                     </select>
                     <Link to="/"> Прайс </Link>
-                </div>  
+                </div>
 
                 <div className="footer__container__column3">
                     <Link to="/"> Контакты </Link>

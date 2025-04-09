@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ServicesPattern from './pages/ServicesPattern.jsx';
 import CasesProfile from "./components/cases/CasesProfile.jsx";
 import DoctorProfile from "./pages/DoctorProfile.jsx"
 import reportWebVitals from './reportWebVitals';
@@ -11,6 +12,7 @@ import ReactDOM from 'react-dom/client';
 import './styles/general/Normalize.css';
 import Cases from './pages/Cases.jsx';
 import Kids from './pages/Kids.jsx';
+import Services from './pages/ServicesPage.jsx';
 import React from 'react';
 import './index.css';
 
@@ -24,6 +26,8 @@ root.render(
               <Route path="/about" element={<AboutUs />} />
               <Route path="/kids" element={<Kids />} />
               <Route path="/doctors" element={<Doctors />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/services/:id" element={<ServicesPattern />} />
               <Route path="/doctors/:slug" element={<DoctorProfile />} />
               <Route path="/cases" element={<Cases />} />
               <Route path="/cases/:slug" element={<CasesProfile />} />

@@ -6,7 +6,8 @@
     height: 75px;
 }
 .header__container {
-    width: 1119px;
+    width: 77%;
+    max-width: 1120px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,7 +15,7 @@
 .header__container__icons img {
     height: 16px;
     width: 16px;
-}   
+}
 .header__container__logo img {
     height: 33px;
     width: 75px;

@@ -32,10 +32,10 @@ export default function Surgery_Implantation () {
             profession: "Стоматолог-хирург",
             link: "nurudinov-nurudin"
         },
-    ]  
+    ]
 
-    return( 
-        <section>
+    return(
+        <section className="container">
             <div className="doctors-branch">
                 <h2> Хирургия/имплантация </h2>
                 <div className="doctors-branch__grid row p-0 row border-box">

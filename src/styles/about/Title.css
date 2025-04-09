@@ -1,7 +1,9 @@
 
 
 .title {
-    width: 1120px;
+
+    max-width: 1120px;
+    width: 77%;
     height: 458px;
     margin-top: 90px;
 

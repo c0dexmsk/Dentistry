@@ -1,5 +1,4 @@
 
-import "../../styles/kids/ServicesAndPrice.css";
 import { Link } from "react-router-dom";
 
 export default function ServicesAndPrice () {
@@ -28,7 +27,7 @@ export default function ServicesAndPrice () {
     ]
 
     return(
-        <section>
+        <section className="container">
             <div className="kids-services">
                 <h2> Услуги и стоимость </h2>
 

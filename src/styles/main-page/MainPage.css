@@ -1,14 +1,10 @@
 #main-page-wrapper {
     display: grid;
     grid-template-rows: auto 1fr auto;
-    
-    /* background: rgb(222,229,239);
-    background: linear-gradient(300deg, rgba(222,229,239,0.5) 0%, rgba(238,234,232,0.5) 40%, rgba(245,236,229,0.5) 100%);
-    background-color: #F1EBE8;
-    background-image: url("../../assets/background-texture.png"); */
+    width: 100vw;
 
-    background-image: 
-    linear-gradient(rgba(241, 235, 232, 0.7), rgba(241, 235, 232, 0.7)), 
+    background-image:
+    linear-gradient(rgba(241, 235, 232, 0.7), rgba(241, 235, 232, 0.7)),
     url("../../assets/background-texture.png");
 
     background-repeat: repeat-y;
@@ -33,7 +29,7 @@
     justify-content: center;
     height: 185px;
     width: 1118px;
-    
+
     /* gap: 98px; */
 }
 .metrics h3 {
@@ -45,7 +41,7 @@
 .metrics > div > div {
     min-width: 168px;
     max-width: 256px;
-    
+
     margin-right: 98px;
 
     display: flex;

@@ -8,7 +8,6 @@ import Recovery from "../components/main-page/Recovery.jsx";
 import Header from "../components/general/Header.jsx";
 import Footer from "../components/general/Footer.jsx";
 import FAQ from "../components/main-page/FAQ.jsx";
-import "../styles/main-page/MainPage.css";
 import React from "react";
 
 export default function MainPage() {

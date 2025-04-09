@@ -18,10 +18,10 @@ export default function Periodontology () {
             profession: "Стоматолог-гигиенист",
             link : "murtazalieva-jariyat-hygienist"
         },
-    ]  
+    ]
 
-    return( 
-        <section>
+    return(
+        <section className="container">
             <div className="doctors-branch">
                 <h2> Пародонтология </h2>
                 <div className="doctors-branch__grid row p-0 row border-box">

@@ -1,0 +1,69 @@
+.pattern-block {
+    width: 77%;
+    max-width: 1120px;
+    /* background-color: lightcyan; */
+}
+.pattern-block .margin100 {
+    margin-top: 100px;
+}
+
+.pattern-block__image {
+    max-height: 85px;
+    aspect-ratio: 1/1;
+}
+.pattern-block__guide {
+    margin-left: 25px;
+}
+.pattern-block__guide p {
+    font-size: 1.25rem;
+    margin: 0;
+}
+.pattern-block__guide h3 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.pattern-block__text * {
+    position: relative;
+}
+.pattern-block__text img {
+    max-width: 510px;
+    width: 100%;
+    aspect-ratio: 1.172 / 1;
+
+}
+
+.pattern-block__text h1 {
+    font-size: 4rem;
+    z-index: 100;
+}
+
+.pattern-block__text p {
+    font-size: 1rem;
+    line-height: 150%;
+    z-index: 100;
+}
+
+.pattern-block__text.block2 img {
+    aspect-ratio: 1.04 / 1;
+    max-width: 520px;
+}
+
+.pattern-block__buttons button {
+    border: 2px solid var(--dark-gray);
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 17px 0;
+    width: 100%;
+}
+.pattern-block__buttons button:hover {
+    background-color: var(--dark-gray);
+    color: white;
+}
+
+.pattern-block .abilities > div > div > div {
+    background-color: white;
+    border-radius: 15px;
+    /* margin: 20px; */
+}

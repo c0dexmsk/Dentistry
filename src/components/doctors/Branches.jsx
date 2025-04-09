@@ -1,10 +1,10 @@
 
-export default function Branches () {
+export default function Branches ({Title}) {
 
-    return( 
-        <section>
+    return(
+        <section className="container">
             <div className="doctors column">
-                <h1> Врачи </h1>
+                <h1> {Title} </h1>
                 <div className="doctors__branches">
                     <h2> Отделения клиники </h2>
                     <div className="row p-0 row border-box">

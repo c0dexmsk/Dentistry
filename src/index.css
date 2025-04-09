@@ -1,3 +1,30 @@
+@import "./styles/main-page/Contacts.css";
+@import "./styles/main-page/DepartmentSection.css";
+@import "./styles/main-page/FAQ.css";
+@import "./styles/main-page/MainPage.css";
+@import "./styles/main-page/MainPageSwiper.css";
+@import "./styles/main-page/PersonalExperience.css";
+@import "./styles/main-page/Recovery.css";
+@import "./styles/main-page/Review.css";
+@import "./styles/main-page/Service.css";
+
+@import "./styles/about/ChildhoodImpressions.css";
+@import "./styles/about/Comfort.css";
+@import "./styles/about/DefaultCard.css";
+@import "./styles/about/FullCycle.css";
+@import "./styles/about/FutureTechnology.css";
+@import "./styles/about/Title.css";
+@import "./styles/about/Video.css";
+
+@import "./styles/kids/Kids.css";
+@import "./styles/kids/KidsDoctors.css";
+@import "./styles/kids/ServicesAndPrice.css";
+
+@import "./styles/doctors/Doctors.css";
+
+@import "./styles/services/ServicesPage.css";
+
+
 body {
   margin: 0;
   padding: 0;

@@ -1,4 +1,3 @@
-import "../../styles/main-page/PersonalExperience.css";
 import Review from "./Review";
 import React from "react";
 
@@ -6,7 +5,7 @@ export default function PersonalExperience() {
 
     return (
         <>
-            <section>
+            <section className="container">
                 <div className="experience">
                     <h2>
                         Личный опыт
