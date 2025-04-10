@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import Services from './pages/ServicesPage.jsx';
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "bootstrap/dist/css/bootstrap.min.css";
+import FullPrice from './pages/FullPrice.jsx';
 import MainPage from './pages/MainPage.jsx';
 import History from "./pages/History.jsx";
 import AboutUs from './pages/AboutUs.jsx';
@@ -35,6 +36,7 @@ root.render(
               <Route path="/cases/:slug" element={<CasesProfile />} />
               <Route path="/history" element={<History />} />
               <Route path="/price" element={<Price />} />
+              <Route path="/full-price" element={<FullPrice />} />
               <Route path="*" element={<MainPage />} />
           </Routes>
       </Router>

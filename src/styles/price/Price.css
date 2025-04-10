@@ -85,3 +85,47 @@
     color: #7F7F7F;
     margin-top: 20px;
 }
+
+.price-list {
+    width: 77%;
+    max-width: 1120px;
+}
+.price-list h1 {
+    margin-top: 90px;
+}
+.price-list__departments button {
+    padding: 16px 20px;
+    background-color: white;
+    border-radius: 60px;
+    color: black;
+    font-weight: bold;
+    width: auto;
+    height: 55px;
+    white-space: nowrap;
+}
+.price-list__departments button:hover {
+    background-color: var(--dark-gray);
+    color: white;
+}
+
+.price-list__departments div     {
+    display: flex;
+    gap: 20px; 
+  }
+.price-list h2 {
+    margin-bottom: 50px;
+}
+
+.price-list__sections p {
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+.bold {
+    font-weight: bold !important;
+}
+.price-list__sections hr {
+    border-color: rgba(21, 17, 14, 0.2);
+    border-width: 2px !important;
+    opacity: 1;
+    margin-bottom: 25px;
+}
