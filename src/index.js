@@ -3,6 +3,7 @@ import ServicesPattern from './pages/ServicesPattern.jsx';
 import CasesProfile from "./components/cases/CasesProfile.jsx";
 import DoctorProfile from "./pages/DoctorProfile.jsx"
 import reportWebVitals from './reportWebVitals';
+import Services from './pages/ServicesPage.jsx';
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MainPage from './pages/MainPage.jsx';
@@ -12,8 +13,8 @@ import Doctors from './pages/Doctors.jsx';
 import ReactDOM from 'react-dom/client';
 import './styles/general/Normalize.css';
 import Cases from './pages/Cases.jsx';
+import Price from './pages/Price.jsx';
 import Kids from './pages/Kids.jsx';
-import Services from './pages/ServicesPage.jsx';
 import React from 'react';
 import './index.css';
 
@@ -33,6 +34,7 @@ root.render(
               <Route path="/cases" element={<Cases />} />
               <Route path="/cases/:slug" element={<CasesProfile />} />
               <Route path="/history" element={<History />} />
+              <Route path="/price" element={<Price />} />
               <Route path="*" element={<MainPage />} />
           </Routes>
       </Router>

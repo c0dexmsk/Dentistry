@@ -26,6 +26,7 @@
 
 @import "./styles/history/History.css";
 
+@import "./styles/price/Price.css";
 
 body {
   margin: 0;

@@ -28,7 +28,7 @@ export default function Footer () {
                         <option value="two">Two option</option>
                         <option value="two">Three option</option>
                     </select>
-                    <Link to="/"> Прайс </Link>
+                    <Link to="/price"> Прайс </Link>
                 </div>
 
                 <div className="footer__container__column3">

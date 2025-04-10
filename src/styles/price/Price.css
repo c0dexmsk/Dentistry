@@ -1,0 +1,87 @@
+
+.price-block {
+    max-width: 1120px;
+    width: 77.7%;
+}
+.price-block h1 {
+    font-size: 4rem;
+    margin-top: 90px;
+}
+
+.price-block .accordion{
+    border-radius: 0 !important;
+    width: 80%;
+}
+.price-block  .accordion-item {
+    background-color: transparent;
+    border: none;
+    /* height: 248px; */
+    /* border-radius: 0; */
+    border-top: 1px solid rgba(21, 17, 14, 0.2);
+    border-bottom: 1px solid rgba(21, 17, 14, 0.2);
+    padding: 30px 0;
+}
+.price-block .accordion-item:first-of-type {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-width: 2px;
+}
+.price-block .accordion-item:last-of-type  {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.price-block  .accordion-header button{
+    background-color: transparent;
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    box-shadow: none;
+}
+.price-block .accordion-body {
+    font-size: 20px;
+}
+
+.price-block .accordion-button::after {
+    display: none !important;
+}
+  
+/* Add button */
+.price-block  .accordion-button:not(.collapsed)::before,
+.price-block  .accordion-button::before {
+    content: url("../../assets/price/polygon.svg");
+    font-size: 4rem;
+    font-weight: 300;
+    position: absolute;
+    left: 1rem;
+    transition: transform 0.3s ease;
+    transform: rotate(90deg);
+}
+  
+.price-block .accordion-button {
+    padding-left: 4rem; 
+}
+/* Rotate button */
+.price-block  .accordion-button:not(.collapsed)::before {
+    transform: rotate(0deg);
+}
+.price-block .accordion-button:not(.collapsed) {
+    color: black;
+}
+.price-block .item-title, .price-block .item-title h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.price-block .item-title p {
+    margin: 0;
+}
+.price-block .item-title div {
+    height: 0;
+    border-top: 1px solid rgba(21, 17, 14, 0.2);
+}
+
+.price-block .item-body p{
+    font-weight: 500;
+    line-height: 150%;
+    color: #7F7F7F;
+    margin-top: 20px;
+}
