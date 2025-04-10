@@ -54,7 +54,7 @@ export default function Review () {
             icon: proDoctorov,
             iconTitle: "ПроДокторов"
         },
-        /* Место для добавления отзыва */
+        /* a place to add a review  */
     ]
 
     return (

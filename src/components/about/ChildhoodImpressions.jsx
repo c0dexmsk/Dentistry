@@ -8,7 +8,7 @@ import Button from "../general/Button";
 export default function ChildhoodImpressions () {
 
     return (
-        <section className="child container">
+        <section className="child">
             <DefautCard
                 title="Детские впечатления"
                 description1="Особый протокол антистресс-лечения — соблюдается от и до, гарантируя безопасность и качество. Признанный препарат Севоран позволяет комфортно пройти сложные процедуры во сне. Наркозно-дыхательный аппарат Drager, применяемый в ведущих клиниках мира, обеспечивает беспрерывный мониторинг состояния ребенка в реальном времени."

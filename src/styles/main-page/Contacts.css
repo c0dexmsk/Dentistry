@@ -25,7 +25,6 @@
     display: flex;
     flex-direction: column;
     font-size: 1.25rem
-    /* align-items: ; */
 }
 .contacts__makhachkala__numbers span, .contacts__moscow__numbers span {
     font-weight: bold;

@@ -6,7 +6,6 @@
 }
 .kids-services__grid {
     display: grid;
-    /* grid-template-columns: repeat(3,360px); */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     grid-template-rows: repeat(2, 250px);
     gap: 20px;
@@ -20,12 +19,10 @@
     background-color: white;
     height: 250px;
     width: auto;
-    /* width: 360px; */
     border-radius: 25px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    /* gap: 88px; */
     gap: 3vw;
 }
 .kids-services__grid > div > p {

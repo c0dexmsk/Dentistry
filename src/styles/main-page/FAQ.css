@@ -34,14 +34,14 @@
 
 
 
-/*Стилизация аккордеона*/
+/*Accordeon styles*/
 .FAQ__dropdown {
     margin-bottom: 20px;
     border: none;
-    overflow: hidden; /* Важно: предотвращает "выползание" контента */
+    overflow: hidden; 
 }
 
-/* Стиль заголовка */
+/* Header styles */
 .FAQ__dropdown__header {
     background-color: var(--dark-gray);
     color: white;
@@ -54,10 +54,11 @@
     padding: 0 20px;
 }
 .FAQ__dropdown {
+    border-radius: 10px;
     background-color: var(--dark-gray);
     color: white;
 }
-/* Стиль для открытого заголовка */
+/* Styles for the open header  */
 .FAQ__dropdown__header:not(.collapsed) {
     background-color: var(--dark-gray);
     color: white;
@@ -69,15 +70,22 @@
     background-color: var(--dark-gray);
     color: white;
 }
-/* Стиль тела аккордеона */
+/* Style of accordeon body */
 .FAQ__dropdown__body {
     background-color: var(--darker-gray);
     color: white;
     border-radius: 0 0 10px 10px;
     padding: 20px;
 }
-
-/* Дополнительный враппер для контента */
+.FAQ .accordion-item:first-of-type {
+    border-top-right-radius: 10px ;
+    border-top-left-radius: 10px;
+}
+.FAQ .accordion-item:last-of-type {
+    border-bottom-right-radius: 10px !important;
+    border-bottom-left-radius: 10px;
+}
+/* additional wrapper for content */
 .FAQ__dropdown__content {
     line-height: 150%;
 }
@@ -85,10 +93,19 @@
 .FAQ__dropdown-icon {
     transition: transform 0.3s ease;
 }
-.accordion-button:not(.collapsed) .FAQ__dropdown-icon {
+.FAQ__dropdown .accordion-button:not(.collapsed) .FAQ__dropdown-icon {
     transform: rotate(45deg);
 }
-
+.FAQ__dropdown .accordion-button::after {
+    background-color: transparent;
+    background-image: none;
+}
+.FAQ__dropdown .accordion-item {
+    border-radius: 10px !important;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px !important;
+    background-color: aqua;
+}
 .FAQ__dropdown__header div {
     width: 100%;
     display: flex;

@@ -39,7 +39,6 @@
 }
 .doctor-profile button:first-child {
     top: 35px;
-    /* left: 45px; */
 }
 .doctor-profile button:nth-child(2) {
     top: 35px;
@@ -52,12 +51,6 @@
     align-items: center;
     gap: 18px;
 }
-/* .doctor-profile div:last-child{
-    /* height: 100% !important; */
-    /* display: flex;
-    flex-direction: column;
-    justify-content: flex-end; 
-} */
 .doctor-profile button:last-child {
     height: 60px;
     width: 360px;

@@ -8,7 +8,7 @@ import Button from "../general/Button";
 export default function FullCycle () {
 
     return (
-        <section className="full-cycle container">
+        <section className="full-cycle">
             <DefautCard
                 title="Полный цикл"
                 description1="Собственная зуботехническая лаборатория обеспечивает оперативное изготовление сложных ортопедических конструкций, Bego Маркет снабжает стоматологов

@@ -2,8 +2,8 @@
 export default function DefautCard ({title, description1, description2, image, icon1, icon2, icon3, icon1Title, icon2Title, icon3Title}) {
 
     return (
-        <div className="default-card">
-            <div className="default-card__text">
+        <div className="default-card row flex-nowrap justify-content-center">
+            <div className="default-card__text col-6">
 
                 <h2> {title} </h2>
                 <p>
@@ -31,8 +31,8 @@ export default function DefautCard ({title, description1, description2, image, i
                 </div>
 
             </div>
-            <div className="default-card__photo">
-                <img src={image} alt="Фотография" />
+            <div className="default-card__photo col-6">
+                <img className="container-fluid" src={image} alt="Фотография" />
             </div>
         </div>
     )

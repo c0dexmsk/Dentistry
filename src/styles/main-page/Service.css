@@ -59,7 +59,7 @@
     color: white;
 }
 
-/*Добавление уникальных размеров и отсутпов для блоков*/
+/*adding unique sizes and missing blocks*/
 
 .service__card:nth-child(1) {
     width: 312px;
@@ -96,12 +96,11 @@
     width: 142px;
 }
 
-/*Позиционирование кнопки по центру*/
+/* positioning the button in the center */
 
 .service__button-container {
     display: flex;
     justify-content: center;
     margin-top: 60px;
-    /* width: 100vw; */
 }
 
