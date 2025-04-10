@@ -26,24 +26,104 @@
     height: 250px;
     overflow: hidden;
     border-radius: 10px;
-    padding: 20px;
 }
 .diagnostics__blocks > div > div p {
     max-height: 100px;
-    max-width: 240px;
+    max-width: 215px;
+
+
     z-index: 100;
     position: relative;
+    padding: 20px;
+    box-sizing: border-box;
 }
 .diagnostics__blocks img {
     position: absolute;
     bottom: 0;
+    right: 0;
     z-index: 1;
+
 }
-
-
+.diagnostics__blocks .even-block img {
+    width: 60%;
+    height: auto;
+}
+.diagnostics__blocks .odd-block img {
+    width: 100%;
+    height: auto;
+}
+.diagnostics__blocks #unique-image {
+    width: 80%;
+}
+.diagnostics__blocks .odd-block {
+    width: 20.2%;
+}
+.diagnostics__blocks .even-block {
+    width: 28.3%;
+}
 .margin-top-100 {
     margin-top: 100px;
 }
 .margin-bottom-100  {
     margin-bottom: 100px;
+}
+
+
+.stages, .result, .team {
+    width: 77.7%;
+    max-width: 1120px;
+}
+
+.stages__stage > div {
+     color: white;
+     background-color: var(--dark-gray);
+     border-radius: 10px;
+     padding: 20px;
+     box-sizing: border-box;
+     position: relative;
+     min-height: 250px;
+}
+.stages__stage h3 {
+    font-size: 1.25rem;
+    /* white-space: nowrap; */
+    margin-bottom: 30px;
+}
+.stages__stage p {
+    font-size: 0.75rem;
+    line-height: 140%;
+}
+.stages__stage img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.result {
+    width: 77.7%;
+    max-width: 1120px;
+}
+.result p {
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 150%;
+}
+.team .col-3 {
+    margin-right: 100px;
+}
+.team img {
+    padding: 0;
+}
+.team h3 {
+    margin-top: 26px;
+    margin-bottom: 10px;
+}
+.team p {
+    margin-bottom: 34px;
+}
+.team a {
+    padding: 10px;
+    background-color: var(--dark-gray);
+    color:  white;
+    font-size: 0.75rem;
+    border-radius: 70px;
 }
