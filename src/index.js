@@ -16,6 +16,7 @@ import './styles/general/Normalize.css';
 import Cases from './pages/Cases.jsx';
 import Price from './pages/Price.jsx';
 import Kids from './pages/Kids.jsx';
+import Map from './pages/Map.jsx';
 import React from 'react';
 import './index.css';
 
@@ -37,6 +38,7 @@ root.render(
               <Route path="/history" element={<History />} />
               <Route path="/price" element={<Price />} />
               <Route path="/full-price" element={<FullPrice />} />
+              <Route path="/contacts" element={<Map />} />
               <Route path="*" element={<MainPage />} />
           </Routes>
       </Router>

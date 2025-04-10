@@ -32,7 +32,7 @@ export default function Footer () {
                 </div>
 
                 <div className="footer__container__column3">
-                    <Link to="/"> Контакты </Link>
+                    <Link to="/contacts"> Контакты </Link>
                 </div>
 
             </div>

@@ -1,0 +1,49 @@
+
+
+.map-block {
+    width: 77.7%;
+    max-width: 1120px;
+    margin-top: 90px;
+}
+.map-block__map {
+    position: relative;
+    margin-top: 64px;
+}
+.map-block__map__contacts {
+    background-color: white;
+    padding: 30px;
+    position: absolute;
+    top: 40px;
+    right: 50px;
+}
+.map-block__map__contacts h3 {
+    font-size: 1.25rem;
+}
+.map-block__map__contacts .contacts__makhachkala__numbers {
+    line-height: 150%;
+}
+
+/* .map-block__map > div {
+    position:relative;
+    overflow:hidden;
+} */
+/* .map-block__map > div > a:first-of-type{
+    color:#eee;
+    font-size:12px;
+    position:absolute;
+    top:0px;
+}
+.map-block__map > a:last-of-type {
+    color:#eee;
+    font-size:12px;
+    position:absolute;
+    top:14px;
+} */
+.map-block__map iframe {
+    position: relative;
+    height: 500px;
+    /* width: 560px; */
+}
+.light {
+    font-weight: lighter !important;
+}

@@ -28,6 +28,8 @@
 
 @import "./styles/price/Price.css";
 
+@import "./styles/map/Map.css";
+
 body {
   margin: 0;
   padding: 0;
