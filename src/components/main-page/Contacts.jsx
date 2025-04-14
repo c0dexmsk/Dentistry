@@ -2,7 +2,7 @@
 export default function Contacts () {
 
     return (
-        <section className="container">
+        <section className="container-fluid">
             <div className="contacts">
 
                 <h2> Контакты </h2>

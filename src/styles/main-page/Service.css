@@ -11,7 +11,8 @@
 }
 
 .service > div {
-    width: 1122px;
+    width: 80%;
+    max-width: 1120px;
     height: 728px;
 
 }
@@ -19,6 +20,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: center;
+
     height: 520px;
     gap: 20px;
 }

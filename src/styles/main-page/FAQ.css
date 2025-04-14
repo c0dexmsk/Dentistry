@@ -1,6 +1,7 @@
 
 .FAQ {
-    width: 1120px;
+    max-width: 1120px;
+    width: 77.7%;
     height: 400px;
     margin-top: 150px;
     display: flex;
@@ -38,7 +39,7 @@
 .FAQ__dropdown {
     margin-bottom: 20px;
     border: none;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 /* Header styles */

@@ -24,7 +24,7 @@ export default function FAQ() {
     ]
 
     return (
-        <section className="container">
+        <section className="container-fluid">
                 <div className="FAQ">
                     <div>
                         <div>

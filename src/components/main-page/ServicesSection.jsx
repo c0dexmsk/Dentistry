@@ -58,7 +58,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="service container">
+    <section className="service container-fluid">
 
       <div>
         <h2>Услуги</h2>
