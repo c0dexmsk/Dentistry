@@ -37,3 +37,28 @@
     max-width: 550px;
     border-radius: 10px;
 }
+@media (max-width: 760px) {
+    .default-card {
+        width: 100%;
+        
+    }
+    .default-card__photo {
+        /* width: 100vw; */
+        /* margin-left: calc(-50vw + 50%); */
+    }
+    .default-card__photo > img {
+        border-radius: 0;
+        
+    }
+    .default-card {
+        width: 90%;
+    }
+    .default-card__text p {
+        margin-top: 15px;
+    }
+    .default-card__text hr {
+        border-color: rgba(31, 31, 31, 0.5);
+        opacity: 1;
+    }
+    
+}
