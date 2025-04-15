@@ -2,23 +2,21 @@
 import Zainap from "../../assets/Zainap.png";
 import Button from '../general/Button';
 import roundTooth from "../../assets/round-tooth.png"
+import withBitrixData from '../../hocs/withBitrixData';
 
-export default function MainSlide () {
+function MainSlide ({ bitrixData }) {
 
     return (
         <div className='main-swiper-wrapper'>
             <div className="main-swiper-slide">
-        
+
                 <div className='main-swiper-slide__text'>
                     <h1>
-                    Вам улыбается Зайнап
+                        {bitrixData.MAIN_SWIPER_TITLE}
                     </h1>
 
                     <p>
-                    История Зайнап — это путь от неуверенности
-                    к ослепительному сиянию. Раньше она словно прятала
-                    свою уникальность, теперь же её лицо излучает гармонию
-                    и спокойствие.
+                        {bitrixData.MAIN_SWIPER_TEXT}
                     </p>
 
                     <Button> Посмотреть кейс </Button>
@@ -26,8 +24,8 @@ export default function MainSlide () {
                     <div>
                     <img src={roundTooth} alt="Зубы" />
                     <p>
-                        <span> 88% </span>
-                        Возвращаются к нам с семьей
+                        <span> {bitrixData.PERCENT_VALUE} </span>
+                        {bitrixData.PERCENT_TEXT}
                     </p>
                     </div>
                 </div>
@@ -37,3 +35,5 @@ export default function MainSlide () {
       </div>
     )
 }
+
+export default withBitrixData(MainSlide, 'main_page');

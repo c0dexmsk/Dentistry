@@ -1,0 +1,25 @@
+{
+    "pages": [
+      {
+        "code": "main",
+        "name": "Главная страница",
+        "content": {
+          "sections": [
+            {
+              "type": "slider",
+              "props": {
+                "slides": [
+                  {
+                    "title": "Вам улыбается Зайнап",
+                    "text": "История Зайнап...",
+                    "buttonText": "Посмотреть кейс"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "mainImage": "/local/images/default.jpg"
+      }
+    ]
+  }

@@ -22,7 +22,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate-config": "node scripts/generateConfig.js",
+    "deploy": "npm run generate-config && npm run build && rsync -av build/ bitrix:/local/templates/react_app/"
   },
   "eslintConfig": {
     "extends": [

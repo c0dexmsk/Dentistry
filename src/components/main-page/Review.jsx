@@ -11,6 +11,7 @@ import gis2 from "../../assets/GIS2Icon.svg";
 import proDoctorov from "../../assets/ProDoctorovIcon.svg";
 import arrowPrev from "../../assets/arrow-prev.svg";
 import arrowNext from "../../assets/arrow-next.svg";
+import withBitrixData from '../../hocs/withBitrixData';
 
 const SwiperButtons = () => {
     const swiper = useSwiper(); // Получаем экземпляр Swiper
@@ -27,11 +28,12 @@ const SwiperButtons = () => {
     );
 };
 
-export default function Review () {
+function Review ({bitrixData}) {
 
     const reviewData = [
         {
-            name: "Азиз Магомедов",
+            // name: "Азиз Магомедов",Ы
+            name: bitrixData.MAIN_SWIPER_TITLE,
             starsCount: 5,
             department: 'Отеделение Хирургия',
             description: "Отличная стоматология. Консультация, чистка зубов и лечение последних выполнено на профессиональном уровне. Доволен результатом. Жаль не успел все зубы полечить. В дальнейшем буду лечиться здесь.",
@@ -90,3 +92,4 @@ export default function Review () {
         </>
     )
 }
+export default withBitrixData(Review, 'main_page')
