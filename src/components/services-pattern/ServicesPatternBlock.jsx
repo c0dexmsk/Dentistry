@@ -3,26 +3,28 @@ import xray from "./images/rentgen-person.png";
 import icon from "./images/block-icon.svg"
 import { Link } from "react-router-dom";
 
-export default function ServicesPatternBlock ({content}) {
+import withBitrixServiceData from '../../hocs/withBitrixServiceData';
+
+function ServicesPatternBlock ({bitrixData}) {
 
     return (
         <section className="container-fluid">
             <div className="pattern-block">
 
-                <div className="container row justify-content-center align-items-center">
+                <div className="container row justify-bitrixData-center align-items-center">
                     <div className="col-1">
-                        <img className="pattern-block__image" src={content.guideImage} alt="Фотография врача" />
+                        <img className="pattern-block__image" src={icon} alt="Фотография врача" />
                     </div>
                     <div className="pattern-block__guide col">
                         <p> Экскурсию по отделению проводит </p>
-                        <h3> {content.guideName} </h3>
+                        <h3> {bitrixData.guideName} </h3>
                     </div>
                 </div>
 
                 <div className="row pattern-block__text mt-5">
                     <div className="col-7">
-                        <h1> {content.title_H1} </h1>
-                        <p> {content.description_H1} </p>
+                        <h1> {bitrixData.title_H1} </h1>
+                        <p> {bitrixData.description_H1} </p>
                     </div>
                     <div className="col-5">
                         <img src={xray} alt="фотография" />
@@ -46,12 +48,12 @@ export default function ServicesPatternBlock ({content}) {
 
                 <div className="row align-items-center pattern-block__text block2 margin100">
                     <div className="col-5">
-                        <img src={content.image} alt="фотография" />
+                        <img src={bitrixData.image} alt="фотография" />
                     </div>
                     <div className="col-7 ">
-                        <h2> {content.title_H2} </h2>
-                        <p> {content.description1_H2} </p>
-                        <p> {content.description2_H2} </p>
+                        <h2> {bitrixData.title_H2} </h2>
+                        <p> {bitrixData.description1_H2} </p>
+                        <p> {bitrixData.description2_H2} </p>
                     </div>
                 </div>
 
@@ -60,19 +62,19 @@ export default function ServicesPatternBlock ({content}) {
                     <div className="row mt-4 g-4">
                         <div className="col-md-12 col-lg-6">
                             <p>
-                                {content.important_1}
+                                {bitrixData.important_1}
                             </p>
                         </div>
                         <div className="col-md-12 col-lg-6">
                             <p>
-                                {content.important_2}
+                                {bitrixData.important_2}
                             </p>
                         </div>
                     </div>
                 </div>
 
                 <div className="margin100 abilities">
-                    <h2> {content.ability_H2} </h2>
+                    <h2> {bitrixData.ability_H2} </h2>
                     <div className="row mt-5 g-4">
 
                         <div className="col-md-12 col-lg-6">
@@ -82,13 +84,13 @@ export default function ServicesPatternBlock ({content}) {
                                         <img src={icon} alt="иконка" />
                                     </div>
                                     <div className="col-10">
-                                        <h3> {content.ability_block1.title} </h3>
+                                        <h3> {bitrixData.abilityBlocks[0].title} </h3>
                                     </div>
                                 </div>
 
                                 <div>
                                     <p>
-                                        {content.ability_block1.description}
+                                        {bitrixData.abilityBlocks[0].description}
                                     </p>
                                 </div>
                             </div>
@@ -101,13 +103,13 @@ export default function ServicesPatternBlock ({content}) {
                                         <img src={icon} alt="иконка" />
                                     </div>
                                     <div className="col-10">
-                                        <h3> {content.ability_block2.title} </h3>
+                                        <h3> {bitrixData.abilityBlocks[1].title} </h3>
                                     </div>
                                 </div>
 
                                 <div>
                                     <p>
-                                        {content.ability_block2.description}
+                                        {bitrixData.abilityBlocks[1].description}
                                     </p>
                                 </div>
                             </div>
@@ -119,13 +121,13 @@ export default function ServicesPatternBlock ({content}) {
                                         <img src={icon} alt="иконка" />
                                     </div>
                                     <div className="col-10">
-                                        <h3> {content.ability_block3.title} </h3>
+                                        <h3> {bitrixData.abilityBlocks[2].title} </h3>
                                     </div>
                                 </div>
 
                                 <div>
                                     <p>
-                                        {content.ability_block3.description}
+                                        {bitrixData.abilityBlocks[2].description}
                                     </p>
                                 </div>
                             </div>
@@ -138,13 +140,13 @@ export default function ServicesPatternBlock ({content}) {
                                         <img src={icon} alt="иконка" />
                                     </div>
                                     <div className="col-10">
-                                        <h3> {content.ability_block4.title} </h3>
+                                        <h3> {bitrixData.abilityBlocks[3].title} </h3>
                                     </div>
                                 </div>
 
                                 <div>
                                     <p>
-                                        {content.ability_block4.description}
+                                        {bitrixData.abilityBlocks[3].description}
                                     </p>
                                 </div>
                             </div>
@@ -156,13 +158,13 @@ export default function ServicesPatternBlock ({content}) {
 
                 <div className="margin100 pattern-block__services">
 
-                    <div className="row align-items-center justify-content-between">
+                    <div className="row align-items-center justify-bitrixData-between">
                         <h2 className="col-8"> Услуги и стоимость </h2>
                         <Link to="/price" className="col text-end"> Прайс на все услуги </Link>
                     </div>
 
                     <div className="row g-3 mt-4 align-items-center">
-                        {content.services.map((el,index) => {
+                        {bitrixData.services.map((el,index) => {
                             return (
                                 <div className="col-4 element" key={index}>
                                     <div>
@@ -180,39 +182,41 @@ export default function ServicesPatternBlock ({content}) {
                                 <Link to="/price"> Полный прайс </Link>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
 
                 <div className="margin100 pattern-block__questions">
                     <h2>Ваши вопросы</h2>
                     <div className="pattern-block__questions__accordeon mt-5">
-                        <Accordion defaultActiveKey={["0", "1", "2"]} alwaysOpen>
+                        {/* <Accordion defaultActiveKey={["0", "1", "2"]} alwaysOpen>
                             <Accordion.Item eventKey="0">
-                                <Accordion.Header>{content.questions[0].question}</Accordion.Header>
+                                <Accordion.Header>{bitrixData.questions[0].question}</Accordion.Header>
                                 <Accordion.Body>
-                                    {content.questions[0].answer}
+                                    {bitrixData.questions[0].answer}
                                 </Accordion.Body>
                             </Accordion.Item>
 
                             <Accordion.Item eventKey="1">
-                            <Accordion.Header>{content.questions[1].question}</Accordion.Header>
+                            <Accordion.Header>{bitrixData.questions[1].question}</Accordion.Header>
                                 <Accordion.Body>
-                                    {content.questions[1].answer}
+                                    {bitrixData.questions[1].answer}
                                 </Accordion.Body>
                             </Accordion.Item>
 
                             <Accordion.Item eventKey="2">
-                            <Accordion.Header>{content.questions[2].question}</Accordion.Header>
+                            <Accordion.Header>{bitrixData.questions[2].question}</Accordion.Header>
                                 <Accordion.Body>
-                                    {content.questions[2].answer}
+                                    {bitrixData.questions[2].answer}
                                 </Accordion.Body>
                             </Accordion.Item>
 
-                            </Accordion>
+                            </Accordion> */}
                     </div>
                 </div>
             </div>
         </section>
     )
 }
+
+export default withBitrixServiceData(ServicesPatternBlock);

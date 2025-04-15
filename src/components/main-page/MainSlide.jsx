@@ -30,7 +30,7 @@ function MainSlide ({ bitrixData }) {
                     </div>
                 </div>
 
-            <img src={Zainap} alt="Зайнап" />
+            <img src={bitrixData.HERO_SWIPER_IMAGE} alt="Зайнап" />
         </div>
       </div>
     )

@@ -37,8 +37,12 @@ export default function withBitrixData(WrappedComponent) {
             MAIN_SWIPER_BUTTON: result.data.content.MAIN_SWIPER_BUTTON,
             PERCENT_VALUE: result.data.content.PERCENT_VALUE,
             PERCENT_TEXT: result.data.content.PERCENT_TEXT,
-            HERO_SWIPER_IMAGE: result.data.content.HERO_SWIPER_IMAGE,
-            TOOTH_SWIPER_ICON: result.data.content.TOOTH_SWIPER_ICON
+            HERO_SWIPER_IMAGE: result.data.content.HERO_SWIPER_IMAGE
+                    ? result.data.content.HERO_SWIPER_IMAGE
+                    : '/local/templates/react_app/assets/static/media/zainap.png',
+            TOOTH_SWIPER_ICON: result.data.content.TOOTH_SWIPER_ICON,
+            RECOVERY_TITLE: result.data.content.RECOVERY_TITLE,
+            RECOVERY_TEXT: result.data.content.RECOVERY_TEXT,
           });
         } catch (err) {
           console.error('Fetch error:', err);
