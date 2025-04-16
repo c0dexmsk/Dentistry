@@ -8,7 +8,9 @@ import Stages  from "../components/history/Stages.jsx";
 import Result from "../components/history/Result.jsx";
 import Team from "../components/history/Team.jsx";
 
-export default function MainPage() {
+import withBitrixHistoryData from "hocs/withBitrixHistoryData.js";
+
+ function History({bitrixData}) {
 
     return (
         <>
@@ -16,11 +18,11 @@ export default function MainPage() {
                 <Header />
                 <div>
 
-                    <HistoryTitle />
-                    <Diagnostics />
-                    <Stages />
-                    <Result />
-                    <Team />
+                    <HistoryTitle bitrixData={bitrixData}/>
+                    <Diagnostics bitrixData={bitrixData} />
+                    <Stages bitrixData={bitrixData}/>
+                    <Result bitrixData={bitrixData}/>
+                    <Team bitrixData={bitrixData}/>
 
                 </div>
                 <Footer />
@@ -28,3 +30,5 @@ export default function MainPage() {
         </>
     )
 }
+
+export default withBitrixHistoryData(History);

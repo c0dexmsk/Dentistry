@@ -17,7 +17,19 @@
 }
 .diagnostics__blocks {
     max-width: 1120px;
+   
 }
+
+.diagnostics > div {
+    width: 77%;
+    display: flex;
+    justify-content: center;
+}
+.diagnostics > div > div {
+    max-width: 1120px;
+    width: 100%;
+}
+
 .diagnostics__blocks > div > div {
     background-color: white;
     color: black;

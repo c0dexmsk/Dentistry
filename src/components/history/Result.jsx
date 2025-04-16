@@ -2,7 +2,7 @@
 import img1 from "../../assets/history/zainap-1.png";
 import img2 from "../../assets/history/zainap-2.png";
 
-export default function Result () {
+export default function Result ({bitrixData}) {
     
     return (
         <section>
@@ -10,22 +10,20 @@ export default function Result () {
                 <h2> Результат </h2>
                 <div className="row flex-nowrap mt-5">
                     <div className="col-3">
-                        <img className="container-fluid" src={img1} alt="Зайнап" />
+                        <img className="container-fluid" src={bitrixData.RESULT_PHOTO1} alt="Зайнап" />
                     </div>
                     <div className="col-3">
-                        <img className="container-fluid" src={img2} alt="Зайнап" />
+                        <img className="container-fluid" src={bitrixData.RESULT_PHOTO2} alt="Зайнап" />
                     </div>
                     <div className="col-6 d-flex flex-column align-items-start justify-content-center">
                         <p>
-                            Зайнап покидала клинику с сияющей улыбкой, отражающей её внутренние перемены.                            
+                        {bitrixData.RESULT1}                           
                         </p>
                         <p>
-                            На каждом этапе – от санации до установки керамических реставраций – она наблюдала, как преображается
-                            её улыбка. Пациентка осталась довольна достигнутым эстетическим и функциональным результатом лечения. 
+                        {bitrixData.RESULT2}       
                         </p>
                         <p>
-                            Зайнап, это был удивительный путь. 
-                            Спасибо за доверие.
+                        {bitrixData.RESULT3}       
                         </p>
                     </div>
                 </div>
