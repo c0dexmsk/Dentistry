@@ -10,11 +10,14 @@ import direction from "../components/doctors/direction.svg";
 import experience from "../components/doctors/experience.svg";
 import education from "../components/doctors/education.svg";
 
-export default function DoctorProfile() {
+import withBitrixDoctorsData from "../hocs/withBitrixDoctorsData";
+
+function DoctorProfile({bitrixData}) {
+
   const { slug } = useParams();
-  const doctor = doctors.find(doc => doc.slug === slug);
+//   const bitrixData = doctors.find(doc => doc.slug === slug);
   const navigate = useNavigate();
-  if (!doctor) return <div>Доктор не найден</div>;
+  if (!bitrixData) return <div>Доктор не найден</div>;
 
   return (
     <div className="doctor-profile d-flex flex-column flex-wrap justify-content-end g-0 align-items-end">
@@ -29,40 +32,45 @@ export default function DoctorProfile() {
                 <img src={close} alt="закрыть" />
             </button>
 
-            <h1>{doctor.name}</h1>
+            <h1>{bitrixData.name}</h1>
 
             <div>
                 <h2>Специализация:</h2>
                 <img src={specialization} alt="Специализация" />
             </div>
-            <p> {doctor.specialization} </p>
+            <p> {bitrixData.specialization} </p>
 
             <div>
                 <h2>Направление лечения: </h2>
                 <img src={direction} alt="Направление лечения" />
             </div>
-            <p> {doctor.direction} </p>
+            <p> {bitrixData.direction} </p>
 
             <div>
                 <h2>Стаж:</h2>
                 <img src={experience} alt="Стаж" />
             </div>
-            <p> {doctor.experience} </p>
+            <p> {bitrixData.experience} </p>
 
             <div>
                 <h2>Образование: </h2>
                 <img src={education} alt="Образование" />
             </div>
-            {doctor.education}
+            
+            <p
+                dangerouslySetInnerHTML={{ __html: bitrixData.education.TEXT }}
+            />
 
             <button>Записаться на прием</button>
             
         </div>
 
         <div className="col-md-6 flex-grow-1">
-             <img src={doctor.photo} alt={doctor.name} className="img-fluid h-100 object-fit-cover" />
+             <img src={bitrixData.photo} alt={bitrixData.name} className="img-fluid h-100 object-fit-cover" />
         </div>
         
     </div>
   );
 }
+
+export default withBitrixDoctorsData(DoctorProfile);
