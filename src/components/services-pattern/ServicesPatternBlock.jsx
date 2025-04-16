@@ -189,7 +189,7 @@ function ServicesPatternBlock ({bitrixData}) {
                 <div className="margin100 pattern-block__questions">
                     <h2>Ваши вопросы</h2>
                     <div className="pattern-block__questions__accordeon mt-5">
-                        {/* <Accordion defaultActiveKey={["0", "1", "2"]} alwaysOpen>
+                        <Accordion defaultActiveKey={["0", "1", "2"]} alwaysOpen>
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>{bitrixData.questions[0].question}</Accordion.Header>
                                 <Accordion.Body>
@@ -211,7 +211,7 @@ function ServicesPatternBlock ({bitrixData}) {
                                 </Accordion.Body>
                             </Accordion.Item>
 
-                            </Accordion> */}
+                            </Accordion>
                     </div>
                 </div>
             </div>
