@@ -5,9 +5,9 @@
     position: relative;
 }
 .full-cycle__button {
-    position: absolute;
-    bottom: 200px;
-    width: 1120px;
+    margin-top: 50px;
+    width: 77%;
+    max-width: 1120px;
     display: flex;
     justify-content: flex-end;
 }

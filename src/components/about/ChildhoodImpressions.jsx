@@ -20,10 +20,11 @@ export default function ChildhoodImpressions () {
                 icon1Title="Игра"
                 icon2Title="Антистресс"
                 icon3Title="Сон"
-            />
-            <div className="child__button">
-                <Button> Все услуги </Button>
-            </div>
+            >
+                <div className="child__button">
+                    <Button> Все услуги </Button>
+                </div>
+            </DefautCard>
         </section>
     )
 }

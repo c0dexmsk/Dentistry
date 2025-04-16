@@ -23,10 +23,11 @@ export default function FullCycle () {
                 icon1Title="Лаборатория"
                 icon2Title="Бегомаркет"
                 icon3Title="Академия"
-            />
+            >
             <div className="full-cycle__button">
                 <Button> Все услуги </Button>
             </div>
+            </DefautCard>
         </section>
     )
 }
