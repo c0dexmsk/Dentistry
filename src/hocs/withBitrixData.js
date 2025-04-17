@@ -30,7 +30,8 @@ export default function withBitrixData(WrappedComponent) {
           const contentData = result.data.content.content
             ? JSON.parse(result.data.data.content)
             : {};
-
+          console.log(contentData);
+          
           setData({
             MAIN_SWIPER_TITLE: result.data.content.title || 'Без названия',
             MAIN_SWIPER_TEXT: result.data.content.MAIN_SWIPER_TEXT,
@@ -43,6 +44,7 @@ export default function withBitrixData(WrappedComponent) {
             TOOTH_SWIPER_ICON: result.data.content.TOOTH_SWIPER_ICON,
             RECOVERY_TITLE: result.data.content.RECOVERY_TITLE,
             RECOVERY_TEXT: result.data.content.RECOVERY_TEXT,
+            QUESTIONS: result.data.content.QUESTIONS,
           });
         } catch (err) {
           console.error('Fetch error:', err);

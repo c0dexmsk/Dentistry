@@ -2,23 +2,25 @@
 import faq from "../../assets/FAQ.svg"
 import FAQDropdown from "./FAQDropdown";
 import Accordion from 'react-bootstrap/Accordion';
+import withBitrixData from "hocs/withBitrixData";
 
-export default function FAQ() {
-
+ function FAQ({bitrixData}) { 
+    
     const FAQDescription = [
         {
-            title: 'Как вы обеспечиваете безопасность лечения в вашей клинике?',
-            description: 'Безопасность – наш приоритет. Мы используем многоступенчатую стерилизацию: дезинфекция, очистка и автоклавирование инструментов под высоким давлением (134°C). Контролируем каждый этап. ',
+            // title: 'Как вы обеспечиваете безопасность лечения в вашей клинике?',
+            title:  bitrixData.QUESTIONS[0].question,
+            description: bitrixData.QUESTIONS[0].answer,
             eventKey: "0",
         },
         {
-            title: 'Что делать с зубами мудрости: удалять или можно оставить?',
-            description: 'Удалять или оставить зуб мудрости решает врач после осмотра и снимка. Рекомендуем удаление при неправильном росте, воспалении, кариесе или нехватке места. Если зуб не беспокоит, можно оставить его под наблюдением. ',
+            title:  bitrixData.QUESTIONS[1].question,
+            description: bitrixData.QUESTIONS[1].answer,
             eventKey: "1"
         },
         {
-            title: 'Что делать, если ребенку выбили зуб? ',
-            description: 'При выбитом зубе нужно действовать быстро. Найдите зуб, держите его за коронку. Промойте холодной водой (не трите). Если зуб постоянный, попробуйте вернуть в лунку, либо поместите в молоко/физраствор. — и срочно к стоматологу. В первые 30 минут шансы спасти зуб выше.',
+            title:  bitrixData.QUESTIONS[2].question,
+            description: bitrixData.QUESTIONS[2].answer,
             eventKey: "2",
         },
     ]
@@ -54,3 +56,6 @@ export default function FAQ() {
         </section>
     )
 }
+
+
+export default withBitrixData(FAQ);
