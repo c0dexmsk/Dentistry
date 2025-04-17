@@ -1,3 +1,4 @@
+import withBitrixBranchesDoctorsData from "hocs/withBitrixBranchesDoctorsData";
 
 import aizanat from "../../assets/doctors/garsha.png";
 import dina from "../../assets/doctors/kinanat.png";
@@ -14,9 +15,12 @@ import patimat from "../../assets/doctors/patimat.png";
 
 import DoctorCard from "./DoctorCard";
 
-export default function Therapy () {
+function Therapy ({bitrixData}) {
 
-    const doctorsList = [
+    const doctorsList = bitrixData.filter(user => user.departmentId === "7")
+    console.log(doctorsList);
+
+    const doctorsStaticList = [
         {
             photo: aizanat,
             name: "Ахмедов Гарша Дамаданович",
@@ -101,3 +105,4 @@ export default function Therapy () {
     )
 
 }
+export default withBitrixBranchesDoctorsData(Therapy);

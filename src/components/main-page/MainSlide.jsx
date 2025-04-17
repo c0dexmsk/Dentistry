@@ -22,7 +22,7 @@ function MainSlide ({ bitrixData }) {
                     <Button> Посмотреть кейс </Button>
 
                     <div>
-                    <img src={roundTooth} alt="Зубы" />
+                    <img src={bitrixData.TOOTH_SWIPER_ICON} alt="Зубы" />
                     <p>
                         <span> {bitrixData.PERCENT_VALUE} </span>
                         {bitrixData.PERCENT_TEXT}

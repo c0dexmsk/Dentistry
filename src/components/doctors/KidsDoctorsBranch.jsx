@@ -1,3 +1,4 @@
+import withBitrixBranchesDoctorsData from "hocs/withBitrixBranchesDoctorsData";
 import aizanat from "../../assets/doctors/aizanat.png";
 import dina from "../../assets/doctors/dina.png";
 import kamila from "../../assets/doctors/kamilla.png";
@@ -13,9 +14,11 @@ import azai from "../../assets/doctors/azai.png";
 
 import KidsDoctors from "../kids/KidsDoctors";
 
+function KidsDoctorsBranch ({bitrixData}) {
 
-export default function KidsDoctorsBranch () {
-    const kidsDoctors = [
+    const kidsDoctors = bitrixData.filter(user => user.departmentId === "11")
+
+    const doctorList = [
         {
             photo: aizanat,
             name: "Абдурахманова Айзанат",
@@ -115,3 +118,5 @@ export default function KidsDoctorsBranch () {
         </div>
     )
 }
+
+export default withBitrixBranchesDoctorsData(KidsDoctorsBranch);

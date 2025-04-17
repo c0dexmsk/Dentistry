@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-export default function withBitrixReviewsData(WrappedComponent) {
+export default function withBitrixBranchesDoctorsData(WrappedComponent) {
   return function(props) {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -11,7 +11,7 @@ export default function withBitrixReviewsData(WrappedComponent) {
         try {
 
           const response = await fetch(
-            'http://nonscrdk.beget.tech/local/api/?endpoint=get-reviews&pageCode=reviews_page'
+            'http://nonscrdk.beget.tech/local/api/?endpoint=get-reviews&pageCode=branches_page'
           );
 
           const result = await response.json();
@@ -20,18 +20,26 @@ export default function withBitrixReviewsData(WrappedComponent) {
               throw new Error(result.error || 'Ошибка сервера');
           }
             
-          const reviewData = result.data.map(review => ({
-              name: review.author,
-              starsCount: review.stars,
-              department: review.department,
-              description: review.text,
-              icon: review.icon || '',
-              iconTitle: review.iconTitle || 'Источник'
+          //Surgery_Implantation - 5
+          //Orthopedics - 6
+          //Therapy - 7
+          //Orthodontics - 8
+          //Periodontology-9
+          //Anesthesiologists -10
+          //KidsDoctorsBranch -11
+
+          const doctorsData = result.data.map(doc => ({
+            name: doc.name,
+            profession: doc.profession,
+            department: doc.department,
+            photo: doc.photo,
+            link: doc.link,
+            departmentId: doc.departmentId
           }));
 
-          console.log(reviewData);
+          console.log(doctorsData);
           
-          setData(reviewData);
+          setData(doctorsData);
 
         } catch (err) {
           console.error('Fetch error:', err);

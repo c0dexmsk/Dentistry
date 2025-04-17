@@ -1,3 +1,4 @@
+import withBitrixBranchesDoctorsData from "hocs/withBitrixBranchesDoctorsData";
 import aizanat from "../../assets/doctors/usuf.png";
 import dina from "../../assets/doctors/gadzi.png";
 import kamila from "../../assets/doctors/shamil.png";
@@ -5,9 +6,12 @@ import siadat from "../../assets/doctors/nurudin.png";
 import DoctorCard from "./DoctorCard";
 
 
-export default function Surgery_Implantation () {
+function Surgery_Implantation ({bitrixData}) {
 
-    const doctorsList = [
+    const doctorsList = bitrixData.filter(user => user.departmentId === "5")
+    console.log(doctorsList);
+
+    const doctorsStaticList = [
         {
             photo: aizanat,
             name: "Гитихмаев Юсуф Магомедович",
@@ -55,3 +59,5 @@ export default function Surgery_Implantation () {
         </section>
     )
 }
+
+export default withBitrixBranchesDoctorsData(Surgery_Implantation)

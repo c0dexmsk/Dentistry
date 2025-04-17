@@ -1,11 +1,14 @@
 
+import withBitrixBranchesDoctorsData from "hocs/withBitrixBranchesDoctorsData";
 import tamila from "../../assets/doctors/zamira.png";
 import gamid from "../../assets/doctors/zariat.png";
 import DoctorCard from "./DoctorCard";
 
-export default function Anesthesiologists () {
+ function Anesthesiologists ({bitrixData}) {
 
-    const doctorsList = [
+    const doctorsList = bitrixData.filter(user => user.departmentId === "10")
+
+    const doctorsStaticList = [
         {
             photo: "tamila",
             name: "Рамазанова Милейсат Гаджиевна",
@@ -40,3 +43,5 @@ export default function Anesthesiologists () {
         </section>
     )
 }
+
+export default withBitrixBranchesDoctorsData(Anesthesiologists);

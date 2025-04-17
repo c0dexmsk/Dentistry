@@ -1,11 +1,14 @@
+import withBitrixBranchesDoctorsData from "hocs/withBitrixBranchesDoctorsData";
 import tamila from "../../assets/doctors/tamila.png";
 import gamid from "../../assets/doctors/gamid.png";
 import DoctorCard from "./DoctorCard";
 
+function Orthodontics ({bitrixData}) {
 
-export default function Orthodontics () {
+    const doctorsList = bitrixData.filter(user => user.departmentId === "8")
+    console.log(doctorsList);
 
-    const doctorsList = [
+    const doctorsStaticList = [
         {
             photo: tamila,
             name: "Асланова Тамила Замрутдиновна",
@@ -40,3 +43,4 @@ export default function Orthodontics () {
         </section>
     )
 }
+export default withBitrixBranchesDoctorsData(Orthodontics);

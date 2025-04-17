@@ -1,3 +1,4 @@
+import withBitrixBranchesDoctorsData from "hocs/withBitrixBranchesDoctorsData";
 import aizanat from "../../assets/doctors/abdulla.png";
 import dina from "../../assets/doctors/dina.png";
 import kamila from "../../assets/doctors/magomed.png";
@@ -6,9 +7,13 @@ import elina from "../../assets/doctors/malik.png";
 import DoctorCard from "./DoctorCard";
 
 
-export default function Orthopedics () {
+function Orthopedics ({bitrixData}) {
 
-    const doctorsList = [
+    const doctorsList = bitrixData.filter(user => user.departmentId === "6")
+    console.log(doctorsList);
+    
+
+    const doctorsStaticList = [
         {
             photo: aizanat,
             name: "Абдулжалилов Абдулла Аминуллаевич",
@@ -61,3 +66,5 @@ export default function Orthopedics () {
         </section>
     )
 }
+
+export default withBitrixBranchesDoctorsData (Orthopedics);

@@ -1,11 +1,15 @@
 
+import withBitrixBranchesDoctorsData from "hocs/withBitrixBranchesDoctorsData";
 import tamila from "../../assets/doctors/zamira.png";
 import gamid from "../../assets/doctors/zariat.png";
 import DoctorCard from "./DoctorCard";
 
-export default function Periodontology () {
+function Periodontology ({bitrixData}) {
 
-    const doctorsList = [
+    const doctorsList = bitrixData.filter(user => user.departmentId === "9")
+    console.log(doctorsList);
+
+    const doctorsStaticList = [
         {
             photo: tamila,
             name: "Магадова Замира Кутбутиновна",
@@ -40,3 +44,4 @@ export default function Periodontology () {
         </section>
     )
 }
+export default withBitrixBranchesDoctorsData(Periodontology);
