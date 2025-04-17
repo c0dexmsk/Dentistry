@@ -11,7 +11,7 @@ import gis2 from "../../assets/GIS2Icon.svg";
 import proDoctorov from "../../assets/ProDoctorovIcon.svg";
 import arrowPrev from "../../assets/arrow-prev.svg";
 import arrowNext from "../../assets/arrow-next.svg";
-import withBitrixData from '../../hocs/withBitrixData';
+import withBitrixReviewsData from '../../hocs/withBitrixReviewsData';
 
 const SwiperButtons = () => {
     const swiper = useSwiper(); // Получаем экземпляр Swiper
@@ -29,24 +29,24 @@ const SwiperButtons = () => {
 };
 
 function Review ({bitrixData}) {
-
+    
     const reviewData = [
         {
-            // name: "Азиз Магомедов",Ы
-            name: bitrixData.MAIN_SWIPER_TITLE,
-            starsCount: 5,
-            department: 'Отеделение Хирургия',
-            description: "Отличная стоматология. Консультация, чистка зубов и лечение последних выполнено на профессиональном уровне. Доволен результатом. Жаль не успел все зубы полечить. В дальнейшем буду лечиться здесь.",
-            icon: yandexIcon,
-            iconTitle: "Яндекс.Карты"
+            // name: "Азиз Магомедов",
+            name: bitrixData[1].name,
+            starsCount: bitrixData[1].starsCount,
+            department: bitrixData[1].department,
+            description: bitrixData[1].description,
+            icon: bitrixData[1].icon,
+            iconTitle: bitrixData[1].iconTitle
         },
         {
-            name: "Шамиль Гаджиев",
-            starsCount: 5,
-            department: 'Отделение Терапия',
-            description: "Клиника бомба, лучшая! Алил Казбекович самый лучший стоматолог! Идите к нему, не пожалеете. Опытный, спокойный, профессионал своего дела. Вся семья обслуживается в Бего!",
-            icon: gis2,
-            iconTitle: "2ГИС"
+            name: bitrixData[0].name,
+            starsCount: bitrixData[0].starsCount,
+            department: bitrixData[0].department,
+            description: bitrixData[0].description,
+            icon: bitrixData[0].icon,
+            iconTitle: bitrixData[0].iconTitle
         },
         {
             name: "Магомед Магомедов",
@@ -92,4 +92,4 @@ function Review ({bitrixData}) {
         </>
     )
 }
-export default withBitrixData(Review, 'main_page')
+export default withBitrixReviewsData(Review)

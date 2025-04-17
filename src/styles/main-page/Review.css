@@ -61,7 +61,7 @@
 .personal-review p {
     width: 295px;
     margin-bottom: 5px;
-    line-height: 100%;
+    line-height: 150%;
 }
 .personal-review > p:first-of-type {
     font-weight: bold;

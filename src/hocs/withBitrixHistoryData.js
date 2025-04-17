@@ -12,7 +12,7 @@ export default function withBitrixHistoryData(WrappedComponent) {
           const response = await fetch(
             'http://nonscrdk.beget.tech/local/api/?endpoint=get-page-data&pageCode=history_page'
           );
-
+      
           // Проверяем Content-Type перед парсингом
           const contentType = response.headers.get('content-type');
           if (!contentType || !contentType.includes('application/json')) {
@@ -28,7 +28,7 @@ export default function withBitrixHistoryData(WrappedComponent) {
 
             // Обрабатываем данные страницы услуг
             const pageData = result.data.content || {};
-            console.log(pageData);
+            // console.log(pageData);
 
             setData({
                 // Основная информация
