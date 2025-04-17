@@ -100,6 +100,7 @@
     width: auto;
     height: 55px;
     white-space: nowrap;
+    transition: 0.3s;
 }
 .price-list__departments button:hover {
     background-color: var(--dark-gray);

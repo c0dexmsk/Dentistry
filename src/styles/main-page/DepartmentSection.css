@@ -54,3 +54,7 @@
 .department__kids__links h3, .department__adults__links h3 {
     font-size: 20px;
 }
+.department__kids__links a, .department__adults__links a {
+    position: relative;
+    z-index: 100;
+}

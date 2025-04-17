@@ -23,6 +23,10 @@ html {
     text-decoration: none;
     color: inherit;
   }
+  a:hover {
+    color: inherit !important; 
+    /* text-decoration: none; */
+  }
   abbr[title] {
     border-bottom: none;
     text-decoration: underline;

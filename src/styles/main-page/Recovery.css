@@ -47,4 +47,9 @@
     width: 170px;
 
     font-weight: bold;
+    transition: 0.3s;
+}
+.recovery__content button:hover {
+    background-color: var(--dark-gray);
+    color: white;
 }

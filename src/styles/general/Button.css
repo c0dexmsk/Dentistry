@@ -8,6 +8,7 @@
     height: 60px;
     text-transform: uppercase;
     width: 360px;
+    transition: 0.3s;
 }
 .button:hover {
     background-color: white;

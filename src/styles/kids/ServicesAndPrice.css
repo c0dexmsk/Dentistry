@@ -23,7 +23,13 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    gap: 3vw;
+    gap: 20%;
+
+    transition: 0.3s;
+}
+.kids-services__grid > div:hover {
+    transform: scale(1.05,1.05);
+    cursor: pointer;
 }
 .kids-services__grid > div > p {
     margin-right: 130px;
@@ -40,7 +46,7 @@
     color: white;
 }
 .kids-services__grid > div:nth-of-type(4) {
-    gap: 2vw;
+    gap: 10%;
 }
 .kids-services__grid > div > div:first-of-type {
     background-color: #EDD49A;
@@ -79,4 +85,7 @@
     color: white;
     padding: 10px 16px;
     margin-right: 15px;
+}
+.kids-services__grid > div:last-child a:hover {
+    color: white !important;
 }

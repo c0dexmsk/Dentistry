@@ -19,6 +19,7 @@
     margin-right: 20px;
     margin-bottom: 20px;
     border-radius: 60px;
+    transition: 0.3s;
 }
 .doctors__branches button:hover {
     color: white;

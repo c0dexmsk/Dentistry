@@ -9,6 +9,12 @@
     height: 680px;
     margin-top: 70px;
 }
+.video img {
+    transition: 0.5s;
+}
+.video img:hover {
+    transform: scale(1.2,1.2);
+}
 
 @media (max-width: 1200px) {
 

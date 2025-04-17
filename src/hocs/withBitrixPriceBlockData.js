@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-export default function withBitrixCasesData(WrappedComponent) {
+export default function withBitrixPriceBlockData(WrappedComponent) {
   return function(props) {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -11,8 +11,11 @@ export default function withBitrixCasesData(WrappedComponent) {
         try {
 
           const response = await fetch(
-            'http://nonscrdk.beget.tech/local/api/?endpoint=get-reviews&pageCode=cases_page'
+            'http://nonscrdk.beget.tech/local/api/?endpoint=get-reviews&pageCode=price_block_page'
           );
+
+          const rawText = await response.text();
+        console.log('Raw response text:', rawText);
 
           const result = await response.json();
             
@@ -22,9 +25,17 @@ export default function withBitrixCasesData(WrappedComponent) {
 
           const pageData = result.data.map(doc => ({
             name: doc.name,
-            image: doc.image,
             description: doc.description,
-          }));          
+            price: doc.price,
+            time: doc.time,
+            count: doc.count,
+            departmentName: doc.departmentName,
+            departmentCode: doc.departmentCode,
+            departmentCode1: doc.departmentCode1
+          }));
+
+          console.log(pageData);
+          
           setData(pageData);
 
         } catch (err) {

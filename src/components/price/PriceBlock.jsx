@@ -1,13 +1,25 @@
+import withBitrixPriceBlockData from 'hocs/withBitrixPriceBlockData';
 import Accordion from 'react-bootstrap/Accordion';
 import clock from "../../assets/price/clock.svg";
 import calendar from "../../assets/price/calendar.svg"
+import PriceBlockItem from './PriceBlockItem';
 
-export default function PriceBlock () {
+function PriceBlock ({bitrixData}) {
 
+    console.log('Получаемые данные: ',bitrixData);
+    const departments = bitrixData.map(el=> el.departmentCode);
+    console.log(departments);
+    
+    
     return (
         <section>
             <div className='price-block'>
                 <h1 className='text-center margin-bottom-100'> Прайс </h1>
+                {bitrixData.map( (el, index )=> {})}
+                <PriceBlockItem
+
+
+                />
                 <Accordion defaultActiveKey="0">
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>Консультация и диагностика</Accordion.Header>
@@ -257,3 +269,5 @@ export default function PriceBlock () {
         </section>
     )
 }
+
+export default withBitrixPriceBlockData(PriceBlock)

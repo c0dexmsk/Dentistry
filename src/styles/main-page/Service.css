@@ -48,6 +48,7 @@
     width: auto;
     padding: 20px;
     box-sizing: border-box;
+    transition: 0.5s;
 }
 .service__card img {
     position: absolute;

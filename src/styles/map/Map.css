@@ -15,6 +15,7 @@
     position: absolute;
     top: 40px;
     right: 50px;
+    transition: 0.5s;
 }
 .map-block__map__contacts h3 {
     font-size: 1.25rem;
@@ -22,23 +23,9 @@
 .map-block__map__contacts .contacts__makhachkala__numbers {
     line-height: 150%;
 }
-
-/* .map-block__map > div {
-    position:relative;
-    overflow:hidden;
-} */
-/* .map-block__map > div > a:first-of-type{
-    color:#eee;
-    font-size:12px;
-    position:absolute;
-    top:0px;
+.map-block__map__contacts:hover {
+    transform: scale(1.05,1.05);
 }
-.map-block__map > a:last-of-type {
-    color:#eee;
-    font-size:12px;
-    position:absolute;
-    top:14px;
-} */
 .map-block__map iframe {
     position: relative;
     height: 500px;
