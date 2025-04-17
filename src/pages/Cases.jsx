@@ -1,18 +1,19 @@
+import withBitrixCasesData from "hocs/withBitrixCasesData.js";
 import Header from "../components/general/Header.jsx";
 import Footer from "../components/general/Footer.jsx";
+import "../styles/cases/Cases.css";
 import Case from "../components/cases/Case.jsx";
 import Zainap from "../assets/ZainapHistory.png"
-import "../styles/cases/Cases.css";
 
-export default function Cases() {
-
-    const casesList = [
-        {
-            name: 'История Зайнап',
-            image: Zainap,
-            description: "Функциональность и красота: полная трансформация улыбки пациента",
-        }
-    ]
+function Cases({bitrixData: casesList}) {
+     
+    // const casesList = [
+    //     {
+    //         name: 'История Зайнап',
+    //         image: Zainap,
+    //         description: "Функциональность и красота: полная трансформация улыбки пациента",
+    //     }
+    // ]
 
     return (
         <>
@@ -44,3 +45,5 @@ export default function Cases() {
         </>
     )
 }
+
+export default withBitrixCasesData(Cases)

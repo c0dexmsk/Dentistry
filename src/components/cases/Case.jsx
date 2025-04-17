@@ -7,12 +7,12 @@ export default function Case ({name, description, image}) {
 
     return (
         <Card className="patient-story-card flex-row w-50 h-100 border-0 shadow-sm overflow-hidden">
-            {image && (
+            {(
             <div className="image-wrapper">
                 <Card.Img 
                 variant="top" 
                 src={image} 
-                alt={`Результат лечения пациента ${name}`}
+                alt={`Результат лечения пациента. ${name}`}
                 className="case-image"
                 />
             </div>
