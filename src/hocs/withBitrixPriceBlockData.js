@@ -11,11 +11,8 @@ export default function withBitrixPriceBlockData(WrappedComponent) {
         try {
 
           const response = await fetch(
-            'http://nonscrdk.beget.tech/local/api/?endpoint=get-reviews&pageCode=price_block_page'
-          );
-
-          const rawText = await response.text();
-        console.log('Raw response text:', rawText);
+            'http://nonscrdk.beget.tech/local/api/?endpoint=get-page-code&pageCode=price_block_page'
+          );    
 
           const result = await response.json();
             
@@ -29,12 +26,13 @@ export default function withBitrixPriceBlockData(WrappedComponent) {
             price: doc.price,
             time: doc.time,
             count: doc.count,
+            department: doc.department,
             departmentName: doc.departmentName,
+            departmentId: doc.departmentId,
             departmentCode: doc.departmentCode,
-            departmentCode1: doc.departmentCode1
           }));
 
-          console.log(pageData);
+          // console.log(pageData);
           
           setData(pageData);
 

@@ -53,3 +53,7 @@
     background-color: var(--dark-gray);
     color: white;
 }
+.recovery__content button:active {
+    background-color: black;
+    color: white;
+}

@@ -5,10 +5,10 @@
 
     background-image:
     linear-gradient(rgba(241, 235, 232, 0.7), rgba(241, 235, 232, 0.7)),
-    url("../../assets/background-texture.png");
+    url("../../assets/aifile.png");
 
     background-repeat: repeat-y;
-    background-size: cover;
+    background-size: 230% 230%;
     /* z-index: -100; */
 }
 #main-page-wrapper > div:nth-child(2) {

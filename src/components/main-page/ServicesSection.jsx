@@ -7,6 +7,7 @@ import scaler from '../../assets/dental_scaler.svg';
 import loupe from '../../assets/loupe.svg';
 import chair from '../../assets/dental_chair.svg';
 import sciccors from '../../assets/sciccors.svg';
+import { Link } from 'react-router-dom';
 
 const ServicesSection = () => {
   // Массив с данными услуг
@@ -76,7 +77,7 @@ const ServicesSection = () => {
         </div>
 
         <div className='service__button-container'>
-            <Button>Все Услуги</Button>
+            <Button> <Link to="/services">Все Услуги </Link> </Button>
         </div>
 
       </div>
