@@ -25,7 +25,7 @@ function Cases({bitrixData: casesList}) {
                         <h1 className="text-center"> Кейсы </h1>
                         <h2> Ортопедия </h2>
 
-                        <section className="case-section container">
+                        <section className="case-section container-fluid px-0">
                             <div className="cases">
                                 {casesList.map((el,index) => {
                                     return (

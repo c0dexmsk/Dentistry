@@ -7,7 +7,7 @@ function Recovery({bitrixData}) {
 
     return (
         <>
-            <section className="recovery container-fluid">
+            <section className="recovery container-fluid px-0">
                 <img src={smile} alt="Улыбка" />
                 <div className="recovery__content">
                     <div>

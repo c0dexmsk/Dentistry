@@ -10,10 +10,10 @@ export default function Result ({bitrixData}) {
                 <h2> Результат </h2>
                 <div className="row flex-nowrap mt-5">
                     <div className="col-3">
-                        <img className="container-fluid" src={bitrixData.RESULT_PHOTO1} alt="Зайнап" />
+                        <img className="container-fluid px-0" src={bitrixData.RESULT_PHOTO1} alt="Зайнап" />
                     </div>
                     <div className="col-3">
-                        <img className="container-fluid" src={bitrixData.RESULT_PHOTO2} alt="Зайнап" />
+                        <img className="container-fluid px-0" src={bitrixData.RESULT_PHOTO2} alt="Зайнап" />
                     </div>
                     <div className="col-6 d-flex flex-column align-items-start justify-content-center">
                         <p>

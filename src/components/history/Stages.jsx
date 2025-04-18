@@ -11,7 +11,7 @@ export default function Stages ({bitrixData}) {
                 
                 <h2> Диагностика </h2>
                 
-                <div className="container-fluid row mt-5 g-3">
+                <div className="container-fluid px-0 row mt-5 g-3">
 
                     <div className="col-4 stages__stage">
                         <div className="d-flex flex-row">

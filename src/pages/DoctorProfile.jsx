@@ -20,9 +20,9 @@ function DoctorProfile({bitrixData}) {
   if (!bitrixData) return <div>Доктор не найден</div>;
 
   return (
-    <div className="doctor-profile d-flex flex-column flex-wrap justify-content-end g-0 align-items-end">
+    <div className="doctor-profile d-flex flex-row flex-nowrap ">
 
-        <div className="container-fluid col-md-6 flex-grow-1 d-flex flex-column">
+        <div className="container-fluid px-0 col-md-6 flex-grow-1 d-flex flex-column">
 
             <button onClick={() => navigate(-1)}>
                 <img src={arrow} alt="стрелка назад" />

@@ -9,7 +9,7 @@ export default function DefautCard ({title, description1, description2, image, i
 
     return isDesktop ? (
         <div className="default-card row flex-nowrap justify-content-center">
-            <div className="default-card__text col-6">
+            <div className="default-card__text px-0 col-6">
 
                 <h2> {title} </h2>
                 <p>
@@ -39,8 +39,8 @@ export default function DefautCard ({title, description1, description2, image, i
                 {children && <div className="card-children">{children}</div>}
 
             </div>
-            <div className="default-card__photo col-6">
-                <img className="container-fluid" src={image} alt="Фотография" />
+            <div className="default-card__photo px-0 col-6">
+                <img className="container-fluid px-0 px-0" src={image} alt="Фотография" />
             </div>
         </div>
 
@@ -55,7 +55,7 @@ export default function DefautCard ({title, description1, description2, image, i
             </div>
 
             <div className="default-card__photo">
-                <img className="container-fluid p-0" src={image} alt="Фотография" />
+                <img className="container-fluid px-0 p-0" src={image} alt="Фотография" />
             </div>
             
             <div className="default-card__text">

@@ -8,7 +8,7 @@ import network from "../../assets/network.svg";
 export default function Comfort () {
 
     return (
-        <section className="container">
+        <section className="container-fluid px-0 p-0">
             <div className="comfort">
 
                 <div>

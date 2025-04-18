@@ -25,7 +25,7 @@ function Periodontology ({bitrixData}) {
     ]
 
     return(
-        <section className="container">
+        <section className="container-fluid px-0">
             <div className="doctors-branch">
                 <h2> Пародонтология </h2>
                 <div className="doctors-branch__grid row p-0 row border-box">

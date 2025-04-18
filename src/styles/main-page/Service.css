@@ -63,7 +63,6 @@
     background-color: var(--dark-gray);
     color: white;
 }
-
 /*adding unique sizes and missing blocks*/
 
 .service__card:nth-child(1) {
@@ -84,7 +83,7 @@
     width: 265px
 }
 .service__card:nth-child(3) > p, .service__card:nth-child(4) >p, .service__card:nth-child(5) >p {
-    width: 200px
+    width: 210px
 }
 
 .service__card:nth-child(6) {

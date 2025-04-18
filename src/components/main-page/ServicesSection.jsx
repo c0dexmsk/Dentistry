@@ -59,7 +59,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="service container-fluid">
+    <section className="service container-fluid px-0">
 
       <div>
         <h2>Услуги</h2>

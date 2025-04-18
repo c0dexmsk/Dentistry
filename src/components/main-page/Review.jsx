@@ -30,34 +30,34 @@ const SwiperButtons = () => {
 
 function Review ({bitrixData}) {
     
-    const reviewData = [
-        {
-            // name: "Азиз Магомедов",
-            name: bitrixData[1].name,
-            starsCount: bitrixData[1].starsCount,
-            department: bitrixData[1].department,
-            description: bitrixData[1].description,
-            icon: bitrixData[1].icon,
-            iconTitle: bitrixData[1].iconTitle
-        },
-        {
-            name: bitrixData[0].name,
-            starsCount: bitrixData[0].starsCount,
-            department: bitrixData[0].department,
-            description: bitrixData[0].description,
-            icon: bitrixData[0].icon,
-            iconTitle: bitrixData[0].iconTitle
-        },
-        {
-            name: "Магомед Магомедов",
-            starsCount: 5,
-            department: 'Отделение Терапия',
-            description: "Хотелось бы поблагодарить весь коллектив стоматологии Bego Были проблемы с зубами,обратился к профессионалам, ни секунды не жалел о своем выборе. Доволен результатом. Спасибо большое вам!",
-            icon: proDoctorov,
-            iconTitle: "ПроДокторов"
-        },
-        /* a place to add a review  */
-    ]
+    // const reviewData = [
+    //     {
+    //         // name: "Азиз Магомедов",
+    //         name: bitrixData[1].name,
+    //         starsCount: bitrixData[1].starsCount,
+    //         department: bitrixData[1].department,
+    //         description: bitrixData[1].description,
+    //         icon: bitrixData[1].icon,
+    //         iconTitle: bitrixData[1].iconTitle
+    //     },
+    //     {
+    //         name: bitrixData[0].name,
+    //         starsCount: bitrixData[0].starsCount,
+    //         department: bitrixData[0].department,
+    //         description: bitrixData[0].description,
+    //         icon: bitrixData[0].icon,
+    //         iconTitle: bitrixData[0].iconTitle
+    //     },
+    //     {
+    //         name: "Магомед Магомедов",
+    //         starsCount: 5,
+    //         department: 'Отделение Терапия',
+    //         description: "Хотелось бы поблагодарить весь коллектив стоматологии Bego Были проблемы с зубами,обратился к профессионалам, ни секунды не жалел о своем выборе. Доволен результатом. Спасибо большое вам!",
+    //         icon: proDoctorov,
+    //         iconTitle: "ПроДокторов"
+    //     },
+    //     /* a place to add a review  */
+    // ]
 
     return (
         <>
@@ -71,7 +71,7 @@ function Review ({bitrixData}) {
 
                 <SwiperButtons />
 
-                {reviewData.map((review, index) => {
+                {bitrixData.map((review, index) => {
                     return (
                         <SwiperSlide>
                             <div className="review-swiper__slide">

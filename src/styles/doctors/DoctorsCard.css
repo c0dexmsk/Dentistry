@@ -9,10 +9,11 @@
     background: linear-gradient(90deg, rgba(214,208,194,0) 12%, rgba(214,208,194,1) 100%);
 }
 .doctor-profile > div {
-    margin-top: 200px;
+    margin: 0;
+    /* margin-top: 200px; */
     padding-top: 65px;
 }
-.doctor-profile .container-fluid  {
+.doctor-profile .container-fluid px-0  {
     height: 100vh;
 }
 .doctor-profile h1 {
@@ -44,7 +45,7 @@
     top: 35px;
     left: 190%;
 }
-.doctor-profile .container-fluid > div {
+.doctor-profile .container-fluid px-0 > div {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;

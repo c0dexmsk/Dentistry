@@ -14,7 +14,7 @@ export default function MobileTitle ({titleh1, titleh2, description1, descriptio
                 </div>
             </section>
 
-            <section className="container-fluid p-0">
+            <section className="container-fluid px-0 p-0">
                 <div className="video">
                     <button>
                         <img src={videoPlay} alt="Видео кнопка" />

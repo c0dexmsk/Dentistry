@@ -8,7 +8,7 @@ import withBitrixServiceData from '../../hocs/withBitrixServiceData';
 function ServicesPatternBlock ({bitrixData}) {
 
     return (
-        <section className="container-fluid">
+        <section className="container-fluid px-0">
             <div className="pattern-block">
 
                 <div className="container row justify-bitrixData-center align-items-center">
@@ -47,10 +47,10 @@ function ServicesPatternBlock ({bitrixData}) {
                 </div>
 
                 <div className="row align-items-center pattern-block__text block2 margin100">
-                    <div className="col-5">
+                    <div className="col-5 px-0">
                         <img src={bitrixData.image} alt="фотография" />
                     </div>
-                    <div className="col-7 ">
+                    <div className="col-7 pr-0">
                         <h2> {bitrixData.title_H2} </h2>
                         <p> {bitrixData.description1_H2} </p>
                         <p> {bitrixData.description2_H2} </p>
@@ -60,12 +60,12 @@ function ServicesPatternBlock ({bitrixData}) {
                 <div className="margin100">
                     <h2> Важно знать </h2>
                     <div className="row mt-4 g-4">
-                        <div className="col-md-12 col-lg-6">
+                        <div className="col-md-12 col-lg-6 pl-0">
                             <p>
                                 {bitrixData.important_1}
                             </p>
                         </div>
-                        <div className="col-md-12 col-lg-6">
+                        <div className="col-md-12 col-lg-6 pr-0">
                             <p>
                                 {bitrixData.important_2}
                             </p>
@@ -77,9 +77,9 @@ function ServicesPatternBlock ({bitrixData}) {
                     <h2> {bitrixData.ability_H2} </h2>
                     <div className="row mt-5 g-4">
 
-                        <div className="col-md-12 col-lg-6">
+                        <div className="col-md-12 col-lg-6 pl-0">
                             <div className="p-3">
-                                <div className="row align-items-center g-4 mb-3">
+                                <div className="row align-items-center g-4 mb-3 ">
                                     <div className="col-2">
                                         <img src={icon} alt="иконка" />
                                     </div>
@@ -96,7 +96,7 @@ function ServicesPatternBlock ({bitrixData}) {
                             </div>
                         </div>
 
-                        <div className="col-md-12 col-lg-6">
+                        <div className="col-md-12 col-lg-6 pr-0">
                             <div className="p-3">
                                 <div className="row align-items-center g-4 mb-3">
                                     <div className="col-2">
@@ -114,7 +114,7 @@ function ServicesPatternBlock ({bitrixData}) {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-12 col-lg-6">
+                        <div className="col-md-12 col-lg-6 pl-0">
                             <div className="p-3">
                                 <div className="row align-items-center g-4 mb-3">
                                     <div className="col-2">
@@ -133,7 +133,7 @@ function ServicesPatternBlock ({bitrixData}) {
                             </div>
                         </div>
 
-                        <div className="col-md-12 col-lg-6">
+                        <div className="col-md-12 col-lg-6 pr-0">
                             <div className="p-3">
                                 <div className="row align-items-center g-4 mb-3">
                                     <div className="col-2">

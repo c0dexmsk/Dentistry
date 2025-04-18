@@ -26,7 +26,7 @@ import withBitrixData from "hocs/withBitrixData";
     ]
 
     return (
-        <section className="container-fluid">
+        <section className="container-fluid px-0">
                 <div className="FAQ">
                     <div>
                         <div>

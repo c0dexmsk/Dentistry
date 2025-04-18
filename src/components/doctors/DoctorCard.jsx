@@ -10,7 +10,7 @@ export default function DoctorCard ({photo, name, profession, link}) {
             <p> {profession} </p>
             <DetailsButton 
                 title="Подробнее"
-                link={link}
+                link={`doctors/${link}`}
             />
         </div>
     )

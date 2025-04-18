@@ -2,11 +2,13 @@ import React from 'react';
 import MainSlide from "./MainSlide"
 import 'swiper/css/pagination'
 import { Swiper, SwiperSlide } from "swiper/react";
+import withBitrixData from '../../hocs/withBitrixData';
 import 'swiper/css';  // Основные стили
 import {Pagination} from 'swiper/modules';
 import 'swiper/css/pagination';
 
-export default function MainPageSwiper () {
+
+ function MainPageSwiper({bitrixData}) {
 
   return (
     <>
@@ -25,18 +27,44 @@ export default function MainPageSwiper () {
           >
 
           <SwiperSlide>
-            <MainSlide />
+            <MainSlide 
+              MAIN_SWIPER_TITLE={bitrixData.MAIN_SWIPER_TITLE}
+              MAIN_SWIPER_TEXT ={bitrixData.MAIN_SWIPER_TEXT}
+              MAIN_SWIPER_LINK={bitrixData.SWIPER_LINK}
+              TOOTH_SWIPER_ICON={bitrixData.TOOTH_SWIPER_ICON}
+              PERCENT_VALUE={bitrixData.PERCENT_VALUE}
+              PERCENT_TEXT={bitrixData.PERCENT_TEXT}
+              HERO_SWIPER_IMAGE={bitrixData.HERO_SWIPER_IMAGE}
+            />
+          </SwiperSlide>
+
+
+          <SwiperSlide>
+            <MainSlide 
+              MAIN_SWIPER_TITLE={bitrixData.MAIN_SWIPER_TITLE2}
+              MAIN_SWIPER_TEXT ={bitrixData.MAIN_SWIPER_TEXT2}
+              MAIN_SWIPER_LINK={bitrixData.SWIPER_LINK2}
+              TOOTH_SWIPER_ICON={bitrixData.TOOTH_SWIPER_ICON}
+              PERCENT_VALUE={bitrixData.PERCENT_VALUE}
+              PERCENT_TEXT={bitrixData.PERCENT_TEXT}
+              HERO_SWIPER_IMAGE={bitrixData.HERO_SWIPER_IMAGE2}
+            />
           </SwiperSlide>
 
           <SwiperSlide>
-            <MainSlide />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <MainSlide />
+            <MainSlide 
+              MAIN_SWIPER_TITLE={bitrixData.MAIN_SWIPER_TITLE3}
+              MAIN_SWIPER_TEXT ={bitrixData.MAIN_SWIPER_TEXT3}
+              MAIN_SWIPER_LINK={bitrixData.SWIPER_LINK3}
+              HERO_SWIPER_IMAGE={bitrixData.HERO_SWIPER_IMAGE3}
+              TOOTH_SWIPER_ICON={bitrixData.TOOTH_SWIPER_ICON}
+              PERCENT_VALUE={bitrixData.PERCENT_VALUE}
+              PERCENT_TEXT={bitrixData.PERCENT_TEXT}
+            />
           </SwiperSlide>
 
       </Swiper>
     </>
   )
 };
+export default withBitrixData(MainPageSwiper);

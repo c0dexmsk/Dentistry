@@ -104,7 +104,7 @@ export default function Kids() {
                         />
                         <Video />
 
-                        <section className="container">
+                        <section className="container-fluid p-0">
                             <DefautCard
                                 title="Современное оборудование"
                                 description1="Отделение оснащено передовым оборудованием для точной диагностики и безболезненного лечения. Микроскопы ZEISS позволяют врачам проводить сложнейшие манипуляции (например, эндодонтическое лечение) максимально выверенно."

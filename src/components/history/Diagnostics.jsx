@@ -8,7 +8,7 @@ import img4 from "../../assets/history/img4.svg";
 export default function Diagnostics ({bitrixData}) {
 
     return (
-        <section className="diagnostics container-fluid margin-top-100">
+        <section className="diagnostics container-fluid px-0 margin-top-100">
             <div className="margin-top-100 margin-bottom-100">
                 <div>
                     <h2> Диагностика </h2>

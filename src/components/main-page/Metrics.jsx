@@ -9,7 +9,7 @@ export default function Metrics () {
 
     return (
         <>
-            <section className="metrics container-fluid">
+            <section className="metrics container-fluid px-0">
                 <div>
                     <div className="metrics__numbers">
                         <img src={numbers} alt="numbers logo" />

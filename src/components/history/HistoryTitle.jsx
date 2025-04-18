@@ -9,7 +9,7 @@ export default function HistoryTitle ({bitrixData}) {
 
                 <h1 className="text-center"> {bitrixData.TITLE} </h1>
                 
-                <div className="container-fluid row mt-5">
+                <div className="container-fluid px-0 row mt-5">
                     <div className="col-6">
                         <img className="img-fluid" src={bitrixData.TITLE_PHOTO} alt="Главное фото" />
                     </div>

@@ -29,6 +29,7 @@ export default function Case ({name, description, image}) {
           
             <DetailsButton
                 title="Подробнее"
+                link="history"
             />
         </Card.Body>
       </Card>

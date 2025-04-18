@@ -1,6 +1,6 @@
 .kids-doctors {
     max-width: 1120px;
-    width: 77%;
+    width: 77.7%;
     margin-top: 150px;
 }
 .kids-doctors__grid {
@@ -35,7 +35,7 @@
     font-size: 1rem;
     font-weight: bold;
     border-radius: 100px;
-    padding: 22px 0;
+    padding: 22px;
     text-transform: uppercase;
     box-sizing: border-box;
     transition: 0.3s;

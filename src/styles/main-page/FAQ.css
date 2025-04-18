@@ -67,9 +67,7 @@
 .FAQ__dropdown__header .accordion-button {
     background-color: var(--dark-gray);
     color: white;
-}.FAQ__dropdown__header .accordion-button {
-    background-color: var(--dark-gray);
-    color: white;
+    box-shadow: none;
 }
 /* Style of accordeon body */
 .FAQ__dropdown__body {

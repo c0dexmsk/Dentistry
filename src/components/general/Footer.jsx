@@ -6,7 +6,7 @@ import "../../styles/general/Footer.css";
 export default function Footer () {
 
     return (
-        <footer className="footer container-fluid">
+        <footer className="footer container-fluid px-0">
             <div className="footer__container">
 
                 <div className="footer__container__logo">

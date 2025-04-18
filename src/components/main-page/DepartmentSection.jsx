@@ -11,7 +11,7 @@ export default function DepartmentSection () {
 
     return (
         <>
-            <section className='department container'>
+            <section className='department container-fluid px-0'>
                 <div>
                     <h2> Отделения </h2>
 
@@ -25,7 +25,8 @@ export default function DepartmentSection () {
                                     </h3>
                                 </Link>
                                 <Link to="/adults">
-                                    <img src={blackArrow} alt="blackArrow" />
+                                    <img className="white-arrow" src={whiteArrow} alt="whiteArrow" />
+                                    <img className="black-arrow" src={blackArrow} alt="blackArrow" />
                                 </Link>
                             </div>
                             <img src={femalePhoto} alt="Девушка" />
@@ -39,7 +40,8 @@ export default function DepartmentSection () {
                                     </h3>
                                 </Link>
                                 <Link to="/adults">
-                                    <img src={whiteArrow} alt="blackArrow" />
+                                    <img className="white-arrow" src={whiteArrow} alt="whiteArrow" />
+                                    <img className="black-arrow" src={blackArrow} alt="blackArrow" />
                                 </Link>
                             </div>
                             <img src={kidPhoto} alt="Ребёнок" />

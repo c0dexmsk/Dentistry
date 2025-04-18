@@ -14,7 +14,7 @@ export default function Header () {
 
     return isDesktop ? (
 
-            <header className="header container-fluid">
+            <header className="header container-fluid px-0">
                 <div className="header__container">
                     <div className="header__container__logo">
                         <Link to="/main">

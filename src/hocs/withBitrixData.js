@@ -35,12 +35,28 @@ export default function withBitrixData(WrappedComponent) {
           setData({
             MAIN_SWIPER_TITLE: result.data.content.title || 'Без названия',
             MAIN_SWIPER_TEXT: result.data.content.MAIN_SWIPER_TEXT,
-            MAIN_SWIPER_BUTTON: result.data.content.MAIN_SWIPER_BUTTON,
-            PERCENT_VALUE: result.data.content.PERCENT_VALUE,
-            PERCENT_TEXT: result.data.content.PERCENT_TEXT,
             HERO_SWIPER_IMAGE: result.data.content.HERO_SWIPER_IMAGE
                     ? result.data.content.HERO_SWIPER_IMAGE
                     : '/local/templates/react_app/assets/static/media/zainap.png',
+            SWIPER_LINK1: result.data.content.SWIPER_LINK1 || '',
+
+            MAIN_SWIPER_TITLE2: result.data.content.title2 || 'Без названия',
+            MAIN_SWIPER_TEXT2: result.data.content.MAIN_SWIPER_TEXT2,
+            HERO_SWIPER_IMAGE2: result.data.content.HERO_SWIPER_IMAGE2
+                    ? result.data.content.HERO_SWIPER_IMAGE2
+                    : '/local/templates/react_app/assets/static/media/zainap.png',
+            SWIPER_LINK2: result.data.content.SWIPER_LINK2 || '',
+
+            MAIN_SWIPER_TITLE3: result.data.content.title3 || 'Без названия',
+            MAIN_SWIPER_TEXT3: result.data.content.MAIN_SWIPER_TEXT3,
+            HERO_SWIPER_IMAGE3: result.data.content.HERO_SWIPER_IMAGE3
+                    ? result.data.content.HERO_SWIPER_IMAGE3
+                    : '/local/templates/react_app/assets/static/media/zainap.png',
+            SWIPER_LINK3: result.data.content.SWIPER_LINK3 || '',
+
+            MAIN_SWIPER_BUTTON: result.data.content.MAIN_SWIPER_BUTTON,
+            PERCENT_VALUE: result.data.content.PERCENT_VALUE,
+            PERCENT_TEXT: result.data.content.PERCENT_TEXT,
             TOOTH_SWIPER_ICON: result.data.content.TOOTH_SWIPER_ICON,
             RECOVERY_TITLE: result.data.content.RECOVERY_TITLE,
             RECOVERY_TEXT: result.data.content.RECOVERY_TEXT,
