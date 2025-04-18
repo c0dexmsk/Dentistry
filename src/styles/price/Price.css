@@ -107,10 +107,13 @@
     color: white;
 }
 
-.price-list__departments div     {
+.price-list__departments div {
     display: flex;
-    gap: 20px; 
-  }
+    gap: 20px;
+    padding: 0 12px;
+    max-width: 1120px; 
+}
+
 .price-list h2 {
     margin-bottom: 50px;
 }

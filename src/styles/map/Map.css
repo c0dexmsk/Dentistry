@@ -17,6 +17,9 @@
     right: 50px;
     transition: 0.5s;
 }
+.map-block__map__contacts.last {
+    top: 60px;
+}
 .map-block__map__contacts h3 {
     font-size: 1.25rem;
 }

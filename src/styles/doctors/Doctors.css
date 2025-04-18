@@ -10,6 +10,10 @@
 .doctors__branches h2 {
     margin: 50px 0px;
 }
+.doctors__branches > div {
+    padding: 0 12px;
+    max-width: 1120px;
+}
 .doctors__branches button {
     padding: 16px 32px;
     font-size: 1rem;

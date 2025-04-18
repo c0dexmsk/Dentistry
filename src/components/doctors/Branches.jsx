@@ -7,7 +7,7 @@ export default function Branches ({Title}) {
                 <h1> {Title} </h1>
                 <div className="doctors__branches">
                     <h2> Отделения клиники </h2>
-                    <div className="row px-3 row border-box">
+                    <div className="row row border-box">
                         <button> Анестезиологи </button>
                         <button> Детские врачи </button>
                         <button> Ортодонтия </button>
