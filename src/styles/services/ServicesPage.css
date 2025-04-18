@@ -54,6 +54,9 @@
     height: auto;
     width: auto;
 }
+.item-01 a:hover , .item-02 a:hover {
+    color: white !important; 
+}
 .item-01 a {
     position: absolute;
     bottom: 20px;

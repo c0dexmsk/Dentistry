@@ -182,7 +182,7 @@ export default function ListOfServices () {
 
     return (
         <>
-            <section className="container mt-5">
+            <section className="container-fluid px-0 mt-5">
 
                 <div className="list-of-services">
                     <div className="list-of-services__title row mb-4">
