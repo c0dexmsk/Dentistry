@@ -26,35 +26,41 @@ export default function withBitrixServiceData(WrappedComponent) {
                 throw new Error(result.error || 'Ошибка сервера');
             }
 
+            const pageData = result.data.map(doc => ({
+              id: doc.id || '404',
+              guideImage: doc.guideImage || '/default/path/to/guide.jpg',
+              guideName: doc.guideName || 'Имя специалиста',
+              title_H1: doc.title_H1 || 'Название услуги',
+              description_H1: doc.description_H1 || 'Описание услуги',
+              mainImage: doc.image || '/default/path/to/service.jpg',
+
+              ICON1: doc.ICON1 || '',
+              ICON2: doc.ICON2 || '',
+              ICON3: doc.ICON3 || '',
+              ICON4: doc.ICON4 || '',
+              ICON5: doc.ICON5 || '',
+
+              // Основной контент
+              title_H2: doc.title_H2 || '',
+              description1_H2: doc.description1_H2 || '',
+              description2_H2: doc.description2_H2 || '',
+              important_1: doc.important_1 || '',
+              important_2: doc.important_2 || '',
+
+              // Блок возможностей
+              ability_H2: doc.ability_H2 || 'Наши возможности',
+              abilityBlocks: doc.ability_blocks || [],
+
+              // Услуги и цены
+              services: doc.services || [],
+
+              // Вопросы и ответы
+              questions: doc.questions || []
+            }));
             // Обрабатываем данные страницы услуг
-            const serviceData = result.data.content || {};
-            console.log(serviceData, ' - ', serviceData.abilityBlocks);
+            console.log(pageData);
 
-          setData({
-            // Основная информация
-            guideImage: serviceData.guideImage || '/default/path/to/guide.jpg',
-            guideName: serviceData.guideName || 'Имя специалиста',
-            title_H1: serviceData.title_H1 || 'Название услуги',
-            description_H1: serviceData.description_H1 || 'Описание услуги',
-            mainImage: serviceData.image || '/default/path/to/service.jpg',
-
-            // Основной контент
-            title_H2: serviceData.title_H2 || '',
-            description1_H2: serviceData.description1_H2 || '',
-            description2_H2: serviceData.description2_H2 || '',
-            important_1: serviceData.important_1 || '',
-            important_2: serviceData.important_2 || '',
-
-            // Блок возможностей
-            ability_H2: serviceData.ability_H2 || 'Наши возможности',
-            abilityBlocks: serviceData.ability_blocks || [],
-
-            // Услуги и цены
-            services: serviceData.services || [],
-
-            // Вопросы и ответы
-            questions: serviceData.questions || []
-          });
+          setData(pageData);
 
         } catch (err) {
           console.error('Fetch error:', err);

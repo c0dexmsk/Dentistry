@@ -6,6 +6,7 @@ import Contacts from "../components/main-page/Contacts.jsx";
 import Metrics from "../components/main-page/Metrics.jsx";
 import Recovery from "../components/main-page/Recovery.jsx";
 import Header from "../components/general/Header.jsx";
+import Veneers from "components/main-page/Veneers.jsx";
 import Footer from "../components/general/Footer.jsx";
 import FAQ from "../components/main-page/FAQ.jsx";
 import React from "react";
@@ -23,6 +24,7 @@ export default function MainPage() {
                     <Metrics />
                     <ServicesSection />
                     <DepartmentSection />
+                    <Veneers />
                     <Recovery />
                     <PersonalExperience />
                     <FAQ />

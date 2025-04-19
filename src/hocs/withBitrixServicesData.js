@@ -12,25 +12,24 @@ export default function withBitrixServicesData(WrappedComponent) {
 
           const response = await fetch(
             'http://nonscrdk.beget.tech/local/api/?endpoint=get-page-code&pageCode=detailed_services'
-          );    
+          );
 
           const result = await response.json();
-            
+
           if (!response.ok || !result.success) {
               throw new Error(result.error || 'Ошибка сервера');
           }
 
           const pageData = result.data.map(doc => ({
-            NUM1: doc.NUM1,
-            NUM2: doc.NUM2,
-            MAIL: doc.MAIL,
-            DAYS: doc.DAYS,
-            ENDS: doc.ENDS,
-            SAT: doc.SAT,
+            title: doc.title,
+            backgroundColor: doc.backgroundColor,
+            link: doc.link,
+            description: doc.description,
+            innerServices: doc.innerServices,
           }));
 
           console.log(pageData);
-          
+
           setData(pageData);
 
         } catch (err) {

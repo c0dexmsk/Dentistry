@@ -11,17 +11,27 @@
 .item-02 h3 {
     font-size: 1.25rem;
 }
+.item-01 p , .item-02 p {
+    font-size: 1rem;
+}
 .item-01 p {
+    font-weight: 500;
     padding-right: 52px;
+    line-height: 150%;
+    margin-bottom: 0;
+}
+.item-02 p {
+    color: rgba(31, 31, 31, 1);
+    font-weight: 700;
+    line-height: 140%;
+    font-size: 0.75rem;
 }
 .item-01, .item-02 {
-    font-weight: bold;
     padding: 30px;
-    font-size: 0.75rem;
     box-sizing: border-box;
     line-height: 140%;
 
-    /* min-height: 350px; */
+    /* min-height: 260px; */
     height: auto;
 
 }
@@ -32,41 +42,38 @@
     padding: 20px;
     box-sizing: border-box;
 }
-/* .item-02 > div {
-    box-sizing: content-box;
-} */
 .item-01 {
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
-
 }
 .item-02 {
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
     align-items: flex-start;
 }
-.item-01 a , .item-02 a{
+.item-01 a{
     font-size: 0.75rem;
-    background-color: var(--dark-gray);
     border-radius: 30px;
-    padding: 8px 8px;
-    color: white;
-    height: auto;
-    width: auto;
-}
-.item-01 a:hover , .item-02 a:hover {
-    color: white !important; 
-}
-.item-01 a {
-    position: absolute;
-    bottom: 20px;
-    left: 30px;
-}
-.item-02 a:first-child {
-    max-width: 90px;
-}
-.item-02 .big-link {
-    height:60px;
-    font-size: 1rem;
+    padding: 6px 8px;
+    height: 32px;
+    text-align: center;
     text-transform: uppercase;
+    position: relative;
+    margin-top: 20px;
+    font-weight: bold;
+    vertical-align: middle;
+
+    background-color: var(--color5);
+    color: var(--color4)
+}
+.item-01 a:hover {
+    color: var(--color4) !important;
+}
+.item-01 a:first-of-type {
+    left: 15px;
+    width: 145px;
+}
+.item-01 a:last-of-type {
+    left: 30px;
+    width: 122px;
 }

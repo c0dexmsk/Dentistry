@@ -1,8 +1,12 @@
 import Item from "./Item";
+import withBitrixServicesData from "hocs/withBitrixServicesData";
 
-export default function ListOfServices () {
+function ListOfServices ({bitrixData: listOfItems}) {
 
-    const listOfItems = [
+    console.log(listOfItems);
+
+
+    const listOfItems2 = [
         {
             title: "Гнатология",
             backgroundColor: "brown", //brown or blue
@@ -191,7 +195,9 @@ export default function ListOfServices () {
                     </div>
                     <div className="list-of-services__description row">
                         {listOfItems.map((el, index)=> {
+                            console.log( el.title);
                             return (
+
                                 <Item
                                     title={el.title}
                                     backgroundColor={el.backgroundColor}
@@ -209,3 +215,5 @@ export default function ListOfServices () {
         </>
     )
 }
+
+export default withBitrixServicesData(ListOfServices)
