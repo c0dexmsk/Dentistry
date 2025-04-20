@@ -45,3 +45,26 @@
 .footer__container__column3 {
     margin-left: 136px;
 }
+
+@media (max-width: 768px) {
+    .footer {
+        margin-top: 50px;
+        width: 100vw;
+    }
+    .footer__container {
+        width: 90%;
+        /* max-width: 375px; */
+    }
+    .footer__container > div {
+
+    }
+    .footer__container a, .footer select {
+        font-size: 1rem;
+    }
+    .footer__container__logo-mobile {
+        margin-bottom: 30px;
+    }
+    .footer__container__logo-mobile img {
+        width: 100px;
+    }
+}

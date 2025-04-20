@@ -4,10 +4,15 @@ import blackArrow from '../../assets/black-arrow.svg';
 import whiteArrow from '../../assets/white-arrow.svg';
 import femalePhoto from '../../assets/female-photo.svg';
 import kidPhoto from '../../assets/kid-photo.svg';
+import femalePhoto2 from '../../assets/young-female.svg';
+import kidPhoto2 from '../../assets/baby.svg';
+import { useMediaQuery } from 'react-responsive';
 import React from 'react';
 
 export default function DepartmentSection () {
 
+    const isDesktop = useMediaQuery ( {minWidth: 768});
+    const isDesktop2 = useMediaQuery ( {minWidth: 1000});
 
     return (
         <>
@@ -29,7 +34,7 @@ export default function DepartmentSection () {
                                     <img className="black-arrow" src={blackArrow} alt="blackArrow" />
                                 </Link>
                             </div>
-                            <img src={femalePhoto} alt="Девушка" />
+                            <img className='img-fluid' src={isDesktop ? femalePhoto : femalePhoto2} alt="Девушка" />
                         </div>
 
                         <div className='department__kids'>
@@ -44,7 +49,7 @@ export default function DepartmentSection () {
                                     <img className="black-arrow" src={blackArrow} alt="blackArrow" />
                                 </Link>
                             </div>
-                            <img src={kidPhoto} alt="Ребёнок" />
+                            <img className='img-fluid' src={isDesktop ? kidPhoto : kidPhoto2} alt="Ребёнок" />
                         </div>
 
                     </div>

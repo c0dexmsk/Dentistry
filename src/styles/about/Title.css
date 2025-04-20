@@ -21,14 +21,16 @@
 }
 @media (max-width: 1100px) {
     .title {
-        width: 90%;
+        width: 77.7%;
+
     }
 }
-@media (max-width: 760px) { 
+@media (max-width: 760px) {
     .title {
         height: auto;
         width: 90%;
         margin-top: 15px;
+        /* max-width: 375px; */
     }
     .title h1 {
         margin-bottom: 25px;

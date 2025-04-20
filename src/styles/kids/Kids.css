@@ -60,3 +60,9 @@
 .kids .video {
     background-image: url("../../assets/video_preview_kids.png");
 }
+
+@media (max-width: 768px) {
+    .main-page-wrapper__pictures > img {
+        width: 100px;
+    }
+}

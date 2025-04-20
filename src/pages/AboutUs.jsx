@@ -12,15 +12,15 @@ import MobileTitle from "components/about/MobileTitle.jsx";
 
 export default function AboutUs() {
 
-    const isDesktop = useMediaQuery({ minWidth: 760 });
+    const isDesktop = useMediaQuery({ minWidth: 768 });
 
     return (
         <div id="main-page-wrapper">
             <Header />
             <div>
                 { isDesktop ? (
-                    <> 
-                        <Title 
+                    <>
+                        <Title
                             titleh1="Bego Clinic"
                             titleh2="Стоматология поколений"
                             description1="В Bego мы храним обычаи семейной стоматологии и с радостью встречаем представителей всех поколений.  Два десятилетия постоянного развития позволили нам создать пространство, где базовые ценности —  качество, надежность и удобство лечения — объединяются в авторский комплексный подход, ориентированный на достижение желаемого результата для каждого. "
@@ -29,7 +29,7 @@ export default function AboutUs() {
                         <Video />
                     </>
                 ) : (
-                    <> 
+                    <>
                         <MobileTitle
                         titleh1="Bego Clinic"
                         titleh2="Стоматология поколений"

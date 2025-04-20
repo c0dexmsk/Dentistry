@@ -30,3 +30,25 @@
 .contacts__makhachkala__numbers span, .contacts__moscow__numbers span {
     font-weight: bold;
 }
+
+@media (max-width: 768px) {
+    .contacts {
+        margin-top: 50px;
+        width: 90%;
+        /* max-width: 375px; */
+    }
+    .contacts > div {
+        gap: 25px;
+    }
+    .contacts h3 {
+        font-size: 1rem;
+    }
+    .contacts p, .contacts span {
+        font-size: 0.75rem;
+        line-height: 120%;
+        margin-bottom: 10px;
+    }
+    .contacts__makhachkala, .contacts__moscow {
+        gap: 20px;
+    }
+}

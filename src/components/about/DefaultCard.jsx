@@ -2,9 +2,10 @@
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
+
 export default function DefautCard ({title, description1, description2, image, icon1, icon2, icon3, icon1Title, icon2Title, icon3Title, children}) {
 
-    const isDesktop = useMediaQuery({ minWidth: 760 });
+    const isDesktop = useMediaQuery({ minWidth: 768 });
     const [hideText, setHideText] = useState(true);
 
     return isDesktop ? (
@@ -57,15 +58,15 @@ export default function DefautCard ({title, description1, description2, image, i
             <div className="default-card__photo">
                 <img className="container-fluid px-0 p-0" src={image} alt="Фотография" />
             </div>
-            
+
             <div className="default-card__text">
-                
+
                 <p>
                     {description1}
                 </p>
 
                 <button className="mb-3" onClick={() => (setHideText(!hideText))}> {hideText? ("Показать весь текст"): ("Скрыть текст") } </button>
-                    
+
                 {hideText ? (
                     null
                 ) : (
@@ -88,6 +89,7 @@ export default function DefautCard ({title, description1, description2, image, i
                         <span> {icon3Title} </span>
                     </div>
                 </div>
+                {children && <div className="card-children">{children}</div>}
 
             </div>
         </div>

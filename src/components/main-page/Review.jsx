@@ -12,12 +12,13 @@ import proDoctorov from "../../assets/ProDoctorovIcon.svg";
 import arrowPrev from "../../assets/arrow-prev.svg";
 import arrowNext from "../../assets/arrow-next.svg";
 import withBitrixReviewsData from '../../hocs/withBitrixReviewsData';
+import { useMediaQuery } from "react-responsive";
 
 const SwiperButtons = () => {
     const swiper = useSwiper(); // Получаем экземпляр Swiper
 
     return (
-      <div className="swiper-buttons">
+      <div className="swiper-buttons d-none d-md-flex">
         <button onClick={() => swiper.slidePrev()}>
           <img src={arrowPrev} alt="Назад" />
         </button>
@@ -29,42 +30,17 @@ const SwiperButtons = () => {
 };
 
 function Review ({bitrixData}) {
-    
-    // const reviewData = [
-    //     {
-    //         // name: "Азиз Магомедов",
-    //         name: bitrixData[1].name,
-    //         starsCount: bitrixData[1].starsCount,
-    //         department: bitrixData[1].department,
-    //         description: bitrixData[1].description,
-    //         icon: bitrixData[1].icon,
-    //         iconTitle: bitrixData[1].iconTitle
-    //     },
-    //     {
-    //         name: bitrixData[0].name,
-    //         starsCount: bitrixData[0].starsCount,
-    //         department: bitrixData[0].department,
-    //         description: bitrixData[0].description,
-    //         icon: bitrixData[0].icon,
-    //         iconTitle: bitrixData[0].iconTitle
-    //     },
-    //     {
-    //         name: "Магомед Магомедов",
-    //         starsCount: 5,
-    //         department: 'Отделение Терапия',
-    //         description: "Хотелось бы поблагодарить весь коллектив стоматологии Bego Были проблемы с зубами,обратился к профессионалам, ни секунды не жалел о своем выборе. Доволен результатом. Спасибо большое вам!",
-    //         icon: proDoctorov,
-    //         iconTitle: "ПроДокторов"
-    //     },
-    //     /* a place to add a review  */
-    // ]
+
+    const isDesktop = useMediaQuery ({minWidth: 768});
 
     return (
         <>
              <Swiper
                 className="review-swiper"
-                spaceBetween={20}
-                slidesPerView={3}
+                loop={true}
+                spaceBetween={isDesktop ? 20 : 5}
+                slidesPerView={isDesktop ? 3 : 1.2}
+                slidesOffsetBefore={isDesktop ? 0 : 5}  // Отступ слева
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
                 >

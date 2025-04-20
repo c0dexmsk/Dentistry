@@ -9,9 +9,12 @@ function Veneers({bitrixData}) {
 
     return (
         <>
-            <section className="container-fluid px-0 ">
+            <section className="container-fluid px-0 veneers_container">
                 <div className="veneers">
-                    <h2> {bitrixData.VTITLE1}</h2>
+                    <h2 className="mb-md-2 mb-3"> {bitrixData.VTITLE1}</h2>
+                    <div className="d-block d-md-none hidden-block" >
+                    <img className="container-fluid custom-img" src={image} alt="виниры" />
+                    </div>
                     <div className="row">
                         <div className="col-lg-6 col-md-12">
                             <p>
@@ -22,14 +25,13 @@ function Veneers({bitrixData}) {
                             </a>
                         </div>
                         <div className="col-lg-6 col-md-12">
-                            <img className="container-fluid custom-img" src={image} alt="виниры" />
+                            <img className="d-none d-md-block container-fluid custom-img" src={image} alt="виниры" />
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section className="container-fluid px-0 ">
-            <h2 className="d-block d-md-none"> {bitrixData.VTITLE2}</h2>
+            <section className="container-fluid px-0 veneers_container">
                 <div className="veneers v2">
                     <div className="row">
                         <div className="col-lg-6 col-md-12">
@@ -37,9 +39,10 @@ function Veneers({bitrixData}) {
                                 <img className="container-fluid col-6" src={image2} alt="фото 1" />
                                 <img className="container-fluid col-6" src={image3} alt="фото 2" />
                             </div>
+                        <h2 className="mt-3 mb-0 d-block d-md-none"> {bitrixData.VTITLE2}</h2>
                         </div>
                         <div className="col-lg-6 col-md-12">
-                        <h2 className="d-none    d-md-block"> {bitrixData.VTITLE2}</h2>
+                        <h2 className="d-none d-md-block"> {bitrixData.VTITLE2}</h2>
                             <p>
                                 {bitrixData.VDESC2}
                             </p>

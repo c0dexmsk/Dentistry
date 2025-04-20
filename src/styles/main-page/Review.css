@@ -18,8 +18,8 @@
     background-color: white;
     padding: 25px 37px 20px 28px;
     box-sizing: border-box;
-    font-size: 12px;   
-    
+    font-size: 12px;
+
     transition: 0.5s;
     border-radius: 10px;
 }
@@ -93,4 +93,38 @@
 }
 .personal-review__place > img {
     height: 31px;
+}
+
+
+@media (max-width: 768px) {
+
+    .review-swiper__slide {
+        width: 247px ;
+        height: 204px ;
+        padding: 18px;
+    }
+    .personal-review {
+        max-height: 184px;
+        max-width: 227px ;
+    }
+    .personal-review h3 {
+        font-size: 12px;
+    }
+    .personal-review p {
+        font-size: 8px;
+        line-height: 140%;
+        max-width: 227px;
+    }
+    .personal-review__place > img {
+        height: 22px;
+    }
+    .experience {
+        height: auto;
+    }
+    .review-swiper {
+        height: 205px;
+        top: 0;
+        width: 95vw;
+    }
+
 }

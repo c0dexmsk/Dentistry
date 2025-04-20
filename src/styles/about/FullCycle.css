@@ -19,3 +19,30 @@
     flex-direction: row;
     align-items: center;
 }
+@media (max-width: 760px) {
+    .full-cycle {
+        /* width: 90%; */
+        /* max-width: 375px; */
+        margin-top: 50px;
+    }
+    .default-card__photo > img {
+        /* max-width: 375px; */
+        position: relative;
+        width: 100%;
+        /* left: -10%; */
+    }
+    .default-card__text__icons {
+        justify-content: center;
+    }
+     .card-children button {
+        font-size: 10px;
+        width: 100px;
+        height: 30px;
+        background-color: rgba(76, 76, 76, 1)
+    }
+    .full-cycle__button {
+        margin-top: 50px;
+        display: flex    ;
+        justify-content: flex-start;
+    }
+}

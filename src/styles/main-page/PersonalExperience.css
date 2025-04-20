@@ -15,3 +15,15 @@ section {
     height: 48px;
     line-height: 150%;
 }
+
+@media (max-width: 768px) {
+    .experience {
+        margin-top: 50px;
+        width: 90%;
+        /* max-width: 375px; */
+    }
+    .experience > p {
+        width: auto;
+        height: auto;
+    }
+}

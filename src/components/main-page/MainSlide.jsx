@@ -1,11 +1,15 @@
 
 import { Link } from "react-router-dom";
 import Zainap from "../../assets/Zainap.png";
+import ZainapSmall from "../../assets/zainapSmall.png";
 import Button from '../general/Button';
 import roundTooth from "../../assets/round-tooth.png"
+import { useMediaQuery } from "react-responsive";
 
 export default function MainSlide ({MAIN_SWIPER_TITLE, MAIN_SWIPER_TEXT, MAIN_SWIPER_LINK,
     TOOTH_SWIPER_ICON, PERCENT_VALUE, PERCENT_TEXT, HERO_SWIPER_IMAGE}) {
+
+    const isDesktop = useMediaQuery({ minWidth: 768 });
 
     return (
         <div className='main-swiper-wrapper'>
@@ -19,11 +23,10 @@ export default function MainSlide ({MAIN_SWIPER_TITLE, MAIN_SWIPER_TEXT, MAIN_SW
                     <p>
                         {MAIN_SWIPER_TEXT}
                     </p>
-
                     <Button> <Link to={MAIN_SWIPER_LINK}>  Посмотреть кейс </Link></Button>
 
                     <div>
-                    <img src={TOOTH_SWIPER_ICON} alt="Зубы" />
+                    <img src={roundTooth} alt="Зубы" />
                     <p>
                         <span> {PERCENT_VALUE} </span>
                         {PERCENT_TEXT}
@@ -31,7 +34,7 @@ export default function MainSlide ({MAIN_SWIPER_TITLE, MAIN_SWIPER_TEXT, MAIN_SW
                     </div>
                 </div>
 
-            <img src={HERO_SWIPER_IMAGE} alt={MAIN_SWIPER_TITLE} />
+            <img className="img-fluid " src={isDesktop ? Zainap : ZainapSmall  } alt={MAIN_SWIPER_TITLE} />
         </div>
       </div>
     )

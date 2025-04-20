@@ -37,3 +37,10 @@
 .light {
     font-weight: lighter !important;
 }
+
+@media (max-width: 768px) {
+    .map-block {
+        width: 90%;
+        margin-top: 45px;
+    }
+}

@@ -22,7 +22,7 @@
 }
 .future hr {
     border-color: rgba(255, 255, 255, 0.5) !important;
-    opacity: 1; 
+    opacity: 1;
     margin: 1rem 0;
 }
 .default-card__text__icons {
@@ -49,7 +49,8 @@
 @media (max-width: 760px) {
     .default-card {
         width: 100%;
-        
+        height: auto;
+
     }
     .default-card__photo {
         /* width: 100vw; */
@@ -57,17 +58,44 @@
     }
     .default-card__photo > img {
         border-radius: 0;
-        
+
     }
     .default-card {
         width: 90%;
+        /* max-width: 375px; */
+        margin-top: 40px;
+        gap: 20px;
+    }
+    .default-card__text h2 {
+        margin: 0;
     }
     .default-card__text p {
         margin-top: 15px;
+        line-height: 140%;
+        font-weight: 500;
     }
     .default-card__text hr {
         border-color: rgba(31, 31, 31, 0.5);
         opacity: 1;
     }
-    
+    .default-card__text button {
+
+        font-size: 0.75rem;
+        text-decoration: underline;
+    }
+    .default-card__text__icons > div {
+        flex-direction: row;
+        gap: 10px;
+    }
+    .default-card__text__icons img {
+        width: 30px;
+    }
+    .default-card__text__icons > div span {
+        font-size: 10px;
+    }
+    .default-card__text__icons {
+        gap: 15px;
+    }
+
+
 }

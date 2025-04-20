@@ -186,12 +186,12 @@ function ListOfServices ({bitrixData: listOfItems}) {
 
     return (
         <>
-            <section className="container-fluid px-0 mt-5">
+            <section className="container-fluid px-0 mt-3 mt-md-5">
 
                 <div className="list-of-services">
                     <div className="list-of-services__title row mb-4">
-                        <h2 className="col-12 col-md-5"> Отделения </h2>
-                        <h2 className="col-12 col-md-7"> Услуги отделения </h2>
+                        <h2 className="col-12 col-md-5 d-none d-md-block"> Отделения </h2>
+                        <h2 className="col-12 col-md-7 d-none d-md-block"> Услуги отделения </h2>
                     </div>
                     <div className="list-of-services__description row">
                         {listOfItems.map((el, index)=> {

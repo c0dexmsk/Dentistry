@@ -57,3 +57,49 @@
     background-color: black;
     color: white;
 }
+
+@media (max-width: 768px) {
+    .recovery {
+        height: auto;
+        background-color: transparent;
+        background-image: none;
+        margin-top: 200px;
+        color: black;
+    }
+    .recovery img {
+        height: 220px;
+        top: 55px;
+        position: static;
+    }
+    .recovery__content {
+        width: 90%;
+        /* max-width: 375px; */
+        height: auto;
+    }
+    .recovery__content > div{
+        width: 100%;
+        position: relative;
+        line-height: 140%;
+        font-size: 12px;
+        height: auto;
+    }
+    .recovery__content p {
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    .recovery h2 {
+        width: 90%;
+        /* max-width: 375px; */
+    }
+    .recovery__content button {
+        text-transform: uppercase;
+        width: 110px;
+        height: 30px;
+        color: white;
+        background-color: var(--dark-gray);
+    }
+    .recovery__content button:hover {
+        color: var(--dark-gray);
+        background-color:  white;
+    }
+}

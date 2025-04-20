@@ -138,7 +138,7 @@
 .pattern-block__questions__accordeon .accordion-button::after {
     display: none !important;
 }
-  
+
 /* Add plus */
 .pattern-block__questions__accordeon .accordion-button:not(.collapsed)::before,
 .pattern-block__questions__accordeon .accordion-button::before {
@@ -150,11 +150,175 @@
     transition: transform 0.3s ease;
     transform: rotate(45deg);
 }
-  
+
 /* Rotate plus */
 .pattern-block__questions__accordeon .accordion-button:not(.collapsed)::before {
     transform: rotate(90deg);
 }
 .pattern-block__questions__accordeon .accordion-button:not(.collapsed) {
     color: black;
+}
+.customLink {
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+
+    .pattern-block {
+        width: 90%;
+    }
+    .pattern-block__guide h3 {
+        font-size: 14px;
+    }
+    .pattern-block__guide p {
+        font-size: 8px;
+        line-height: 150%;
+    }
+    .pattern-block__image {
+        max-height: 41px;
+    }
+    .pattern-block__guide {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+    .pattern-block .col-md-1 {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .pattern-block {
+        margin-top: 30px;
+    }
+    .pattern-block__text p {
+        font-size: 12px;
+        line-height: 150%;
+    }
+    .pattern-block__text img, .pattern-block__text.block2 img{
+        aspect-ratio: auto;
+    }
+    .pattern-block__buttons button {
+        padding: 10px 23px;
+        font-size: 10px;
+        line-height: 140%;
+        border-width: 1px;
+    }
+    .pattern-block__text p {
+        line-height: 140%;
+    }
+    .pattern-block__text button {
+        font-size: 12px;
+    }
+    .pattern-block .margin100 {
+        margin-top: 50px;
+    }
+    .pattern-block__text button:hover {
+        text-decoration: underline;
+    }
+    .imp p {
+        margin: 5px 0;
+        line-height: 140%;
+    }
+    .imp {
+        background-color: white;
+        border-radius: 15px;
+        padding: 15px;
+    }
+    .imp > div > div, .imp > div{
+        max-width: 100%;
+        padding: 0;
+        position: relative;
+        left: 2%;
+    }
+    .imp > div > div {
+        margin-top: 10px;
+    }
+    .imp button {
+        text-align: start;
+        font-size: 12px;
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+    .imp button:hover {
+        text-decoration: underline;
+    }
+
+    .pattern-block .abilities > div > div > div {
+        background-color: transparent;
+        padding: 0;
+    }
+    .abilities h3 , .abilities p{
+        font-size: 10px;
+        line-height: 140%;
+    }
+    .abilities img {
+        width: 40px;
+        height: 40px;
+    }
+    .abilities {
+        position: relative;
+    }
+    .abilities > div {
+        max-width: 100%;
+        position: relative;
+        left: 3%;
+    }
+    .element > div {
+        border-radius: 11px;
+        height: 80px;
+    }
+    .element > div h3 {
+        margin: 10px;
+        font-size: 9px;
+    }
+    .element > div > div {
+        padding-left: 10px;
+        height: 30px;
+    }
+    .element > div > div > h3 {
+        margin-left: 0;
+        /* margin-top: 5px;
+        margin-bottom: 5px; */
+    }
+    .customLink {
+        font-size: 8px;
+        background-color: rgba(136, 125, 99, 1);
+        color: white;
+        border-radius: 60px;
+        text-align: center;
+        vertical-align: middle;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 140%;
+        padding: 6px 13px;
+        width: auto;
+        max-width: 100px;
+        white-space: nowrap;
+        left: -3%;
+    }
+    .customLink:hover {
+        background-color: var(--dark-gray);
+
+    }
+    .pattern-block__questions__accordeon .accordion-header button {
+        font-size: 12px !important; /* Размер текста */
+        min-height: 40px !important; /* Высота блока */
+        padding: 10px 0 !important; /* Уменьшаем отступы */
+      }
+
+      .pattern-block__questions__accordeon .accordion-body ,
+      .accordion-item:first-of-type>.accordion-header .accordion-button, .pattern-block__questions__accordeon .accordion-button:not(.collapsed), .button:focus:not(:focus-visible), .pattern-block__questions__accordeon .accordion-header button {
+        font-size: 12px; /* Размер текста контента */
+      }
+
+      .pattern-block__questions__accordeon .accordion-button::before {
+        font-size: 2rem !important; /* Уменьшаем плюсик */
+        right: 0.5rem !important; /* Сдвигаем ближе к краю */
+      }
+
+      .pattern-block__questions__accordeon .accordion-item , .pattern-block__questions__accordeon .accordion-body{
+        height: auto; /* Автоматическая высота */
+        padding: 5px 0; /* Уменьшаем отступы */
+      }
+
 }

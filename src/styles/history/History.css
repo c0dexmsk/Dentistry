@@ -17,7 +17,7 @@
 }
 .diagnostics__blocks {
     max-width: 1120px;
-   
+
 }
 
 .diagnostics > div {
@@ -34,7 +34,7 @@
     background-color: white;
     color: black;
     position: relative;
-    
+
     height: 250px;
     overflow: hidden;
     border-radius: 10px;
@@ -143,4 +143,88 @@
 .team a:hover {
     background-color: white;
     color: var(--dark-gray);
+}
+
+
+@media (max-width: 768px) {
+    .margin-bottom-100 {
+        margin-bottom: 25px;
+    }
+    .margin-top-100 {
+        margin-top: 25px;
+    }
+    .history-title {
+        width: 90%;
+        max-height: 300px;
+    }
+    .history-title p {
+        line-height: 180%;
+        font-size: 7px;
+    }
+    .history-title img {
+        width: 140%;
+        margin-left: -20%;
+        /* background-size: contain; */
+    }
+    .history-title h2 {
+        font-size: 12px;
+        margin: 15px 0;
+    }
+    .history-title h1 {
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+    .diagnostics > div {
+        width: 90%;
+    }
+    .diagnostics {
+        margin-top: 0;
+    }
+    .diagnostics__blocks .odd-block {
+        width: 40%;
+    }
+    .diagnostics__blocks .even-block{
+        width:60%;
+    }
+    .diagnostics__blocks > div > div {
+        font-size: 10px;
+        line-height: 150%;
+        height: 131px;
+        margin: 0;
+    }
+    .stages, .result, .team {
+        width: 90%;
+    }
+    .stages__stage h3 {
+        font-size: 1rem;
+    }
+    .stages__stage p {
+        font-size: 10px;
+    }
+    .stages__stage > div {
+        min-height: 200px;
+    }
+    .result p {
+        font-size: 12px;
+        line-height: 150%;
+    }
+    .result img {
+        max-width: 100%;
+    }
+    .team h3 , .team p{
+        margin: 0;
+        font-size: 6px;
+        max-width: 100%;
+    }
+    .team img {
+        max-width: 100%;
+    }
+    .team a {
+        padding: 4px;
+        font-size: 5px;
+    }
+    .team > div {
+        align-items: flex-end;
+    }
+
 }

@@ -75,8 +75,11 @@
 }
 .kids-services__grid > div:last-child p{
     margin: 0;
-    margin-left: 30px;
-
+    margin-bottom: 10px;
+}
+.kids-services__grid  {
+    padding: 20px;
+    box-sizing: border-box;
 }
 .kids-services__grid > div:last-child a{
     border-radius: 70px;
@@ -88,4 +91,71 @@
 }
 .kids-services__grid > div:last-child a:hover {
     color: white !important;
+}
+@media (max-width: 768px) {
+    .kids-services {
+        width: 90%;
+        margin-top: 50px;
+    }
+    .rocket-picture {
+        left: 300px;
+        top: 480px;
+    }
+    .cat-picture {
+        top: 1450px;
+        left: 250px;
+    }
+    .flower-yellow-picture {
+        top: 2150px;
+        /* left: 300px; */
+    }
+    .rainbow-picture {
+        top: 2200px;
+    }
+    .flower-picture {
+        display: none;
+    }
+    .curve-picture {
+        display: none;
+    }
+    .star2-picture {
+        top: 2050px;
+        left: 250px;
+    }
+    .flower-pink-picture {
+        top: 1700px;
+    }
+    .kids-services__grid {
+        grid-template-columns:  repeat(2, minmax(160px, 280px));
+        gap: 15px;
+        grid-template-rows: repeat(2, 100px);
+        padding: 0;
+        /* box-sizing: border-box; */
+        width: 100%;
+    }
+    .kids-services__grid > div {
+        font-size: 9px;
+        gap: 25px;
+        line-height: 140%;
+        height: 100px;
+        border-radius: 11px;
+    }
+    .kids-services__grid > div > div:first-of-type {
+        height: auto;
+        padding: 10px;
+    }
+    .kids-services__grid > div > p {
+        font-size: 9px;
+        margin: 10px;
+        margin-top: 20px;
+    }
+    .kids-services {
+        height: auto;
+    }
+
+    .kids-services__grid > div > div:first-of-type {
+
+        border-bottom-right-radius: 11px;
+        border-bottom-left-radius:11px;
+    }
 }

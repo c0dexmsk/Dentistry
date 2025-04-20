@@ -1,4 +1,5 @@
 
+import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom"
 
 export default function Item ({title, backgroundColor, link,description,innerServices}) {
@@ -22,24 +23,30 @@ export default function Item ({title, backgroundColor, link,description,innerSer
 
     const selectedStyle = styles[backgroundColor] || {};
 
+    const isDesktop = useMediaQuery ({minWidth : 768});
+
     return (
         <>
-            <div className="item-01 col-12 col-md-5 my-3"
+            <div className="item-01 col-12 col-md-5 my-md-3"
             style={{ backgroundColor: selectedStyle.color2, }}>
-                <div className="row gy-3">
-                    <h3> {title} </h3>
-                    <p> {description} </p>
-                    <Link style={{
-                    '--color4': selectedStyle.color4,
-                    '--color5': selectedStyle.color5
-                    }} to={`/${link}`}> Об отделении </Link>
-                    <Link style={{
+                <div className="row gy-3 item">
+                    <div className="special1 col-8 col-md-12">
+                        <h3> {title} </h3>
+                        <p> {description} </p>
+                    </div>
+                    <div className="special2 col-3 col-md-12 ">
+                        <Link style={{
                         '--color4': selectedStyle.color4,
                         '--color5': selectedStyle.color5
-                    }} to={`/${link}`}> Все услуги </Link>
+                        }} to={`/${link}`}> Об отделении </Link>
+                        <Link style={{
+                            '--color4': selectedStyle.color4,
+                            '--color5': selectedStyle.color5
+                        }} to={`/${link}`}> Все услуги </Link>
+                    </div>
                 </div>
             </div>
-            <div className="item-02 col-12 col-md-7 my-3 row gx-3"
+            <div className="item-02 col-12 col-md-7 my-md-3 row gx-3"
             style={{ backgroundColor: selectedStyle.color1, }}>
                 {innerServices.map ((el,index) => {
                     return (

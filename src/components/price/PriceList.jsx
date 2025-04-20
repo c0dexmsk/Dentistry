@@ -8,7 +8,7 @@ function PriceList ({bitrixData}) {
 
     const groupedByDepartment = uniqueDepartments.reduce((acc, department) => {
         acc[department] = departments.filter(el => el.department === department);
-        
+
         return acc;
     }, {});
 
@@ -18,7 +18,7 @@ function PriceList ({bitrixData}) {
         therapy: "Терапия",
         orthopedics: "Ортопедия",
         orthodontics: "Ортодонтия",
-        
+
         periodontology: "Пародонтология",
         implantation: "Имплантация",
         surgery: "Хирургия",
@@ -35,7 +35,7 @@ function PriceList ({bitrixData}) {
 
                 <div className="price-list__departments">
                     <h2> Отделения клиники </h2>
-                    <div className="row mb-4">
+                    <div className="row mb-md-4">
                         <button className="col"> Консультация и диагностика </button>
                         <button className="col-auto"> Профилактика </button>
                         <button className="col"> Терапия </button>
@@ -43,7 +43,7 @@ function PriceList ({bitrixData}) {
                         <button className="col"> Ортодонтия </button>
                     </div>
 
-                    <div className="row mb-4">
+                    <div className="row mb-md-4">
                         <button className="col"> Хирургия </button>
                         <button className="col-auto"> Имплантация </button>
                         <button className="col"> Пародонтология </button>
@@ -54,13 +54,13 @@ function PriceList ({bitrixData}) {
 
                 {uniqueDepartments.map((department, index) => (
                     <div key={index} className="price-list__sections margin-top-100">
-                        
+
                         <h2>{departmentTitles[department] || department} </h2>
-                        
+
                         {groupedByDepartment[department].map((service, serviceIndex) => (
 
                             <div>
-                                <div className="row">
+                                <div className="row price-mobile">
                                     <div className="col-7">
                                         <p>
                                         {service.name}

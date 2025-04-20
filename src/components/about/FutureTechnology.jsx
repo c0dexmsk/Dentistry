@@ -8,7 +8,7 @@ import { useMediaQuery } from "react-responsive";
 
 export default function FutureTechnology () {
 
-    const isDesktop = useMediaQuery({ minWidth: 760 });
+    const isDesktop = useMediaQuery({ minWidth: 768 });
 
     return (
         <section className={isDesktop ? "future container-fluid px-0 p-0" : "future container"}>

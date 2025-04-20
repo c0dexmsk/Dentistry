@@ -47,3 +47,71 @@
     border-color: #C3D4DE;
     color: initial;
 }
+
+@media (max-width: 768px) {
+    .kids-doctors {
+        width: 90%;
+        margin-top: 50px;
+    }
+    .kids-doctors__grid {
+        width: 90%;
+        margin-top: 20px;
+        gap: 25px   ;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .doctor-card {
+        margin: 0;
+        max-width: 90px;
+        height: 200px;
+        max-height: 100%;
+        padding: 0;
+        width: 100%;
+
+        display: flex
+        ;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .doctor-card img {
+        width: 90px;
+        height: 143px;
+    }
+    .doctor-card > * {
+        margin-top: 0px !important;
+        margin-bottom: 2px !important;
+    }
+    .doctor-card h3 , .doctor-card p{
+        font-size: 6px;
+    }
+    .kids-doctors__grid button {
+        height: 13px;
+        width: 40px;
+        font-size: 5px;
+        background-color: var(--dark-gray);
+    }
+    .doctor-card p {
+        height: 10px;
+        line-height: 140%;
+    }
+
+    .details-button{
+        margin-top: 10px !important;
+        display: flex    ;
+        align-items: center;
+        justify-content: center;
+        height: 13px;
+        width: 40px;
+        font-size: 5px;
+    }
+
+    .kids .service__button-container a {
+        /* padding: 6px 25px; */
+        padding: 0 20px;
+        font-size: 0.5rem;
+        background-color: var(--dark-gray);
+        color: white;
+        border: none;
+    }
+}

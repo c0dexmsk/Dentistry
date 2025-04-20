@@ -3,9 +3,12 @@ import faq from "../../assets/FAQ.svg"
 import FAQDropdown from "./FAQDropdown";
 import Accordion from 'react-bootstrap/Accordion';
 import withBitrixData from "hocs/withBitrixData";
+import { useMediaQuery } from "react-responsive";
 
- function FAQ({bitrixData}) { 
-    
+ function FAQ({bitrixData}) {
+
+    const isDesktop = useMediaQuery ({minWidth: 768});
+
     const FAQDescription = [
         {
             // title: 'Как вы обеспечиваете безопасность лечения в вашей клинике?',
@@ -27,33 +30,46 @@ import withBitrixData from "hocs/withBitrixData";
 
     return (
         <section className="container-fluid px-0">
-                <div className="FAQ">
-                    <div>
-                        <div>
-                            <h2> FAQ </h2>
-                            <img src={faq} alt="Ответы на вопросы" />
-                        </div>
-                        <p> Ответы на популярные вопросы </p>
-                    </div>
-                    <div>
-                    <Accordion>
-                        {FAQDescription.map((el, index) => {
-                            return (
-                                <>
-                                    <FAQDropdown
-                                        title={el.title}
-                                        description={el.description}
-                                        eventKey={el.eventKey}
-                                        key={index}
-                                    />
-                                </>
-                            )
-                        })}
-                    </Accordion >
-
-                    </div>
+        <div className="FAQ">
+          {isDesktop ? (
+            <>
+              <div>
+                <div>
+                  <h2>FAQ</h2>
+                  <img src={faq} alt="Ответы на вопросы" />
                 </div>
-        </section>
+                <p>Ответы на популярные вопросы</p>
+              </div>
+              <div>
+                <Accordion>
+                  {FAQDescription.map((el, index) => (
+                    <FAQDropdown
+                      title={el.title}
+                      description={el.description}
+                      eventKey={el.eventKey}
+                      key={index}  // key должен быть на верхнем элементе
+                    />
+                  ))}
+                </Accordion>
+              </div>
+            </>
+          ) : (
+            <>
+                <h2> FAQ </h2>
+                <Accordion>
+                  {FAQDescription.map((el, index) => (
+                    <FAQDropdown
+                      title={el.title}
+                      description={el.description}
+                      eventKey={el.eventKey}
+                      key={index}  // key должен быть на верхнем элементе
+                    />
+                  ))}
+                </Accordion>
+            </>
+          )}
+        </div>
+      </section>
     )
 }
 

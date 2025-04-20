@@ -3,17 +3,17 @@ import image2 from "../../assets/history/teeth.svg";
 import image3 from "../../assets/history/BL2.svg";
 
 export default function Stages ({bitrixData}) {
-    
-    return (
-        <section> 
-        
-            <div className="stages margin-top-100 ">
-                
-                <h2> Диагностика </h2>
-                
-                <div className="container-fluid px-0 row mt-5 g-3">
 
-                    <div className="col-4 stages__stage">
+    return (
+        <section>
+
+            <div className="stages margin-top-100 ">
+
+                <h2 className="text-center text-md-start"> Этапы лечения </h2>
+
+                <div className="container-fluid px-0 row mt-3 mt-md-5 g-3">
+
+                    <div className="col-12 col-md-4 stages__stage">
                         <div className="d-flex flex-row">
                             <div className="col-8">
                                 <h3> {bitrixData.STEP1_H2} </h3>
@@ -25,7 +25,7 @@ export default function Stages ({bitrixData}) {
                         </div>
                     </div>
 
-                    <div className="col-4 stages__stage">
+                    <div className="col-12 col-md-4 stages__stage">
                         <div className="d-flex flex-row">
                             <div className="col-10">
                                 <h3> {bitrixData.STEP2_H2} </h3>
@@ -37,7 +37,7 @@ export default function Stages ({bitrixData}) {
                         </div>
                     </div>
 
-                    <div className="col-4 stages__stage">
+                    <div className="col-12 col-md-4 stages__stage">
                         <div className="d-flex flex-row">
                             <div className="col-10">
                                 <h3> {bitrixData.STEP3_H2}</h3>
@@ -50,7 +50,7 @@ export default function Stages ({bitrixData}) {
                     </div>
 
                 </div>
-                
+
             </div>
         </section>
     )

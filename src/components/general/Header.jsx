@@ -9,7 +9,7 @@ import { useMediaQuery } from 'react-responsive';
 
 export default function Header () {
 
-    const isDesktop = useMediaQuery({ minWidth: 760 });
+    const isDesktop = useMediaQuery({ minWidth: 768 });
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return isDesktop ? (
@@ -21,7 +21,7 @@ export default function Header () {
                             <img src={logo} alt="logo" />
                         </Link>
                     </div>
-    
+
                     <div className="header__container__text">
                         <Link to="/about"> О клинике </Link>
                         <Link to="/kids"> Дети </Link>
@@ -36,7 +36,7 @@ export default function Header () {
                         <Link to="/contacts"> Контакты </Link>
                         <Link to="/"> Записаться </Link>
                     </div>
-    
+
                     <div className="header__container__icons">
                         <button>
                             <img src={glasses} alt="glasses" />
@@ -50,7 +50,7 @@ export default function Header () {
                     </div>
                 </div>
             </header>
-        ) : ( 
+        ) : (
             <header className="header">
                 <div className="header__container">
 
@@ -61,7 +61,7 @@ export default function Header () {
                     </div>
 
                     <div className="header__container__burger">
-                    <button 
+                    <button
                         className={`burger-button ${isMenuOpen ? 'active' : ''}`}
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
@@ -73,14 +73,14 @@ export default function Header () {
 
                     {isMenuOpen && (
                     <div className="mobile-menu d-flex flex-column">
-                        
+
                         <div className="mobile-menu__container d-flex flex-row justify-content-between align-items-center">
                             <img src={logo} alt="logo" />
-                            <button 
+                            <button
                                 className="mobile-menu__close"
                                 onClick={() => setIsMenuOpen(false)}
                                 >
-                                &times; 
+                                &times;
                             </button>
                         </div>
 

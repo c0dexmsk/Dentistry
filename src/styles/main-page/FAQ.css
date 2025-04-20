@@ -110,3 +110,82 @@
     display: flex;
     justify-content: space-between;
 }
+@media (max-width: 768px) {
+    .FAQ {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        margin-top: 60px;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 15px;
+      }
+
+      .FAQ > div:first-of-type {
+        width: 100%;
+        align-items: center;
+        /* text-align: center; */
+    }
+      .FAQ > div:first-of-type > div {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .FAQ > div:first-of-type > div > img {
+        width: 200px;
+        height: auto;
+      }
+
+      .FAQ > div:first-of-type > div > h2 {
+        font-size: 1.5rem;
+      }
+
+      .FAQ > div:first-of-type > p {
+        font-size: 10px
+      }
+
+      .FAQ > div:last-of-type {
+        width: 100%;
+      }
+
+      /* Аккордеон в мобильной версии */
+      .FAQ__dropdown {
+        margin-bottom: 10px;
+      }
+
+      .FAQ__dropdown__header {
+        height: 52px;
+        padding: 0 15px;
+    }
+    .FAQ__dropdown__header div {
+        font-size: 10px;
+
+    }
+    .FAQ__dropdown.accordion-item {
+        border-radius: 5px !important;
+    }
+    .FAQ__dropdown__header .accordion-button {
+        /* padding: 10px; */
+    }
+      .FAQ__dropdown__body {
+        padding: 0px 15px 15px 15px ;
+        border-radius: 0 0 5px 5px;
+      }
+
+      .FAQ .accordion-item:first-of-type,
+      .FAQ .accordion-item:last-of-type {
+        border-radius: 5px !important;
+        width: 100%;
+      }
+
+      .FAQ__dropdown__content {
+        font-size: 10px;
+        line-height: 130%;
+      }
+      .FAQ__dropdown__header div  {
+        gap: 40px;
+      }
+      .accordion-button.collapsed , .accordion-button {
+        padding: 15px 0;
+      }
+}

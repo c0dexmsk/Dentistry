@@ -48,3 +48,50 @@
 #all-kids-doctors-container .details-button a {
     color: white;
 }
+@media (max-width: 760px) {
+    .doctors{
+        width: 90%;
+    }
+    .doctors h1 {
+        margin-top: 50px
+    }
+    .doctors__branches button {
+        padding: 0 15px;
+        /* padding: 9px 15px; */
+        font-size: 0.5rem;
+        border-radius: 30px;
+        box-sizing: border-box;
+        height: 30px;
+    }
+    .doctors__branches {
+        width: 100%;
+    }
+    .doctors-branch h2 {
+        margin: 25px 0;
+    }
+    .doctors__branches button {
+        margin-right: 11px;
+        margin-bottom: 10px;
+    }
+    .doctors__branches > div {
+        align-items: center;
+        justify-content: center;
+        /* max-width: 375px; */
+    }
+    .doctors-branch {
+        margin: 0;
+        width: 90%;
+    }
+    .doctors-branch__grid {
+        max-width: 100%;
+        gap: 30px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .doctor-card p {
+        font-weight: bold;
+    }
+    .doctors__branches h2 {
+        margin: 25px 0;
+    }
+}

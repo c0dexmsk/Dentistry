@@ -6,7 +6,7 @@ import Case from "../components/cases/Case.jsx";
 import Zainap from "../assets/ZainapHistory.png"
 
 function Cases({bitrixData: casesList}) {
-     
+
     // const casesList = [
     //     {
     //         name: 'История Зайнап',
@@ -29,11 +29,11 @@ function Cases({bitrixData: casesList}) {
                             <div className="cases">
                                 {casesList.map((el,index) => {
                                     return (
-                                        <Case 
+                                        <Case
                                             name={el.name}
                                             image={el.image}
                                             description={el.description}
-                                        />    
+                                        />
                                     )
                                 })}
                             </div>
