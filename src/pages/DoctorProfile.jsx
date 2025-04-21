@@ -9,66 +9,93 @@ import specialization from "../components/doctors/specialization.svg";
 import direction from "../components/doctors/direction.svg";
 import experience from "../components/doctors/experience.svg";
 import education from "../components/doctors/education.svg";
+import photoA from "../components/doctors/doctorsProfilePhoto/абдулжалилов.png"
 
 import withBitrixDoctorsData from "../hocs/withBitrixDoctorsData";
+import { useMediaQuery } from "react-responsive";
 
 function DoctorProfile({bitrixData}) {
 
-  const { slug } = useParams();
-//   const bitrixData = doctors.find(doc => doc.slug === slug);
-  const navigate = useNavigate();
-  if (!bitrixData) return <div>Доктор не найден</div>;
+    const isDesktop = useMediaQuery({minWidth: 768});
+    const { slug } = useParams();
+    //   const bitrixData = doctors.find(doc => doc.slug === slug);
+    const navigate = useNavigate();
+    if (!bitrixData) return <div>Доктор не найден</div>;
 
   return (
-    <div className="doctor-profile d-flex flex-row flex-nowrap ">
+    <div className="doctor-profile">
+        <div className="container-fluid px-0 d-flex flex-column flex-md-row">
 
-        <div className="container-fluid px-0 col-md-6 flex-grow-1 d-flex flex-column">
+            <div className="col-md-6 col-6 doctor-info">
 
-            <button onClick={() => navigate(-1)}>
-                <img src={arrow} alt="стрелка назад" />
-            </button>
+                <button onClick={() => navigate(-1)}>
+                    <img src={arrow} alt="стрелка назад" />
+                </button>
 
-            <button onClick={() => navigate("/doctors")}>
-                <img src={close} alt="закрыть" />
-            </button>
+                <button onClick={() => navigate("/doctors")}>
+                    <img src={close} alt="закрыть" />
+                </button>
+                <h1>{bitrixData.name}</h1>
 
-            <h1>{bitrixData.name}</h1>
+                <div className="info-section">
+                    <div className="icon-text">
+                        <img src={specialization} alt="Специализация" />
+                        <h2>Специализация:</h2>
+                    </div>
+                    <p>{bitrixData.specialization}</p>
+                </div>
 
-            <div>
-                <h2>Специализация:</h2>
-                <img src={specialization} alt="Специализация" />
+                <div className="info-section">
+                    <div className="icon-text">
+                        <img src={direction} alt="Направление" />
+                        <h2>Направление:</h2>
+                    </div>
+                    <p>{bitrixData.direction}</p>
+                </div>
+
+                <div className="info-section">
+                    <div className="icon-text">
+                        <img src={experience} alt="Стаж" />
+                        <h2>Стаж:</h2>
+                    </div>
+                    <p>{bitrixData.experience}</p>
+                </div>
+            {isDesktop ? (
+                <div className="info-section">
+                     <div className="icon-text">
+                        <img src={education} alt="Образование" />
+                        <h2>Образование:</h2>
+                    </div>
+                    <p dangerouslySetInnerHTML={{ __html: bitrixData.education.TEXT }} />
+                </div>
+            ) : (
+                null
+            )}
+
+                <button className="appointment-btn d-none d-md-block">Записаться на прием</button>
             </div>
-            <p> {bitrixData.specialization} </p>
 
-            <div>
-                <h2>Направление лечения: </h2>
-                <img src={direction} alt="Направление лечения" />
+            <div className="col-md-6 col-6 doctor-photo">
+                <img
+                    src={photoA}
+                    // src={bitrixData.photo}
+                    alt={bitrixData.name}
+                    className="img-fluid"
+                />
             </div>
-            <p> {bitrixData.direction} </p>
-
-            <div>
-                <h2>Стаж:</h2>
-                <img src={experience} alt="Стаж" />
-            </div>
-            <p> {bitrixData.experience} </p>
-
-            <div>
-                <h2>Образование: </h2>
-                <img src={education} alt="Образование" />
-            </div>
-            
-            <p
-                dangerouslySetInnerHTML={{ __html: bitrixData.education.TEXT }}
-            />
-
-            <button>Записаться на прием</button>
-            
         </div>
-
-        <div className="col-md-6 flex-grow-1">
-             <img src={bitrixData.photo} alt={bitrixData.name} className="img-fluid h-100 object-fit-cover" />
-        </div>
-        
+        {isDesktop ? (
+            null
+        ) : (
+            <div className="info-section">
+                <div className="icon-text">
+                    <img src={education} alt="Образование" />
+                    <h2>Образование:</h2>
+                </div>
+                    <p dangerouslySetInnerHTML={{ __html: bitrixData.education.TEXT }} />
+            </div>
+        )}
+         <button className="appointment-btn d-block d-md-none">Записаться на прием</button>
     </div>
   );
 }

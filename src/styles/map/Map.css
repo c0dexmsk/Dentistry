@@ -44,6 +44,7 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     row-gap: 10px;
+    height: 403px;
 }
 .map-block__block  > div {
     display: flex;

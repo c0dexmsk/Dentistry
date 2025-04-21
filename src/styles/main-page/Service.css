@@ -119,6 +119,7 @@
         padding: 10px;
         box-sizing: border-box;
         height: 100%;
+        position: relative;
     }
     .service__card__mobile:hover {
         background-color: var(--dark-gray);

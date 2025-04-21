@@ -26,7 +26,7 @@ export default function MainSlide ({MAIN_SWIPER_TITLE, MAIN_SWIPER_TEXT, MAIN_SW
                     <Button> <Link to={MAIN_SWIPER_LINK}>  Посмотреть кейс </Link></Button>
 
                     <div>
-                    <img src={roundTooth} alt="Зубы" />
+                    <img src={TOOTH_SWIPER_ICON} alt="Зубы" />
                     <p>
                         <span> {PERCENT_VALUE} </span>
                         {PERCENT_TEXT}
@@ -34,7 +34,7 @@ export default function MainSlide ({MAIN_SWIPER_TITLE, MAIN_SWIPER_TEXT, MAIN_SW
                     </div>
                 </div>
 
-            <img className="img-fluid " src={isDesktop ? Zainap : ZainapSmall  } alt={MAIN_SWIPER_TITLE} />
+            <img className="img-fluid " src={HERO_SWIPER_IMAGE  } alt={MAIN_SWIPER_TITLE} />
         </div>
       </div>
     )

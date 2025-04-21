@@ -106,8 +106,8 @@
 }
 .stages__stage img {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 20px;
+    bottom: 20px;
 }
 
 .result {

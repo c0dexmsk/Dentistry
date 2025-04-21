@@ -99,6 +99,170 @@
 .mobile-menu__links {
  margin-top: 30px;
 }
+.phone-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.phone-menu__content {
+    background: #F1EBE8;
+    padding: 30px;
+    width: 100%;
+    max-width: 650px;
+    position: relative;
+}
+
+.phone-menu.desktop .phone-menu__content {
+    max-width: 650px;
+}
+
+.phone-menu.mobile .phone-menu__content {
+    max-width: 90%;
+    margin: 20px;
+}
+
+.phone-menu__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.phone-menu__header h3 {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    margin: 0;
+}
+
+.phone-menu__close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--dark-gray);
+}
+
+.phone-menu__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.phone-menu__form input,
+.phone-menu__form textarea {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.phone-menu__form textarea {
+    /* min-height: 100px; */
+    line-height: 100%;
+    resize: vertical;
+    border: none;
+    border-bottom: 1px solid rgba(21, 17, 14, 0.4);
+    border-radius: 0;
+    padding-bottom: 10px;
+    background: transparent;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.phone-menu__form textarea:focus {
+    border-bottom-color: rgba(21, 17, 14, 0.8);
+}
+
+.phone-menu__agreement {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    margin: 10px 0;
+}
+
+.phone-menu__submit {
+    background-image: linear-gradient(90deg, rgba(141, 121, 98, 1) 0%, rgba(62, 41, 17, 1) 100%);
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    line-height: 100%;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+    width: 150px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.phone-menu__form input[type=checkbox], input[type=radio] {
+    aspect-ratio: 1/1;
+}
+.phone-menu__form input[type=text],
+.phone-menu__form input[type=tel]  {
+    border: none;
+    border-bottom: 1px solid rgba(21, 17, 14, 0.4);
+    border-radius: 0;
+    padding-bottom: 20px;
+}
+.phone-menu__submit:hover {
+    color: black;
+    background-color: white;
+}
+.phone-menu__submit:hover {
+    background: var(--primary-dark);
+}
+.phone-menu__agreement input[type="checkbox"] {
+    z-index: 1100;
+    position: relative;
+}
+
+
+.phone-menu__agreement {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.phone-menu__agreement input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.phone-menu__agreement span::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid rgba(21, 17, 14, 0.4);
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.phone-menu__agreement input[type="checkbox"]:checked + span::before {
+    background-color: rgba(21, 17, 14, 0.8);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 12px;
+}
+
+
 @media (max-width: 1200px) {
 
     .header__container {
@@ -108,7 +272,22 @@
 }
 
 @media (max-width: 768px) {
-
+    .phone-menu__form input[type=text], .phone-menu__form input[type=tel] ,
+    .phone-menu__form textarea  {
+        padding: 5px;
+        font-size: 10px;
+    }
+    .phone-menu__header {
+        margin-bottom: 20px;
+    }
+    .phone-menu__agreement {
+        font-size: 10px;
+    }
+    .phone-menu__submit {
+        font-size: 10px;
+        padding: 5px 5px;
+        width: max-content;
+    }
     .header__container {
         width: 90%;
         justify-content: flex-end;
@@ -116,5 +295,12 @@
     }
     .header.container-fluid px-0 {
         padding: 20px;
+    }
+    .phone-menu__content {
+        padding: 20px;
+    }
+
+    .phone-menu__header h3 {
+        font-size: 1.3rem;
     }
 }
