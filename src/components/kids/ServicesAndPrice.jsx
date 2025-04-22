@@ -50,7 +50,10 @@ export default function ServicesAndPrice () {
     return(
         <section className="container-fluid px-0">
             <div className="kids-services">
+                <div className="new-button">
                 <h2> Услуги и стоимость </h2>
+                <a className="button" href="/full-price">Полный прайс-лист</a>
+                </div>
 
                 <div className="kids-services__grid">
                     { (isDesktop ? kidsServices : kidsServices2).map ((el,index)=> {
@@ -65,11 +68,11 @@ export default function ServicesAndPrice () {
                             </div>
                         )
                     })}
-                    <div className="d-none d-md-block">
+                    <div className="d-none d-md-flex">
                         <p>
-                        Полный прайс “Детская стоматология”
+                        Полный прайс
                         </p>
-                        <Link>
+                        <Link to="/full-price">
                             Смотреть
                         </Link>
                     </div>

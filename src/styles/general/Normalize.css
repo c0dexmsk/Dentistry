@@ -24,7 +24,7 @@ html {
     color: inherit;
   }
   a:hover {
-    color: inherit !important; 
+    color: inherit !important;
     /* text-decoration: none; */
   }
   abbr[title] {
@@ -146,27 +146,27 @@ html {
   h1 {
     font-size: 4rem;
     font-family: Montserrat, serif;
-    font-weight: bolder;  
+    font-weight: 800;
     margin: 1rem 0;
     line-height: normal;
   }
   h2 {
     font-size: 2rem;
     font-family: Montserrat, serif;
-    font-weight: bolder;  
+    font-weight: bolder;
     margin: 0.5rem 0;
   }
   h3 {
     font-size: 1rem;
     font-family: Montserrat, serif;
-    font-weight: bold;  
+    font-weight: bold;
     margin: 5px 0;
   }
   p{
     font-family: Montserrat, serif;
   }
 
-  @media (max-width: 760px) { 
+  @media (max-width: 760px) {
     h1 {
       font-size: 1.5rem;
     }
@@ -175,7 +175,7 @@ html {
     }
     h3 {
 
-    } 
+    }
     p {
       font-size: 0.75rem;
     }

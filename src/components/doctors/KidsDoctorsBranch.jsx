@@ -11,7 +11,8 @@ import malikat from "../../assets/doctors/malikat.png";
 import fatima from "../../assets/doctors/fatima.png";
 import aishat from "../../assets/doctors/aishat.png";
 import azai from "../../assets/doctors/azai.png";
-
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import KidsDoctors from "../kids/KidsDoctors";
 
 function KidsDoctorsBranch ({bitrixData}) {
@@ -110,9 +111,19 @@ function KidsDoctorsBranch ({bitrixData}) {
             link: "aliev-murad"
         }
     ];
-    return( 
+    const location = useLocation();
+
+    useEffect(() => {
+      if (location.hash === '#all-kids-doctors-container') {
+        const element = document.getElementById('all-kids-doctors-container');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }, [location]);
+    return(
         <div id="all-kids-doctors-container">
-            <KidsDoctors 
+            <KidsDoctors
                 kidsDoctors={kidsDoctors}
             />
         </div>

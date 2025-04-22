@@ -8,14 +8,28 @@
     border: none !important;
     box-shadow: none !important;
 }
-.cases .card-title {
-    font-size: 2rem;
-    font-weight: bold;
-}
 .patient-story-card {
     width: 50%;
 }
-
+.patient-story-card .card-body {
+    width: 100%;
+    padding: 45px 0px 45px 40px;
+}
+.cases h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 120%;
+}
+.cases  h2, .cases .card-title {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 120%;
+}
+.cases .card-title p {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 150%;
+}
 @media (max-width: 768px) {
     .cases.column {
         width: 90%;
@@ -42,5 +56,18 @@
     .cases button {
         height: 27px;
         width: 100px;
+    }
+    .cases .image-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    .cases h1 {
+        font-size: 24px;
+    }
+    .cases h2 {
+        font-size: 16px;
+    }
+    .cases p {
+        font-size: 12px;
     }
 }

@@ -11,13 +11,19 @@
 .title h1 {
     margin-bottom: 50px;
     text-align: center;
-    font-weight: bolder;
+    font-weight: 800;
+    font-size: 4rem;
 }
 .title h2 {
     margin-bottom: 23px;
+    font-weight: 800;
+    font-size: 2rem;
 }
 .title p {
-    font-weight: bold;
+    font-weight: 600;
+    line-height: 150%;
+    font-size: 20px;
+    text-align: justify;
 }
 @media (max-width: 1100px) {
     .title {
@@ -34,10 +40,15 @@
     }
     .title h1 {
         margin-bottom: 25px;
+        font-size: 24px;
+    }
+    .title h2 {
+        font-size: 16px;
     }
     .title p {
         font-weight: 500;
         line-height: 140%;
+        font-size: 12px;
     }
     .title button {
         font-size: 0.75rem;

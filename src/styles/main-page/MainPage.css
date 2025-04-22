@@ -116,9 +116,12 @@
     background-color: #2E2E2E;
     color: white;
     border-radius: 90px;
+    transition: 0.3s;
 }
 .veneers a:hover {
-    color: white !important;
+    color: var(--dark-gray) !important;
+    text-decoration: none;
+    background-color: white;
 }
 .custom-img {
     position: relative;
@@ -156,6 +159,10 @@
         padding: 10px 13px;
         font-weight: bold;
         text-transform: uppercase;
+        font-size: 10px;
+    }
+    .recovery__content a {
+        font-size: 10px;
     }
     .veneers.v2 .row{
         margin-top: 60px;

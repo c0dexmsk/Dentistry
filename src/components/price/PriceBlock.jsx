@@ -11,7 +11,7 @@ function PriceBlock ({bitrixData}) {
 
     const groupedByDepartment = uniqueDepartments.reduce((acc, department) => {
         acc[department] = departments.filter(el => el.department === department);
-        
+
         return acc;
     }, {});
 
@@ -21,7 +21,7 @@ function PriceBlock ({bitrixData}) {
         therapy: "Терапия",
         orthopedics: "Ортопедия",
         orthodontics: "Ортодонтия",
-        
+
         periodontology: "Пародонтология",
         implantation: "Имплантация",
         surgery: "Хирургия",
@@ -50,7 +50,7 @@ function PriceBlock ({bitrixData}) {
                                             <div className='col'> </div>
                                             <p className='col-auto'> {service.price} </p>
                                         </div>
-        
+
                                         <div className='item-body row'>
                                             <div className="col-8">
                                                 <p>
@@ -62,7 +62,7 @@ function PriceBlock ({bitrixData}) {
                                                     <img className="mr-3" src={clock} alt="Часы" />
                                                     <p> {service.time} </p>
                                                 </div>
-                                                { service.count && 
+                                                { service.count &&
                                                 <div className='d-flex flex-row'>
                                                     <img className="mr-3" src={calendar} alt="Календарь" />
                                                     <p> {service.count} </p>
@@ -75,8 +75,9 @@ function PriceBlock ({bitrixData}) {
                             </Accordion.Body>
                         </Accordion.Item>
                     ))}
-                
+
                 </Accordion>
+                <a className='button' href="/full-price"> Полный прайс-лист </a>
             </div>
         </section>
     )

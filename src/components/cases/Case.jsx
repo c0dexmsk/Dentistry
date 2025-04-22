@@ -18,7 +18,7 @@ export default function Case ({name, description, image}) {
             </div>
             )}
 
-            <Card.Body className="text-left p-4">
+            <Card.Body className="text-left">
             <div className="story-header mb-3">
                 <Card.Title>{name}</Card.Title>
             </div>

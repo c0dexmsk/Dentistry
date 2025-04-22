@@ -9,7 +9,7 @@ export default function FAQDropdown ({title, description, eventKey}) {
             <Accordion.Item eventKey={eventKey} className="FAQ__dropdown">
                 <Accordion.Header className="FAQ__dropdown__header">
                     <div>
-                        {title}
+                        <p>{title} </p>
                         <img src={plus} alt="плюс" className="FAQ__dropdown-icon" />
                     </div>
                 </Accordion.Header>

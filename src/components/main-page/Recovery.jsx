@@ -22,10 +22,8 @@ function Recovery({bitrixData}) {
                         <p>{bitrixData.RECOVERY_TEXT}</p>
                             {/* Кейс Зайнап демонстрирует возможности цифровой стоматологии: от диагностики с помощью 3D-томографии и сканирования Primescan до микрохирургии и высокоточной реставрации с индивидуальным подбором оттенка. Точность и предсказуемость на каждом этапе лечения. */}
 
-                        <Link to="/">
-                            <button>
-                                Подробнее
-                            </button>
+                        <Link to="/history">
+                            Подробнее
                         </Link>
                     </div>
                 </div>
@@ -39,7 +37,7 @@ function Recovery({bitrixData}) {
                     <div>
                         <p>{bitrixData.RECOVERY_TEXT}</p>
 
-                        <Link to="/">
+                        <Link to="/history">
                             <button>
                                 {bitrixData.CASE}
                             </button>

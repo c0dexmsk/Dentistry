@@ -11,7 +11,7 @@ export default function Diagnostics ({bitrixData}) {
    const isDesktop = useMediaQuery ({minWidth: 768})
 
     return (
-        <section className={isDesktop ? "diagnostics container-fluid px-0 margin-top-100" : "diagnostics container-fluid px-0 margin-top-100"}>
+        <section className={isDesktop ? "diagnostics container-fluid px-0" : "diagnostics container-fluid px-0"}>
             <div className="margin-top-100 margin-bottom-100 ">
                 <div>
                     <h2 className="text-md-start text-center"> Диагностика </h2>

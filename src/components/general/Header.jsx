@@ -1,6 +1,7 @@
 import React , { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.svg";
+import bigLogo from "assets/logoBig.svg"
 import glasses from "../../assets/glasses.svg";
 import phone from "../../assets/phone.svg";
 import profile from "../../assets/profile.svg";
@@ -18,7 +19,7 @@ export default function Header () {
             <div className="header__container">
                 <div className="header__container__logo">
                     <Link to="/main">
-                        <img src={logo} alt="logo" />
+                        <img src={bigLogo} alt="logo" />
                     </Link>
                 </div>
 
@@ -67,7 +68,7 @@ export default function Header () {
                         {isMenuOpen && (
                             <div className="mobile-menu d-flex flex-column">
                                 <div className="mobile-menu__container d-flex flex-row justify-content-between align-items-center">
-                                    <img src={logo} alt="logo" />
+                                    <a href="/main"><img src={logo} alt="logo" /></a>
                                     <button
                                         className="mobile-menu__close"
                                         onClick={() => setIsMenuOpen(false)}
@@ -82,7 +83,7 @@ export default function Header () {
                                     <Link to="/doctors">Врачи</Link>
                                     <Link to="/cases">Кейсы</Link>
                                     <Link to="/services">Услуги</Link>
-                                    <Link to="/price">Прайс</Link>
+                                    <Link to="/full-price">Прайс</Link>
                                     <Link to="/contacts">Контакты</Link>
                                     <Link onClick={() => {
                                         setIsMenuOpen(false);

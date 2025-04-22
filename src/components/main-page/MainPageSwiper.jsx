@@ -27,10 +27,10 @@ import 'swiper/css/pagination';
           >
 
           <SwiperSlide>
-            <MainSlide 
+            <MainSlide
               MAIN_SWIPER_TITLE={bitrixData.MAIN_SWIPER_TITLE}
               MAIN_SWIPER_TEXT ={bitrixData.MAIN_SWIPER_TEXT}
-              MAIN_SWIPER_LINK={bitrixData.SWIPER_LINK}
+              MAIN_SWIPER_LINK={bitrixData.SWIPER_LINK1}
               TOOTH_SWIPER_ICON={bitrixData.TOOTH_SWIPER_ICON}
               PERCENT_VALUE={bitrixData.PERCENT_VALUE}
               PERCENT_TEXT={bitrixData.PERCENT_TEXT}
@@ -40,7 +40,7 @@ import 'swiper/css/pagination';
 
 
           <SwiperSlide>
-            <MainSlide 
+            <MainSlide
               MAIN_SWIPER_TITLE={bitrixData.MAIN_SWIPER_TITLE2}
               MAIN_SWIPER_TEXT ={bitrixData.MAIN_SWIPER_TEXT2}
               MAIN_SWIPER_LINK={bitrixData.SWIPER_LINK2}
@@ -52,7 +52,7 @@ import 'swiper/css/pagination';
           </SwiperSlide>
 
           <SwiperSlide>
-            <MainSlide 
+            <MainSlide
               MAIN_SWIPER_TITLE={bitrixData.MAIN_SWIPER_TITLE3}
               MAIN_SWIPER_TEXT ={bitrixData.MAIN_SWIPER_TEXT3}
               MAIN_SWIPER_LINK={bitrixData.SWIPER_LINK3}

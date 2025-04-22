@@ -24,12 +24,12 @@ export default function DepartmentSection () {
 
                         <div className='department__adults'>
                             <div className='department__adults__links'>
-                                <Link to="/adults">
+                                <Link to="/about">
                                     <h3>
                                         Взрослое
                                     </h3>
                                 </Link>
-                                <Link to="/adults">
+                                <Link to="/about">
                                     <img className="white-arrow" src={whiteArrow} alt="whiteArrow" />
                                     <img className="black-arrow" src={blackArrow} alt="blackArrow" />
                                 </Link>
@@ -44,7 +44,7 @@ export default function DepartmentSection () {
                                         Детское
                                     </h3>
                                 </Link>
-                                <Link to="/adults">
+                                <Link to="/kids">
                                     <img className="white-arrow" src={whiteArrow} alt="whiteArrow" />
                                     <img className="black-arrow" src={blackArrow} alt="blackArrow" />
                                 </Link>

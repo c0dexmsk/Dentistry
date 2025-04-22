@@ -25,7 +25,7 @@ function Map({bitrixData}) {
                             <div className="map-block__image col-12 col-md-4">
                                 <img className="img-fluid" src={isDesktop ? mah : mah2} alt="Махачкала" />
                             </div>
-                            <div className="map-block__block col-12 col-md-8 row">
+                            <div className="map-block__block first col-12 col-md-8 row">
 
                                 <h2 className="col-12"> Махачкала </h2>
                                 <div className="col-6">
@@ -68,7 +68,7 @@ function Map({bitrixData}) {
                             <div className="map-block__image col-12 col-md-4 ">
                                 <img className="img-fluid" src={isDesktop ? mosc : mosc2} alt="Москва" />
                             </div>
-                            <div className="map-block__block col-12 col-md-8 row">
+                            <div className="map-block__block second col-12 col-md-8 row">
                                 <h2 className="col-12"> Город Москва </h2>
                                 <div className="col-12 col-md-6">
                                         <p className="light"> улица Маршала Новикова, 11 (м. Щукинская)</p>

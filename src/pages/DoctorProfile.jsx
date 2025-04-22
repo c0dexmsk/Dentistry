@@ -18,9 +18,10 @@ function DoctorProfile({bitrixData}) {
 
     const isDesktop = useMediaQuery({minWidth: 768});
     const { slug } = useParams();
-    //   const bitrixData = doctors.find(doc => doc.slug === slug);
+    const doctorData = bitrixData;
+    // const doctorData = bitrixData.find(doc => doc.slug === slug);
     const navigate = useNavigate();
-    if (!bitrixData) return <div>Доктор не найден</div>;
+    if (!doctorData) return <div>Доктор не найден</div>;
 
   return (
     <div className="doctor-profile">
@@ -35,14 +36,14 @@ function DoctorProfile({bitrixData}) {
                 <button onClick={() => navigate("/doctors")}>
                     <img src={close} alt="закрыть" />
                 </button>
-                <h1>{bitrixData.name}</h1>
+                <h1>{doctorData.name}</h1>
 
                 <div className="info-section">
                     <div className="icon-text">
                         <img src={specialization} alt="Специализация" />
                         <h2>Специализация:</h2>
                     </div>
-                    <p>{bitrixData.specialization}</p>
+                    <p>{doctorData.specialization}</p>
                 </div>
 
                 <div className="info-section">
@@ -50,7 +51,7 @@ function DoctorProfile({bitrixData}) {
                         <img src={direction} alt="Направление" />
                         <h2>Направление:</h2>
                     </div>
-                    <p>{bitrixData.direction}</p>
+                    <p>{doctorData.direction}</p>
                 </div>
 
                 <div className="info-section">
@@ -58,7 +59,7 @@ function DoctorProfile({bitrixData}) {
                         <img src={experience} alt="Стаж" />
                         <h2>Стаж:</h2>
                     </div>
-                    <p>{bitrixData.experience}</p>
+                    <p>{doctorData.experience}</p>
                 </div>
             {isDesktop ? (
                 <div className="info-section">
@@ -66,7 +67,7 @@ function DoctorProfile({bitrixData}) {
                         <img src={education} alt="Образование" />
                         <h2>Образование:</h2>
                     </div>
-                    <p dangerouslySetInnerHTML={{ __html: bitrixData.education.TEXT }} />
+                    <p dangerouslySetInnerHTML={{ __html: doctorData.education.TEXT }} />
                 </div>
             ) : (
                 null
@@ -78,8 +79,8 @@ function DoctorProfile({bitrixData}) {
             <div className="col-md-6 col-6 doctor-photo">
                 <img
                     src={photoA}
-                    // src={bitrixData.photo}
-                    alt={bitrixData.name}
+                    // src={doctorData.photo}
+                    alt={doctorData.name}
                     className="img-fluid"
                 />
             </div>
@@ -92,7 +93,7 @@ function DoctorProfile({bitrixData}) {
                     <img src={education} alt="Образование" />
                     <h2>Образование:</h2>
                 </div>
-                    <p dangerouslySetInnerHTML={{ __html: bitrixData.education.TEXT }} />
+                    <p dangerouslySetInnerHTML={{ __html: doctorData.education.TEXT }} />
             </div>
         )}
          <button className="appointment-btn d-block d-md-none">Записаться на прием</button>

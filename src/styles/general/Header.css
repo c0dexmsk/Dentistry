@@ -30,9 +30,32 @@
     z-index: 100;
 }
 .header__container__text select {
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    font-size: 0.875rem !important;
     border: none;
     background-color: transparent;
-    font-size: 0.875rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    position: relative;
+}
+.header__container__text select:focus-visible {
+    border: none;
+    background-color: transparent;
+}
+.header__container__text select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+.header__container__text select::-ms-expand {
+    display: none;
 }
 .header__container__text a {
     font-size: 0.875rem;

@@ -41,6 +41,9 @@
     border: none;
     overflow: hidden;
 }
+.FAQ__dropdown .accordion-button {
+  font-size: 20px;
+}
 
 /* Header styles */
 .FAQ__dropdown__header {
@@ -109,6 +112,14 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+.FAQ__dropdown__header div p {
+  width: 75%;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+.FAQ__dropdown.accordion-item {
+  box-shadow: 0px 9px 17px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 768px) {
     .FAQ {

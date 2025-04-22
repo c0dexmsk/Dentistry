@@ -4,7 +4,7 @@
     height: 196px;
     display: flex;
     flex-direction: row;
-    gap: 64px;
+    gap: 60px;
     align-items: flex-start;
     justify-content: space-between;
     margin-top: 100px;
@@ -22,6 +22,7 @@
 }
 .comfort > div h3 {
     font-size: 0.875rem;
+    max-width: 130px;
     margin: 0;
 }
 .comfort > div p {

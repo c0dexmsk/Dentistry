@@ -5,11 +5,26 @@
 }
 
 .history-title img {
-    width: 100%;
-    max-width: 550px;
+    width: 110%;
+    max-width: 680px;
     background-size: cover;
+    position: relative;
+    left: -7vw;
 }
-
+.history-title h1 {
+    font-weight: 800;
+    margin-top: 90px;
+    margin-bottom: 0;
+}
+.history-title h2 {
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+.history-title p {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 150%;
+}
 .diagnostics {
     width: 100%;
     background-color: var(--dark-gray);
@@ -39,11 +54,15 @@
     overflow: hidden;
     border-radius: 10px;
 }
+.diagnostics__blocks > div:nth-of-type(odd) > div {
+    width: 215px;
+}
+.diagnostics__blocks > div:nth-of-type(even) > div {
+    width: 300px;
+}
 .diagnostics__blocks > div > div p {
     max-height: 100px;
     max-width: 215px;
-
-
     z-index: 100;
     position: relative;
     padding: 20px;
@@ -67,12 +86,12 @@
 .diagnostics__blocks #unique-image {
     width: 80%;
 }
-.diagnostics__blocks .odd-block {
+/* .diagnostics__blocks .odd-block {
     width: 20.2%;
 }
 .diagnostics__blocks .even-block {
     width: 28.3%;
-}
+} */
 .margin-top-100 {
     margin-top: 100px;
 }
@@ -115,9 +134,12 @@
     max-width: 1120px;
 }
 .result p {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1rem;
     line-height: 150%;
+}
+.result > div > .col-md-6 {
+    margin-top: 20px;
 }
 .team .col-3 {
     margin-right: 100px;
@@ -128,9 +150,11 @@
 .team h3 {
     margin-top: 26px;
     margin-bottom: 10px;
+    font-weight: 700;
 }
 .team p {
     margin-bottom: 34px;
+    font-weight: 600;
 }
 .team a {
     padding: 10px;
@@ -144,8 +168,19 @@
     background-color: white;
     color: var(--dark-gray);
 }
-
-
+.history-title .col-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.history-title {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+.history-title > div {
+    /* width: 130%; */
+}
 @media (max-width: 768px) {
     .margin-bottom-100 {
         margin-bottom: 25px;
@@ -155,14 +190,22 @@
     }
     .history-title {
         width: 90%;
-        max-height: 300px;
+        max-height: 100%;
+        align-items: center;
+        align-content: center;
     }
     .history-title p {
-        line-height: 180%;
+        line-height: 150%;
         font-size: 7px;
     }
+    .stages__stage > div {
+        padding: 15px;
+    }
+    .diagnostics__blocks .odd-block img {
+        bottom: -15px;
+    }
     .history-title img {
-        width: 140%;
+        width: 130%;
         margin-left: -20%;
         /* background-size: contain; */
     }
@@ -192,8 +235,29 @@
         height: 131px;
         margin: 0;
     }
+    .diagnostics__blocks > div:nth-of-type(odd) > div {
+        width: auto;
+    }
+    .diagnostics__blocks > div:nth-of-type(even) > div {
+        width: auto;
+    }
+    .diagnostics__blocks>div>div p {
+        padding: 8px;
+    }
+    .diagnostics__blocks #unique-image {
+        width: 60%;
+    }
+    .diagnostics__blocks .even-block img {
+        width: 40%;
+    }
     .stages, .result, .team {
         width: 90%;
+    }
+    .stages {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
     }
     .stages__stage h3 {
         font-size: 1rem;
@@ -226,5 +290,9 @@
     .team > div {
         align-items: flex-end;
     }
-
+    .stages__stage img {
+        right: 20px;
+        bottom: 20px;
+        position: absolute;
+    }
 }

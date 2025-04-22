@@ -13,7 +13,18 @@
     background-color: white;
     color: #2E2E2E;
 }
+.details-button:hover a{
+    color: #2E2E2E;
+}
 .details-button a {
     color: white;
     transition: 0.3s;
-}   
+}
+.kids .details-button a {
+    color: white;
+    /* color: var(--dark-gray); */
+    font-weight: 500;
+}
+.kids-doctors__grid button:hover a {
+    color: white;
+}

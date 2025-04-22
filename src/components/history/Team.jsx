@@ -8,7 +8,7 @@ export default function Team ({bitrixData}) {
     return (
         <section>
             <div className="team margin-top-100">
-                <h2> Команда  </h2>
+                <h2> КОМАНДА </h2>
 
                 <div className="row flex-nowrap mt-3 mt-md-5">
                     <div className="col-md-3 col-4">

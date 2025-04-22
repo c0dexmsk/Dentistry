@@ -47,7 +47,40 @@
     border-color: #C3D4DE;
     color: initial;
 }
+.kids .default-card__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+}
+.kids hr {
+    display: none;
+}
+.kids .default-card__text p {
+    font-weight: 600;
+    line-height: 150%;
+    margin-bottom: 40px;
+    max-width: 477px;
+}
 
+.doctor-card h3 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+}
+.doctor-card > * {
+    margin: 0;
+}
+.doctor-card p {
+    font-weight: 600;
+    line-height: 150%;
+    font-size: 16px;
+}
+.doctor-card {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
 @media (max-width: 768px) {
     .kids-doctors {
         width: 90%;
@@ -64,11 +97,12 @@
     .doctor-card {
         margin: 0;
         max-width: 90px;
-        height: 200px;
+        /* height: 200px; */
+        height: auto;
         max-height: 100%;
         padding: 0;
         width: 100%;
-
+        gap: 11px;
         display: flex
         ;
         flex-direction: column;
@@ -80,10 +114,11 @@
     }
     .doctor-card > * {
         margin-top: 0px !important;
-        margin-bottom: 2px !important;
+        /* margin-bottom: 2px !important; */
     }
     .doctor-card h3 , .doctor-card p{
         font-size: 6px;
+        margin: 0;
     }
     .kids-doctors__grid button {
         height: 13px;
@@ -97,7 +132,7 @@
     }
 
     .details-button{
-        margin-top: 10px !important;
+        /* margin-top: 10px !important; */
         display: flex    ;
         align-items: center;
         justify-content: center;

@@ -6,6 +6,10 @@ import antistress from "../../assets/anti-stress.svg";
 import sleep from "../../assets/sleep.svg";
 import Button from "../general/Button";
 import { useMediaQuery } from "react-responsive";
+import img1 from "assets/images/v1.svg";
+import img2 from "assets/images/v2.svg"
+import img3 from "assets/images/v3.svg";
+import img4 from "assets/images/v4.svg"
 
 export default function ChildhoodImpressions () {
 
@@ -13,6 +17,12 @@ export default function ChildhoodImpressions () {
 
     return (
         <section className="child">
+            <div className="child__images">
+                <img src={img1} alt="звёздочка" />
+                <img src={img2} alt="радуга" />
+                <img src={img3} alt="петля" />
+                <img src={img4} alt="звёздочка" />
+            </div>
             <DefautCard
                 title="Детские впечатления"
                 description1="Особый протокол антистресс-лечения — соблюдается от и до, гарантируя безопасность и качество. Признанный препарат Севоран позволяет комфортно пройти сложные процедуры во сне. Наркозно-дыхательный аппарат Drager, применяемый в ведущих клиниках мира, обеспечивает беспрерывный мониторинг состояния ребенка в реальном времени."
@@ -26,7 +36,7 @@ export default function ChildhoodImpressions () {
                 icon3Title="Сон"
             >
                 <div className="child__button">
-                    <Button> Все услуги </Button>
+                    <Button> <a href="/services">Все услуги</a> </Button>
                 </div>
             </DefautCard>
         </section>

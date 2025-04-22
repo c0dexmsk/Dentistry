@@ -31,7 +31,6 @@ import elina from "../assets/doctors/elina.png";
 import muslim from "../assets/doctors/muslim.png";
 import asiat from "../assets/doctors/asiat.png";
 import malikat from "../assets/doctors/malikat.png";
-import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import MobileTitle from "components/about/MobileTitle.jsx";
 
@@ -44,41 +43,49 @@ export default function Kids() {
             photo: aizanat,
             name: "Абдурахманова Айзанат",
             profession: "Детский стоматолог",
+            link: "abdurahmanova-aizanat"
         },
         {
             photo: dina,
             name: "Гасанова Дина Абдулгаджиевна",
             profession: "Подростковый ортопед",
+            link: "hasanova-dina"
         },
         {
             photo: kamila,
             name: "Даудова Камила Гамзатовна",
             profession: "Детский стоматолог",
+            link:"daudova-kamila"
         },
         {
             photo: siadat,
             name: "Ибрагимова Сиядат Магомедовна",
             profession: "Детский стоматолог",
+            link: "ibragimova-siyadat"
         },
         {
             photo: elina,
             name: "Курбанова Элина Багарчиевна",
             profession: "Детский стоматолог",
+            link: "kurbanova-elina"
         },
         {
             photo: muslim,
             name: "Мурзабеков Муслим Мурзабекович",
             profession: "Детский стоматолог",
+            link: "murzabekov-muslim"
         },
         {
             photo: asiat,
             name: "Мурилова Асият Магомедовна",
             profession: "Детский стоматолог",
+            link:"murilova-asiyat"
         },
         {
             photo: malikat,
             name: "Мусаева Маликат Магомедшапиевна",
             profession: "Детский стоматолог",
+            link: "musaeva-malikat"
         },
     ]
 
@@ -142,8 +149,8 @@ export default function Kids() {
                         />
 
                         <div className="service__button-container">
-                            <Link to="/kids">
-                                Все десткие врачи
+                            <Link to="/doctors#all-kids-doctors-container">
+                                Все детские врачи
                             </Link>
                         </div>
 

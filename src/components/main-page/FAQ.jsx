@@ -36,9 +36,9 @@ import { useMediaQuery } from "react-responsive";
               <div>
                 <div>
                   <h2>FAQ</h2>
-                  <img src={faq} alt="Ответы на вопросы" />
+                  {/* <img src={faq} alt="Ответы на вопросы" /> */}
                 </div>
-                <p>Ответы на популярные вопросы</p>
+                {/* <p>Ответы на популярные вопросы</p> */}
               </div>
               <div>
                 <Accordion>

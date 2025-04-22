@@ -4,6 +4,20 @@
     height: 613px;
 
 }
+.kids-services .button {
+    padding: 10px 30px;
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: 700;
+    width: auto;
+    height: auto;
+}
+.new-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
 .kids-services__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -23,7 +37,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    gap: 20%;
+    gap: 30%;
 
     transition: 0.3s;
 }
@@ -32,8 +46,14 @@
     cursor: pointer;
 }
 .kids-services__grid > div > p {
-    margin-right: 130px;
+    margin-right: 100px;
     margin-left: 30px;
+    line-height: 140%;
+    font-weight: 700;
+    font-size: 20px;
+}
+.kids-services__grid > div:nth-of-type(4) > p {
+    margin-right: 10px;
 }
 .kids-services__grid > div > div {
     height: 70px;
@@ -46,7 +66,7 @@
     color: white;
 }
 .kids-services__grid > div:nth-of-type(4) {
-    gap: 10%;
+    gap: 20%;
 }
 .kids-services__grid > div > div:first-of-type {
     background-color: #EDD49A;
@@ -66,16 +86,17 @@
     background-color: #8DA4B5;
 }
 .kids-services__grid > div:last-child{
-    height: 130px;
+    height: 57px;
     background-color: #C3D4DE;
     flex-direction: row;
     gap: 0;
     align-items: center;
-
+    justify-content: center;
+    align-content: center;
+    gap: 15px;
 }
 .kids-services__grid > div:last-child p{
     margin: 0;
-    margin-bottom: 10px;
 }
 .kids-services__grid  {
     padding: 20px;
@@ -88,6 +109,9 @@
     color: white;
     padding: 10px 16px;
     margin-right: 15px;
+    font-weight: 500;
+    line-height: 100%;
+    margin: 0;
 }
 .kids-services__grid > div:last-child a:hover {
     color: white !important;
@@ -97,12 +121,20 @@
         width: 90%;
         margin-top: 50px;
     }
+    .kids-services .button {
+        padding: 5px 10px;
+        vertical-align: middle;
+        font-size: 10px;
+        font-weight: 700;
+        width: auto;
+        height: auto;
+    }
     .rocket-picture {
         left: 300px;
         top: 480px;
     }
     .cat-picture {
-        top: 1450px;
+        top: 1350px;
         left: 250px;
     }
     .flower-yellow-picture {

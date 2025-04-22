@@ -29,16 +29,10 @@ export default function Contacts () {
 
                         <h3> Москва </h3>
                         <div className="contacts__moscow__numbers">
-                            <p> улица Аскерханова, 1В </p>
-                            <span className="my-1">+7 989 877 78 88 </span>
-                            <span>+7 988 777 88 87 (Дети)</span>
+                            <p> улица Маршала Новикова, 11 (м. Щукинская) </p>
+                            <span className="my-1">+7 965 365 74 41 </span>
+                            <span> +7 495 790 00 65</span>
                         </div>
-
-                        <div className="contacts__moscow__numbers">
-                            <p> улица Хурукринская, 11</p>
-                            <span>+7 963 799 77 88 </span>
-                        </div>
-
                     </div>
                 </div>
 

@@ -62,7 +62,7 @@ export default function Footer () {
                         <option value="two">Two option</option>
                         <option value="two">Three option</option>
                     </select>
-                    <Link to="/price"> Прайс </Link>
+                    <Link to="/full-price"> Прайс </Link>
                     <Link to="/contacts"> Контакты </Link>
                 </div>
 

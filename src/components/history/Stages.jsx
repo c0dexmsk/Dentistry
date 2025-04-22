@@ -9,18 +9,15 @@ export default function Stages ({bitrixData}) {
 
             <div className="stages margin-top-100 ">
 
-                <h2 className="text-center text-md-start"> Этапы лечения </h2>
+                <h2 className="text-center text-md-start"> ЭТАПЫ ЛЕЧЕНИЯ </h2>
 
                 <div className="container-fluid px-0 row mt-3 mt-md-5 g-3">
 
                     <div className="col-12 col-md-4 stages__stage">
                         <div className="d-flex flex-row">
-                            <div className="col-8">
+                            <div className="col-10">
                                 <h3> {bitrixData.STEP1_H2} </h3>
-                                <p> {bitrixData.STEP1_P} </p>
-                            </div>
-                            <div className="col">
-                                <img src={bitrixData.STEP1_ICON} alt="Прибор" />
+                                <p style={{width: '180px'}}> {bitrixData.STEP1_P} </p>
                             </div>
                         </div>
                     </div>
@@ -39,7 +36,7 @@ export default function Stages ({bitrixData}) {
 
                     <div className="col-12 col-md-4 stages__stage">
                         <div className="d-flex flex-row">
-                            <div className="col-10">
+                            <div className="col-12">
                                 <h3> {bitrixData.STEP3_H2}</h3>
                                 <p> {bitrixData.STEP3_P}</p>
                             </div>

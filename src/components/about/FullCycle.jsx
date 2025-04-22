@@ -29,7 +29,9 @@ export default function FullCycle () {
                 icon3Title="Академия"
             >
             <div className="full-cycle__button">
-                <Button> Все услуги </Button>
+                <Button>
+                    <a href="/services">Все услуги</a>
+                </Button>
             </div>
             </DefautCard>
         </section>

@@ -7,7 +7,7 @@ export default function Result ({bitrixData}) {
     return (
         <section>
             <div className="result margin-bottom-100 margin-top-100">
-                <h2> Результат </h2>
+                <h2> РЕЗУЛЬТАТ </h2>
                 <div className="row flex-md-nowrap flex-wrap mt-3 mt-md-5">
                     <div className="col-md-3 col-6">
                         <img className="container-fluid px-0" src={bitrixData.RESULT_PHOTO1} alt="Зайнап" />
