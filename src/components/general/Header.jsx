@@ -30,9 +30,9 @@ export default function Header () {
                             <Link to="/kids">Дети</Link>
                             <Link to="/doctors">Врачи</Link>
                             <Link to="/cases">Кейсы</Link>
-                            <select 
-                                onChange={(e) => { 
-                                    if (e.target.value) window.location.href = e.target.value; 
+                            <select
+                                onChange={(e) => {
+                                    if (e.target.value) window.location.href = e.target.value;
                                 }}
                             >
                                 <option value="">Услуги</option>
@@ -49,7 +49,10 @@ export default function Header () {
                             </select>
                             <Link to="/price">Прайс</Link>
                             <Link to="/contacts">Контакты</Link>
-                            <Link to="/">Записаться</Link>
+                            <Link onClick={() => {
+                                setIsMenuOpen(false);
+                                setIsPhoneMenuOpen(true);
+                            }} >Записаться</Link>
                         </div>
 
                         <div className="header__container__icons">

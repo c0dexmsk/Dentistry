@@ -139,6 +139,7 @@ font-weight: 400; /* Обычный текст */
     position: absolute;
     right: 20px;
     bottom: 20px;
+    max-width: 180px;
 }
 
 .result {
@@ -226,10 +227,10 @@ font-weight: 400; /* Обычный текст */
         /* left: auto;
         width: auto;
         margin-left: 0; */
-        width: 170%; 
+        width: 170%;
         left: -12vw;
-        margin-left: 0; 
-        background-size: contain; 
+        margin-left: 0;
+        background-size: contain;
     }
     .history-title h2 {
         font-size: 12px;
@@ -317,5 +318,6 @@ font-weight: 400; /* Обычный текст */
         right: 20px;
         bottom: 20px;
         position: absolute;
+        max-width: 130px;
     }
 }
