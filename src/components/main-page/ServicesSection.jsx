@@ -86,7 +86,7 @@ const ServicesSection = () => {
         </div>
 
         <div className='service__button-container'>
-            <Button> <Link to="/services">Все отделения </Link> </Button>
+            <Button> <Link to="/services">Все услуги </Link> </Button>
         </div>
 
       </div>
