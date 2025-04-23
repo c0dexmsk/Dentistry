@@ -14,6 +14,7 @@ import pinkFlower from "../assets/flowerPinkPicture.svg"
 import cat from "../assets/catPicture.svg"
 import curve from "../assets/curvePicture.svg"
 import yellowFlower from "../assets/flowerYellowPicture.svg"
+import yellowFlowerMobile from "../assets/flowerYellowPictureMobile.svg"
 import rainbow from "../assets/rainbowPicture.svg"
 import star2 from "../assets/starPicture2.svg"
 import comfort from "../assets/comfotrable.svg"
@@ -88,7 +89,6 @@ export default function Kids() {
             link: "musaeva-malikat"
         },
     ]
-
     return (
         <>
             <div id="main-page-wrapper">
@@ -105,7 +105,7 @@ export default function Kids() {
                             <img className="flower-pink-picture" src={pinkFlower} alt="Фотография Цветочка" />
                             <img className="cat-picture" src={cat} alt="Фотография Кошки" />
                             <img className="curve-picture" src={curve} alt="Фотография Кривой" />
-                            <img className="flower-yellow-picture" src={yellowFlower} alt="Фотография Цветка" />
+                            <img className="flower-yellow-picture" src={isDesktop ? yellowFlower : yellowFlowerMobile} alt="Фотография Цветка" />
                             <img className="rainbow-picture" src={rainbow} alt="Фотография Радуги" />
                             <img className="star2-picture" src={star2} alt="Фотография Звезды" />
                         </div>

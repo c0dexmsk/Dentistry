@@ -21,10 +21,16 @@
     transition: 0.3s;
 }
 .kids .details-button a {
-    color: white;
-    /* color: var(--dark-gray); */
+    /* color: white; */
+    color: var(--dark-gray);
     font-weight: 500;
 }
 .kids-doctors__grid button:hover a {
     color: white;
+}
+@media (max-width: 768px) {
+    .kids .details-button a {
+        color: white;
+        font-weight: 500;
+    }
 }

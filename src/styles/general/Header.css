@@ -34,7 +34,7 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-
+    max-width: 100px;
     font-size: 0.875rem !important;
     border: none;
     background-color: transparent;

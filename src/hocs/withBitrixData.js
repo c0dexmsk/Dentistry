@@ -30,7 +30,7 @@ export default function withBitrixData(WrappedComponent) {
           const contentData = result.data.content.content
             ? JSON.parse(result.data.data.content)
             : {};
-          console.log(contentData);
+          //console.log(contentData);
 
           setData({
             MAIN_SWIPER_TITLE: result.data.content.title || 'Без названия',

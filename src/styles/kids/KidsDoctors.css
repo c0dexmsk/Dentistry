@@ -5,9 +5,9 @@
 }
 .kids-doctors__grid {
     margin-top: 50px;
-}
-.kids-doctors__grid {
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
 }
 .doctor-card {
     max-width: 235px;
@@ -63,6 +63,7 @@
     max-width: 477px;
 }
 
+
 .doctor-card h3 {
     font-weight: 700;
     font-size: 16px;
@@ -89,7 +90,10 @@
     .kids-doctors__grid {
         width: 90%;
         margin-top: 20px;
-        gap: 25px   ;
+        gap: 25px;
+        
+        display: grid;
+        grid-template-columns: repeat(3, auto);
 
         margin-left: auto;
         margin-right: auto;
@@ -107,6 +111,9 @@
         ;
         flex-direction: column;
         justify-content: space-between;
+    }
+    .kids-doctors .doctor-card {
+        gap: 5px;
     }
     .doctor-card img {
         width: 90px;
@@ -130,6 +137,9 @@
         height: 10px;
         line-height: 140%;
     }
+    .kids .default-card__text p {
+        font-weight: 500;
+    }
 
     .details-button{
         /* margin-top: 10px !important; */
@@ -148,5 +158,11 @@
         background-color: var(--dark-gray);
         color: white;
         border: none;
+    }
+}
+@media (max-width: 370px) { 
+    .kids-doctors__grid {
+        display: grid;
+        grid-template-columns: repeat(2,(auto));
     }
 }

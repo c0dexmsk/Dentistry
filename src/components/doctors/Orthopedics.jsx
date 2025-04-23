@@ -10,7 +10,7 @@ import DoctorCard from "./DoctorCard";
 function Orthopedics ({bitrixData}) {
 
     const doctorsList = bitrixData.filter(user => user.departmentId === "6")
-    console.log(doctorsList);
+    // //console.log(doctorsList);
     
 
     const doctorsStaticList = [

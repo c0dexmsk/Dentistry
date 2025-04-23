@@ -35,6 +35,7 @@ import DoctorCard from "./DoctorCard";
                                 photo={element.photo}
                                 name={element.name}
                                 profession={element.profession}
+                                link={element.link}
                             />
                         )
                     })}

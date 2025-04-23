@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
 export default function withBitrixDoctorsData(WrappedComponent) {
-  return function(props) {
-    const [data, setData] = useState(null);
+  return function (props) {
+    const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -13,36 +13,31 @@ export default function withBitrixDoctorsData(WrappedComponent) {
             'http://nonscrdk.beget.tech/local/api/?endpoint=get-page-data&pageCode=person_page'
           );
 
-          // Проверяем Content-Type перед парсингом
           const contentType = response.headers.get('content-type');
           if (!contentType || !contentType.includes('application/json')) {
-              const text = await response.text();
-              throw new Error(`Ожидался JSON, получено: ${text.substring(0, 100)}...`);
-            }
+            const text = await response.text();
+            throw new Error(`Ожидался JSON, получено: ${text.substring(0, 100)}...`);
+          }
 
-            const result = await response.json();
+          const result = await response.json();
 
-            if (!response.ok || !result.success) {
-                throw new Error(result.error || 'Ошибка сервера');
-            }
+          if (!response.ok || !result.success) {
+            throw new Error(result.error || 'Ошибка сервера');
+          }
 
-            // Обрабатываем данные страницы услуг
-            const pageData = result.data.content || {};
-            console.log(pageData);
+          const doctors = result.data.content || [];
 
-          setData({
-            // Основная информация
-            name: pageData.title || '/default/path/to/guide.jpg',
-            slug: pageData.slug || 'Имя специалиста',
-            specialization: pageData.specialization || 'Специализация',
-            direction: pageData.direction || 'Направление лечения',
-            experience: pageData.experience || 'Опыт',
-            education: pageData.education || 'Образование',
+          const mappedData = doctors.map((item) => ({
+            name: item.title || 'Имя специалиста',
+            slug: item.slug || '',
+            specialization: item.specialization || 'Специализация',
+            direction: item.direction || 'Направление',
+            experience: item.experience || 'Опыт',
+            education: item.education?.TEXT || 'Образование',
+            photo: item.photo || '/default/path/to/photo.jpg',
+          }));
 
-            photo: pageData.photo || '/default/path/to/service.jpg',
-
-          });
-
+          setData(mappedData);
         } catch (err) {
           console.error('Fetch error:', err);
           setError(err.message || 'Произошла ошибка при загрузке данных');
@@ -56,7 +51,7 @@ export default function withBitrixDoctorsData(WrappedComponent) {
 
     if (loading) return <div className="loader">Загрузка...</div>;
     if (error) return <div className="error">Ошибка: {error}</div>;
-    if (!data) return <div className="error">Нет данных</div>;
+    if (!data.length) return <div className="error">Нет данных</div>;
 
     return <WrappedComponent {...props} bitrixData={data} />;
   };

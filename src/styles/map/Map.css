@@ -5,36 +5,6 @@
     max-width: 1120px;
     margin-top: 90px;
 }
-/* .map-block__map {
-    position: relative;
-    margin-top: 64px;
-}
-.map-block__map__contacts {
-    background-color: white;
-    padding: 30px;
-    position: absolute;
-    top: 40px;
-    right: 50px;
-    transition: 0.5s;
-}
-.map-block__map__contacts.last {
-    top: 60px;
-}
-.map-block__map__contacts h3 {
-    font-size: 1.25rem;
-}
-.map-block__map__contacts .contacts__makhachkala__numbers {
-    line-height: 150%;
-}
-.map-block__map__contacts:hover {
-    transform: scale(1.05,1.05);
-}
-.map-block__map iframe {
-    position: relative;
-    height: 500px;
-    /* width: 560px;
-}
-*/
 .light {
     font-weight: 500 !important;
 }
@@ -43,7 +13,7 @@
     border-radius: 25px;
     right: 20px;
     position: relative;
-    row-gap: 10px;
+    row-gap: -10px;
     height: 466px;
 }
 /* .map-block__block.first {
@@ -69,7 +39,7 @@
     vertical-align: bottom;
     height: 40px;
     position: relative;
-    top: 60px;
+    top: 80px;
 }
 .map-block__block > div > div {
     display: flex;

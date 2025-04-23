@@ -5,7 +5,7 @@
     position: relative;
 }
 .full-cycle__button {
-    margin-top: 50px;
+    margin-top: 30px;
     justify-content: flex-start;
     max-width: 1120px;
     display: flex;
@@ -14,7 +14,14 @@
     flex-direction: row-reverse;
     margin-top: 0;
 }
+.full-cycle .default-card__text__icons {
+    gap: 30px;
+}
 .full-cycle .default-card__text__icons > div {
+    /* flex-direction: column; */
+    width: auto;
+    gap: 11px;
+
     flex-direction: row;
     align-items: center;
 }
@@ -33,8 +40,8 @@
     .default-card__photo > img {
         /* max-width: 375px; */
         position: relative;
-        width: 100%;
-        /* left: -10%; */
+        width: 100vw;
+        left: -5%;
     }
     .default-card__text__icons {
         justify-content: center;
@@ -49,5 +56,13 @@
         margin-top: 50px;
         display: flex    ;
         justify-content: flex-start;
+    }
+    .full-cycle .default-card__text__icons > div {
+        flex-direction: row;
+        width: auto;
+    }
+    .full-cycle .default-card__text__icons {
+        justify-content:space-between;
+        gap: 0;
     }
 }

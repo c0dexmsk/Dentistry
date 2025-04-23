@@ -18,7 +18,7 @@ import DoctorCard from "./DoctorCard";
 function Therapy ({bitrixData}) {
 
     const doctorsList = bitrixData.filter(user => user.departmentId === "7")
-    console.log(doctorsList);
+    //console.log(doctorsList);
 
     const doctorsStaticList = [
         {

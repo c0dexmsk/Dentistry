@@ -28,7 +28,7 @@ export default function withBitrixServicesData(WrappedComponent) {
             innerServices: doc.innerServices,
           }));
 
-          console.log(pageData);
+          //console.log(pageData);
 
           setData(pageData);
 

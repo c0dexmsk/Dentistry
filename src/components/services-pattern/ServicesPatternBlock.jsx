@@ -14,6 +14,12 @@ export default function ServicesPatternBlock ({content}) {
     const [hideText, setHideText] = useState(true);
     const [hideText2, setHideText2] = useState(true);
 
+    const [showAll, setShowAll] = useState(false);
+    const shouldShowButton = content.services.length > 6;   
+    const visibleServices = showAll 
+        ? content.services 
+        : content.services.slice(0, 6);
+
     return (
         <section className="container-fluid px-0">
             <div className="pattern-block">
@@ -25,12 +31,13 @@ export default function ServicesPatternBlock ({content}) {
                     <div className="pattern-block__guide col">
                         <p> Экскурсию по отделению проводит </p>
                         <h3> {content.guideName} </h3>
+                        <p> {content.specialization} стоматолог </p>
                     </div>
                 </div>
 
                 <div className="row pattern-block__text mt-md-5 mt-3">
                     <div className="col-md-5 col-12 d-block d-md-none mb-3 mb-md-0">
-                        <img src={content.ICON5 ? test1 : test1} alt="фотография" />
+                        <img src={content.ICON5} alt="фотография" />
                     </div>
 
                     <div className="col-md-7 col-12">
@@ -39,7 +46,7 @@ export default function ServicesPatternBlock ({content}) {
                     </div>
 
                     <div className="col-5 d-none d-md-block">
-                        <img src={content.ICON5 ? test1 : test1} alt="фотография" />
+                        <img src={content.ICON5} alt="фотография" />
                     </div>
                 </div>
 
@@ -61,9 +68,9 @@ export default function ServicesPatternBlock ({content}) {
                 <div className="row align-items-center pattern-block__text block2 margin100">
                 <h2 className='d-block d-md-none mb-3'> {content.title_H2} </h2>
                     <div className="col-md-5 col-12 px-0">
-                        <img src={content.image ? test2 : test2} alt="фотография" />
+                        <img src={content.image} alt="фотография" />
                     </div>
-                    <div className="col-md-7 col-12 pr-0">
+                    <div className="col-md-7 col-12 pr-0 pl-auto pl-md-5">
                         <h2 className='d-none d-md-block'> {content.title_H2} </h2>
                         <p className='mt-3 mt-md-0'> {content.description1_H2} </p>
                         <button className="mb-3 d-block d-md-none" onClick={() => (setHideText(!hideText))}> {hideText? ("Показать весь текст"): ("Скрыть текст") } </button>
@@ -185,24 +192,44 @@ export default function ServicesPatternBlock ({content}) {
 
                     <div className="row align-items-center justify-content-between">
                         <h2 className="col-md-8 col-7"> Услуги и стоимость </h2>
-                        <Link to="/price" className="col-md col-4 customLink"> {isDesktop ? 'Прайс на все услуги' : 'Полный прайс'} </Link>
+                        <div className='col-md col-4 d-flex justify-content-end'>
+                            <Link to="/full-price" className=" customLink"> Полный прайс </Link>
+                        </div>
                     </div>
 
                     <div className="row g-3 mt-md-4 mt-3 align-items-center">
-                        {content.services.map((el,index) => {
-                            return (
-                                <div className="col-md-4 col-6 element" key={index}>
-                                    <div>
-                                        <h3> {el.name} </h3>
-                                        <div>
-                                            <h3> {el.price} </h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            )
-                        })}
-
-                        <div className="col-4 d-none d-md-block all-price-el">
+                    {visibleServices.map((el, index) => (
+                        <div className="col-md-4 col-6 element" key={index}>
+                            <div>
+                            <h3>{el.name}</h3>
+                            <div>
+                                <h3>{el.price}</h3>
+                            </div>
+                            </div>
+                        </div>
+                        ))}
+                    {shouldShowButton && (
+                        <div className="text-center mt-4">
+                        <button 
+                            className="custom_button"
+                            onClick={() => setShowAll(!showAll)}
+                        >
+                            {showAll ? 'Свернуть' : 'Развернуть все услуги'}
+                            <svg 
+                                width="12" 
+                                height="12" 
+                                viewBox="0 0 12 12" 
+                                fill="none" 
+                                xmlns="http://www.w3.org/2000/svg"
+                                className={`transition-transform ${showAll ? 'rotate-180' : ''}`}
+                                style={{ transition: 'transform 0.3s ease' }}
+                            >
+                                <path d="M6 9L2 5L3 4L6 7L9 4L10 5L6 9Z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                        </div>
+                    )}
+                        <div className="col-4 d-none all-price-el">
                             <div>
                                 <Link to="/full-price"> Полный прайс </Link>
                             </div>
@@ -235,7 +262,6 @@ export default function ServicesPatternBlock ({content}) {
                                     {content.questions[2].answer}
                                 </Accordion.Body>
                             </Accordion.Item>
-
                             </Accordion>
                     </div>
                 </div>

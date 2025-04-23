@@ -32,7 +32,7 @@
 .price-block  .accordion-header button{
     background-color: transparent;
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 800;
     border: none;
     box-shadow: none;
 }
@@ -73,11 +73,13 @@
 }
 .price-block .item-title {
     font-weight: 700;
+    max-width: 100%;
 }
 .price-block .item-title p {
     margin: 0;
     padding-right: 0;
     padding-left: 20px;
+    white-space: pre-line;
 }
 .price-block .item-title div {
     height: 0;
@@ -133,11 +135,14 @@
 }
 
 .price-list__sections p {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.25rem;
 }
 .bold {
     font-weight: bold !important;
+}
+.price-list__sections .bold , .price-list__sections .price-mobile{
+    white-space: pre-line;
 }
 .price-list__sections hr {
     border-color: rgba(21, 17, 14, 0.2);
@@ -145,7 +150,9 @@
     opacity: 1;
     margin-bottom: 25px;
 }
-
+.price-block .specialGap {
+    gap: 10px;
+}
 @media (max-width: 768px) {
     .price-list {
         width: 90%;

@@ -32,7 +32,7 @@ export default function withBitrixPriceBlockData(WrappedComponent) {
             departmentCode: doc.departmentCode,
           }));
 
-          // console.log(pageData);
+          // //console.log(pageData);
           
           setData(pageData);
 

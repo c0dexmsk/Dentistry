@@ -29,7 +29,7 @@ export default function withBitrixContactsData(WrappedComponent) {
             SAT: doc.SAT,
           }));
 
-          console.log(pageData);
+          //console.log(pageData);
           
           setData(pageData);
 

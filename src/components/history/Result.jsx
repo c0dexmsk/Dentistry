@@ -22,7 +22,7 @@ export default function Result ({bitrixData}) {
                         <p>
                         {bitrixData.RESULT2}
                         </p>
-                        <p>
+                        <p className="thanks">
                         {bitrixData.RESULT3}
                         </p>
                     </div>

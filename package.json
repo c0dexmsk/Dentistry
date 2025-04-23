@@ -17,7 +17,7 @@
     "swiper": "^11.2.6",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "/local/templates/react_app/assets",
+  "homepage": "/local/templates/react_app/build",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

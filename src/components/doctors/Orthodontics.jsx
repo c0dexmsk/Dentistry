@@ -6,7 +6,7 @@ import DoctorCard from "./DoctorCard";
 function Orthodontics ({bitrixData}) {
 
     const doctorsList = bitrixData.filter(user => user.departmentId === "8")
-    console.log(doctorsList);
+    // //console.log(doctorsList);
 
     const doctorsStaticList = [
         {
@@ -35,6 +35,7 @@ function Orthodontics ({bitrixData}) {
                                 photo={element.photo}
                                 name={element.name}
                                 profession={element.profession}
+                                link={element.link}
                             />
                         )
                     })}

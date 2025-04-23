@@ -29,7 +29,7 @@ export default function withBitrixReviewsData(WrappedComponent) {
               iconTitle: review.iconTitle || 'Источник'
           }));
 
-          console.log(reviewData);
+          //console.log(reviewData);
           
           setData(reviewData);
 

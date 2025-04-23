@@ -3,7 +3,7 @@ import { useMediaQuery } from "react-responsive"
 export default function Service ({title, description, image, alt, id}) {
 
     const isDesktop = useMediaQuery({ minWidth: 768 });
-    console.log(id);
+    //console.log(id);
 
 
     return isDesktop ? (

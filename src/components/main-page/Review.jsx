@@ -40,9 +40,9 @@ function Review ({bitrixData}) {
                 loop={true}
                 spaceBetween={isDesktop ? 20 : 5}
                 slidesPerView={isDesktop ? 3 : 1.2}
-                slidesOffsetBefore={isDesktop ? 0 : 5}  // Отступ слева
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
+                slidesOffsetBefore={isDesktop ? 0 : 5} 
+                // onSlideChange={() => console.log('slide change')}
+                // onSwiper={(swiper) => console.log(swiper)}
                 >
 
                 <SwiperButtons />

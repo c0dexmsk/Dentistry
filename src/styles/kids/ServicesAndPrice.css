@@ -130,32 +130,46 @@
         height: auto;
     }
     .rocket-picture {
-        left: 300px;
-        top: 480px;
+        left: 210px;
+        top: 460px;
+        rotate: 85deg;
     }
     .cat-picture {
-        top: 1350px;
-        left: 250px;
+        width: 22% !important;
+        top: 1480px;
+        left: 220px;
     }
     .flower-yellow-picture {
-        top: 2150px;
+        top: 2230px;
+        right: 20px;
+        left: auto;
+        width: 20% !important;
+        transform: scale(-1, 1)
         /* left: 300px; */
     }
     .rainbow-picture {
-        top: 2200px;
+        top: 2100px;
     }
     .flower-picture {
         display: none;
     }
     .curve-picture {
-        display: none;
+        top: 2000px;
+        /* display: none; */
     }
     .star2-picture {
-        top: 2050px;
-        left: 250px;
+        top: 380px;
+        right: 0;
+        rotate: 40deg;
+        width: 15% !important;
     }
     .flower-pink-picture {
-        top: 1700px;
+        top: 2000px;
+        width: 10% !important;
+    }
+    .star-picture {
+        top: -50px;
+        width: 50%;
     }
     .kids-services__grid {
         grid-template-columns:  repeat(2, minmax(160px, 280px));

@@ -3,7 +3,7 @@ import withBitrixServicesData from "hocs/withBitrixServicesData";
 
 function ListOfServices ({bitrixData: listOfItems}) {
 
-    console.log(listOfItems);
+    //console.log(listOfItems);
 
 
     const listOfItems2 = [
@@ -195,7 +195,7 @@ function ListOfServices ({bitrixData: listOfItems}) {
                     </div>
                     <div className="list-of-services__description row">
                         {listOfItems.map((el, index)=> {
-                            console.log( el.title);
+                            //console.log( el.title);
                             return (
 
                                 <Item

@@ -43,6 +43,11 @@
 #all-kids-doctors-container .details-button a {
     color: white;
 }
+.doctors-branch__grid  {
+    /* width: calc(100% + 56px); */
+    position: relative;
+    left: -16px;
+}
 @media (max-width: 760px) {
     .doctors{
         width: 90%;

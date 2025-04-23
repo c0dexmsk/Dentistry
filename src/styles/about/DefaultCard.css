@@ -28,7 +28,7 @@
 .default-card__text__icons {
     display: flex;
     flex-direction: row;
-    gap: 53px;
+    gap: 64px;
 }
 .default-card__text__icons > div {
     display: flex;
@@ -104,5 +104,10 @@
         gap: 25px;
     }
 
-
+}
+@media (max-width : 370px) {
+    .default-card__text__icons > div {
+        gap: 0;
+    }
+    
 }

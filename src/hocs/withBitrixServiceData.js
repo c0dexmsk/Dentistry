@@ -58,7 +58,7 @@ export default function withBitrixServiceData(WrappedComponent) {
               questions: doc.questions || []
             }));
             // Обрабатываем данные страницы услуг
-            console.log(pageData);
+            //console.log(pageData);
 
           setData(pageData);
 

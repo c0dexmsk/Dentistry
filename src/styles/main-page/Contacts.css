@@ -50,5 +50,6 @@
     }
     .contacts__makhachkala, .contacts__moscow {
         gap: 20px;
+        max-width: 110px;
     }
 }

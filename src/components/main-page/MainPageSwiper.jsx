@@ -17,8 +17,8 @@ import 'swiper/css/pagination';
           className="main-swiper"
           spaceBetween={0}
           slidesPerView={1}
-          onSlideChange={() => console.log('main slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log('main slide change')}
+          // onSwiper={(swiper) => console.log(swiper)}
           modules={[Pagination]}
           pagination={{
             clickable: true,

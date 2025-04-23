@@ -38,11 +38,11 @@ export default function Item ({title, backgroundColor, link,description,innerSer
                         <Link style={{
                         '--color4': selectedStyle.color4,
                         '--color5': selectedStyle.color5
-                        }} to={`/${link}`}> Об отделении </Link>
+                        }} to={`/services${link}`}> Об отделении </Link>
                         <Link style={{
                             '--color4': selectedStyle.color4,
                             '--color5': selectedStyle.color5
-                        }} to={`/${link}`}> Все услуги </Link>
+                        }} to={`/services${link}`}> Все услуги </Link>
                     </div>
                 </div>
             </div>

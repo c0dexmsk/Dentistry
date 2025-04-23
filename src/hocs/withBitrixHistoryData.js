@@ -28,7 +28,7 @@ export default function withBitrixHistoryData(WrappedComponent) {
 
             // Обрабатываем данные страницы услуг
             const pageData = result.data.content || {};
-            console.log(pageData);
+            //console.log(pageData);
 
             setData({
                 // Основная информация

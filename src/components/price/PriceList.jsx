@@ -2,7 +2,7 @@ import withBitrixPriceListData from "hocs/withBitrixPriceListData";
 
 function PriceList ({bitrixData}) {
 
-    console.log('Получаемые данные: ',bitrixData);
+    //console.log('Получаемые данные: ',bitrixData);
     const departments = bitrixData;
     const uniqueDepartments = Array.from(new Set(bitrixData.map(el=> el.department)));
 
@@ -27,7 +27,21 @@ function PriceList ({bitrixData}) {
         teeth_whitening: "Отбеливание зубов",
 
     };
-
+    const orderedDepartmentKeys = [
+        'consultation',
+        'prevention',
+        'therapy',
+        'orthopedics',
+        'orthodontics',
+        'periodontology',
+        'implantation',
+        'surgery',
+        'gnathology',
+        'pediatricDentistry'
+    ];
+    const sortedDepartments = orderedDepartmentKeys.filter(key => 
+        uniqueDepartments.includes(key)
+    );
     return (
         <section>
             <div className='price-list'>
@@ -52,7 +66,7 @@ function PriceList ({bitrixData}) {
                     </div>
                 </div>
 
-                {uniqueDepartments.map((department, index) => (
+                {sortedDepartments.map((department, index) => (
                     <div key={index} className="price-list__sections margin-top-100">
 
                         <h2>{departmentTitles[department] || department} </h2>
@@ -63,12 +77,12 @@ function PriceList ({bitrixData}) {
                                 <div className="row price-mobile">
                                     <div className="col-7">
                                         <p>
-                                        {service.name}
+                                        {service.name.replace(/\\n/g, '\n')}
                                         </p>
                                     </div>
                                     <div className="col-5">
                                         <p className="bold">
-                                        {service.price}
+                                        {service.price.replace(/\\n/g, '\n')}
                                         </p>
                                     </div>
                                 </div>

@@ -30,10 +30,22 @@ export default function Header () {
                             <Link to="/kids">Дети</Link>
                             <Link to="/doctors">Врачи</Link>
                             <Link to="/cases">Кейсы</Link>
-                            <select>
-                                <option value="one">Услуги</option>
-                                <option value="two">Two option</option>
-                                <option value="two">Three option</option>
+                            <select 
+                                onChange={(e) => { 
+                                    if (e.target.value) window.location.href = e.target.value; 
+                                }}
+                            >
+                                <option value="">Услуги</option>
+                                <option value="/services/94">Гнатология</option>
+                                <option value="/services/93">Детская стоматология</option>
+                                <option value="/services/92">Диагностика</option>
+                                <option value="/services/73">Ортодонтия</option>
+                                <option value="/services/68">Ортопедия</option>
+                                <option value="/services/57">Отбеливание зубов</option>
+                                <option value="/services/55">Пародонтия</option>
+                                <option value="/services/47">Профессиональная гигиена</option>
+                                <option value="/services/12">Терапевтическая стоматология</option>
+                                <option value="/services/51">Хирургия и имплантация</option>
                             </select>
                             <Link to="/price">Прайс</Link>
                             <Link to="/contacts">Контакты</Link>

@@ -9,7 +9,9 @@ import { useMediaQuery } from "react-responsive";
 import img1 from "assets/images/v1.svg";
 import img2 from "assets/images/v2.svg"
 import img3 from "assets/images/v3.svg";
-import img4 from "assets/images/v4.svg"
+import img4 from "assets/images/v4.svg";
+import rainbow from "assets/rainbowMobile.svg";
+import curve from "assets/curvePictureMobile.svg";
 
 export default function ChildhoodImpressions () {
 
@@ -18,10 +20,10 @@ export default function ChildhoodImpressions () {
     return (
         <section className="child">
             <div className="child__images">
-                <img src={img1} alt="звёздочка" />
-                <img src={img2} alt="радуга" />
-                <img src={img3} alt="петля" />
-                <img src={img4} alt="звёздочка" />
+                <img className="d-none d-md-block" src={img1} alt="звёздочка" />
+                <img src={isDesktop ? img2 : rainbow} alt="радуга"/>
+                <img src={isDesktop ? img3 : curve} alt="петля" />
+                <img className="d-none d-md-block" src={img4} alt="звёздочка" />
             </div>
             <DefautCard
                 title="Детские впечатления"

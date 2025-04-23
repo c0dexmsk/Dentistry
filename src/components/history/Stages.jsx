@@ -19,6 +19,9 @@ export default function Stages ({bitrixData}) {
                                 <h3> {bitrixData.STEP1_H2} </h3>
                                 <p style={{width: '180px'}}> {bitrixData.STEP1_P} </p>
                             </div>
+                            <div className="col">
+                                <img src={bitrixData.STEP1_ICON} alt="Зубы" />
+                            </div>
                         </div>
                     </div>
 

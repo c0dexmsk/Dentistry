@@ -2,7 +2,7 @@
     display: grid;
     grid-template-rows: auto 1fr auto;
     width: 100vw;
-
+    overflow-x: hidden;
     background-image:
     linear-gradient(rgba(241, 235, 232, 0.7), rgba(241, 235, 232, 0.7)),
     url("../../assets/aifile.png");

@@ -27,7 +27,7 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-
+    max-width: 100px;
     border: none;
     background-color: transparent;
     font-size: 1rem !important;

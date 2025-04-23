@@ -17,13 +17,25 @@
     margin-bottom: 0;
 }
 .history-title h2 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-weight: 800;
 }
 .history-title p {
     font-weight: 600;
     font-size: 1rem;
     line-height: 150%;
+}
+.history-title  .split-text {
+    line-height: 1.5; /* Общий межстрочный интервал */
+}
+
+.history-title  .first-sentence {
+font-weight: 600; /* Полужирный текст */
+margin-bottom: 1em; /* Отступ в одну строку */
+}
+
+.history-title .rest-text {
+font-weight: 400; /* Обычный текст */
 }
 .diagnostics {
     width: 100%;
@@ -181,12 +193,18 @@
 .history-title > div {
     /* width: 130%; */
 }
+.result .thanks {
+    width: 70%;
+}
 @media (max-width: 768px) {
     .margin-bottom-100 {
         margin-bottom: 25px;
     }
     .margin-top-100 {
         margin-top: 25px;
+    }
+    .result .thanks {
+        width: 75%;
     }
     .history-title {
         width: 90%;
@@ -205,9 +223,13 @@
         bottom: -15px;
     }
     .history-title img {
-        width: 130%;
-        margin-left: -20%;
-        /* background-size: contain; */
+        /* left: auto;
+        width: auto;
+        margin-left: 0; */
+        width: 170%; 
+        left: -12vw;
+        margin-left: 0; 
+        background-size: contain; 
     }
     .history-title h2 {
         font-size: 12px;
@@ -216,6 +238,7 @@
     .history-title h1 {
         font-size: 24px;
         margin-bottom: 0;
+        margin-top: 0;
     }
     .diagnostics > div {
         width: 90%;

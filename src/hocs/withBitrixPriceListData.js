@@ -26,7 +26,7 @@ export default function withBitrixPriceListData(WrappedComponent) {
             department: doc.department,
           }));
 
-          console.log(pageData);
+          //console.log(pageData);
           
           setData(pageData);
 

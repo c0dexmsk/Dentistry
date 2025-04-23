@@ -5,7 +5,7 @@ import calendar from "../../assets/price/calendar.svg"
 
 function PriceBlock ({bitrixData}) {
 
-    console.log('Получаемые данные: ',bitrixData);
+    //console.log('Получаемые данные: ',bitrixData);
     const departments = bitrixData;
     const uniqueDepartments = Array.from(new Set(bitrixData.map(el=> el.department)));
 
@@ -29,15 +29,30 @@ function PriceBlock ({bitrixData}) {
         pediatricDentistry: "Детская стоматология"
 
     };
+    const orderedDepartmentKeys = [
+        'consultation',
+        'prevention',
+        'therapy',
+        'orthopedics',
+        'orthodontics',
+        'periodontology',
+        'implantation',
+        'surgery',
+        'gnathology',
+        'pediatricDentistry'
+    ];
+    const sortedDepartments = orderedDepartmentKeys.filter(key => 
+        uniqueDepartments.includes(key)
+    );
 
-    console.log(groupedByDepartment);
+    //console.log(groupedByDepartment);
 
     return (
         <section>
             <div className='price-block'>
                 <h1 className='text-center margin-bottom-100'> Прайс </h1>
                 <Accordion>
-                {uniqueDepartments.map((department, index) => (
+                {sortedDepartments.map((department, index) => (
                         <Accordion.Item key={index} eventKey={String(index)}>
                             <Accordion.Header>
                                 {departmentTitles[department] || department}
@@ -48,7 +63,9 @@ function PriceBlock ({bitrixData}) {
                                         <div className='item-title row flex-nowrap align-items-center'>
                                             <h3 className='col-auto'> {service.name}</h3>
                                             <div className='col'> </div>
-                                            <p className='col-auto'> {service.price} </p>
+                                            <p className='col-auto price-text'>
+                                                {service.price.replace(/\\n/g, '\n')}
+                                            </p>
                                         </div>
 
                                         <div className='item-body row'>
@@ -58,12 +75,17 @@ function PriceBlock ({bitrixData}) {
                                                 </p>
                                             </div>
                                             <div className="col-4 d-flex flex-column mt-3">
-                                                <div className='d-flex flex-row'>
-                                                    <img className="mr-3" src={clock} alt="Часы" />
-                                                    <p> {service.time} </p>
+                                                <div className='d-flex flex-row specialGap'>
+                                                {service.time && (
+                                                    <>
+                                                        <img className="mr-3" src={clock} alt="Часы" />
+                                                        <p> {service.time} </p>
+                                                    </>
+                                                )}
+                                                    
                                                 </div>
                                                 { service.count &&
-                                                <div className='d-flex flex-row'>
+                                                <div className='d-flex flex-row specialGap'>
                                                     <img className="mr-3" src={calendar} alt="Календарь" />
                                                     <p> {service.count} </p>
                                                 </div>

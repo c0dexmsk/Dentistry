@@ -34,4 +34,4 @@ globSync([
   `${buildDir}/**/*.{html,js,css,json}`
 ]).forEach(processFile);
 
-console.log('Asset paths fixed successfully!');
+//console.log('Asset paths fixed successfully!');

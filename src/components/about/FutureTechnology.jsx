@@ -11,7 +11,7 @@ export default function FutureTechnology () {
     const isDesktop = useMediaQuery({ minWidth: 768 });
 
     return (
-        <section className={isDesktop ? "future container-fluid px-0 p-0" : "future container"}>
+        <section className={isDesktop ? "future container-fluid px-0 p-0" : "future container px-0"}>
             <DefautCard
                 title="Технологии будущего"
                 description1="Bego использует технологии, чтобы сделать лечение более эффективным и комфортным. Цифровое сканирование немецким аппаратом позволяет создавать точные
