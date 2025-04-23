@@ -37,7 +37,7 @@ export default function ServicesPatternBlock ({content}) {
 
                 <div className="row pattern-block__text mt-md-5 mt-3">
                     <div className="col-md-5 col-12 d-block d-md-none mb-3 mb-md-0">
-                        <img src={content.ICON5} alt="фотография" />
+                        <img src={content.ICON5} alt="фотография 1" />
                     </div>
 
                     <div className="col-md-7 col-12">
@@ -46,7 +46,7 @@ export default function ServicesPatternBlock ({content}) {
                     </div>
 
                     <div className="col-5 d-none d-md-block">
-                        <img src={content.ICON5} alt="фотография" />
+                        <img src={content.ICON5} alt="фотография 2" />
                     </div>
                 </div>
 
@@ -68,7 +68,7 @@ export default function ServicesPatternBlock ({content}) {
                 <div className="row align-items-center pattern-block__text block2 margin100">
                 <h2 className='d-block d-md-none mb-3'> {content.title_H2} </h2>
                     <div className="col-md-5 col-12 px-0">
-                        <img src={content.image} alt="фотография" />
+                        <img src={content.mainImage} alt="фотография 3" />
                     </div>
                     <div className="col-md-7 col-12 pr-0 pl-auto pl-md-5">
                         <h2 className='d-none d-md-block'> {content.title_H2} </h2>
