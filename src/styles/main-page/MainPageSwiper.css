@@ -27,17 +27,20 @@
 }
 .main-swiper-slide__text h1 {
   width: 560px;
+  margin-bottom: 0;
 }
 .main-swiper-slide__text p {
-  width: 516px;
+  width: 550px;
   font-weight: 400;
   font-size: 1rem;
+  margin-top: 30px;
+  margin-bottom: 0;
 }
 .main-swiper-slide__text > div {
   display: flex;
   flex-direction: row;
   width: 320px;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
 }
 .main-swiper-slide__text > div > img {

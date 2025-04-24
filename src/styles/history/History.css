@@ -134,6 +134,7 @@ font-weight: 400; /* Обычный текст */
 .stages__stage p {
     font-size: 0.75rem;
     line-height: 140%;
+    white-space: pre-line;
 }
 .stages__stage img {
     position: absolute;
@@ -169,6 +170,9 @@ font-weight: 400; /* Обычный текст */
     margin-bottom: 34px;
     font-weight: 600;
 }
+ .team-block {
+    gap: 60px;
+ }
 .team a {
     padding: 10px;
     background-color: var(--dark-gray);

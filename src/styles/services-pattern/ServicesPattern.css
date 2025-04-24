@@ -28,23 +28,28 @@
 .pattern-block__text img {
     max-width: 510px;
     width: 100%;
-    aspect-ratio: 1.172 / 1;
+    /* aspect-ratio: 1.172 / 1; */
 
 }
 
 .pattern-block__text h1 {
-    font-size: 4rem;
+    font-size: 50px;
     z-index: 100;
+    margin-bottom: 30px;
 }
-
+.pattern-block__text.block2 h2 {
+    margin-bottom: 30px;
+}
 .pattern-block__text p {
     font-size: 1rem;
     line-height: 150%;
     z-index: 100;
+    width: 90%;
 }
-
+.pattern-block__text.block2 .blockH2 {
+    margin-left: 50px;
+}
 .pattern-block__text.block2 img {
-    /* aspect-ratio: 1 / 1; */
     max-width: 520px;
 }
 
@@ -92,6 +97,7 @@
 .element > div > h3{
     margin-top: 35px;
     margin-left: 30px;
+    margin-right: 30px;
 }
 .pattern-block__services .all-price-el {
     justify-content: center;

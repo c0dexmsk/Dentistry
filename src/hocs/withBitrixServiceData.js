@@ -39,6 +39,7 @@ export default function withBitrixServiceData(WrappedComponent) {
               ICON3: doc.ICON3 || '',
               ICON4: doc.ICON4 || '',
               ICON5: doc.ICON5 || '',
+              specialization: doc.specialization || '',
 
               // Основной контент
               title_H2: doc.title_H2 || '',

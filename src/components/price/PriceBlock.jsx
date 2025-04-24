@@ -35,9 +35,9 @@ function PriceBlock ({bitrixData}) {
         'therapy',
         'orthopedics',
         'orthodontics',
-        'periodontology',
-        'implantation',
         'surgery',
+        'implantation',
+        'periodontology',
         'gnathology',
         'pediatricDentistry'
     ];
@@ -51,6 +51,7 @@ function PriceBlock ({bitrixData}) {
         <section>
             <div className='price-block'>
                 <h1 className='text-center margin-bottom-100'> Прайс </h1>
+                <p>При нажатии на стрелочку открывается полный прайс-лист отделения</p>
                 <Accordion>
                 {sortedDepartments.map((department, index) => (
                         <Accordion.Item key={index} eventKey={String(index)}>
@@ -61,11 +62,16 @@ function PriceBlock ({bitrixData}) {
                                 {groupedByDepartment[department].map((service, serviceIndex) => (
                                     <div key={serviceIndex} className='d-flex flex-column mb-5'>
                                         <div className='item-title row flex-nowrap align-items-center'>
-                                            <h3 className='col-auto'> {service.name}</h3>
-                                            <div className='col'> </div>
+
+                                            <div className='two-blocks'>
+                                                <h3 className=''> {service.name.replace(/\\n/g, '\n')}</h3>
+                                                <div className='col'> </div>
+                                            </div>
+
                                             <p className='col-auto price-text'>
                                                 {service.price.replace(/\\n/g, '\n')}
                                             </p>
+
                                         </div>
 
                                         <div className='item-body row'>
@@ -74,7 +80,7 @@ function PriceBlock ({bitrixData}) {
                                                 {service.description}
                                                 </p>
                                             </div>
-                                            <div className="col-4 d-flex flex-column mt-3">
+                                            <div className="col-3 timeClock d-flex flex-column mt-3">
                                                 <div className='d-flex flex-row specialGap'>
                                                 {service.time && (
                                                     <>

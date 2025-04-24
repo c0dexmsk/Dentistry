@@ -1,7 +1,7 @@
 
 import { useMediaQuery } from "react-responsive";
-import { Link } from "react-router-dom"
-
+// import { Link } from "react-router-dom"
+import { HashLink as Link } from 'react-router-hash-link';
 export default function Item ({title, backgroundColor, link,description,innerServices}) {
 
     const styles = {
@@ -33,7 +33,7 @@ export default function Item ({title, backgroundColor, link,description,innerSer
                     <div className="special1 col-8 col-md-12">
                         <h3> {title} </h3>
                         <p> {description} </p>
-                    </div>
+                    </div> 
                     <div className="special2 col-3 col-md-12 ">
                         <Link style={{
                         '--color4': selectedStyle.color4,
@@ -42,7 +42,7 @@ export default function Item ({title, backgroundColor, link,description,innerSer
                         <Link style={{
                             '--color4': selectedStyle.color4,
                             '--color5': selectedStyle.color5
-                        }} to={`/services${link}`}> Все услуги </Link>
+                        }} to={`/services${link}#servicesprices`}> Все услуги </Link>
                     </div>
                 </div>
             </div>

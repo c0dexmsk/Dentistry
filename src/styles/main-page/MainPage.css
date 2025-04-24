@@ -59,7 +59,15 @@
 .metrics__openness {
     margin-right: 0 !important;
 }
-
+.metrics__openness p {
+    width: 265px;
+}
+.metrics__safety p {
+    width: 205px;
+}
+.metrics__confession p , .metrics__numbers p {
+    width: 186px;
+}
 @media (max-width:768px) {
     #main-page-wrapper {
         background-size: 150% 150%;
@@ -89,6 +97,7 @@
     }
     .metrics p {
         font-size: 0.5rem;
+        width: auto;
     }
     .metrics .secret {
         gap: 10px;
@@ -125,10 +134,12 @@
 }
 .custom-img {
     position: relative;
-    bottom: 60px;
+    width: 120%;
+    bottom: 120px;
 }
-.veneers.v2 h2 {
-
+.veneers.v2 .VTITLE2{
+    margin-left: 80px;
+    padding-left: 0;
 }
 
 @media (max-width: 768px) {
@@ -141,6 +152,8 @@
     .custom-img {
         object-fit: cover;
         bottom: 0;
+        right: 50px;
+        width: 120%;
     }
     .hidden-block{
         position: relative;

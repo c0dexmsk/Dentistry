@@ -66,10 +66,14 @@
 .price-block .accordion-button:not(.collapsed) {
     color: black;
 }
+.price-block .timeClock {
+    margin-left: 60px;
+}
 .price-block .item-title h3 {
     font-size: 1.25rem;
     font-weight: 600;
     padding-right: 40px;
+    white-space: pre-line;
 }
 .price-block .item-title {
     font-weight: 700;
@@ -117,6 +121,7 @@
     height: 55px;
     white-space: nowrap;
     transition: 0.3s;
+    font-size: 14px;
 }
 .price-list__departments button:hover {
     background-color: var(--dark-gray);
@@ -137,12 +142,17 @@
 .price-list__sections p {
     font-weight: 600;
     font-size: 1.25rem;
+    width: 80%;
 }
 .bold {
     font-weight: bold !important;
 }
 .price-list__sections .bold , .price-list__sections .price-mobile{
     white-space: pre-line;
+}
+.price-mobile .col-md-3 {
+    display: flex;
+    align-items: center;
 }
 .price-list__sections hr {
     border-color: rgba(21, 17, 14, 0.2);
@@ -152,6 +162,19 @@
 }
 .price-block .specialGap {
     gap: 10px;
+}
+.price-block .item-title .two-blocks {
+    height: auto;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.price-block > p {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 120%;
+    margin-left: 15px;
 }
 @media (max-width: 768px) {
     .price-list {
@@ -177,6 +200,7 @@
         font-size: 10px;
         line-height: 150%;
         margin-bottom: 0;
+        width: 100%;
     }
     .price-list__sections hr {
         margin: 7px 0;

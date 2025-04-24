@@ -26,6 +26,7 @@
     line-height: 140%;
     font-size: 0.75rem;
     opacity: 0.7;
+    width: 95%;
 }
 .item-01, .item-02 {
     padding: 30px;
@@ -53,7 +54,7 @@
     align-items: flex-start;
 }
 .item-01 a{
-    font-size: 0.75rem;
+    font-size: 10px;
     border-radius: 30px;
     padding: 6px 8px;
     height: 32px;

@@ -1,13 +1,15 @@
 import React from "react"
 import { Link } from "react-router-dom";
-import logoBig from "../../assets/logoBig.svg";
+import logotype from "../../assets/logotype.png";
 import "../../styles/general/Footer.css";
 import { useMediaQuery } from "react-responsive";
+import { useNavigate } from "react-router-dom";
 
 export default function Footer () {
 
     const isDesktop = useMediaQuery ({minWidth: 768})
-
+    const navigate = useNavigate () ;
+    
     return (
         <footer className="footer container-fluid px-0">
             {isDesktop ? (
@@ -15,7 +17,7 @@ export default function Footer () {
 
                 <div className="footer__container__logo">
                     <Link to="/main">
-                        <img src={logoBig} alt="logo" />
+                        <img src={logotype} alt="logo" />
                     </Link>
                 </div>
 
@@ -33,6 +35,7 @@ export default function Footer () {
                         }}
                     >
                         <option value="">Услуги</option>
+                        <option value="/services">Все услуги</option>
                         <option value="/services/94">Гнатология</option>
                         <option value="/services/93">Детская стоматология</option>
                         <option value="/services/92">Диагностика</option>
@@ -57,7 +60,7 @@ export default function Footer () {
 
                 <div className="footer__container__logo-mobile col-12">
                     <Link to="/main">
-                        <img src={logoBig} alt="logo" />
+                        <img src={logotype} alt="logo" />
                     </Link>
                 </div>
 
@@ -75,6 +78,7 @@ export default function Footer () {
                                 }}
                             >
                                 <option value="">Услуги</option>
+                                <option value="/services">Все услуги</option>
                                 <option value="/services/94">Гнатология</option>
                                 <option value="/services/93">Детская стоматология</option>
                                 <option value="/services/92">Диагностика</option>

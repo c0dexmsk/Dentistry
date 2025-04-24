@@ -10,7 +10,7 @@ export default function Team ({bitrixData}) {
             <div className="team margin-top-100">
                 <h2> КОМАНДА </h2>
 
-                <div className="row flex-nowrap mt-3 mt-md-5">
+                <div className="row flex-nowrap mt-3 mt-md-5 team-block">
                     <div className="col-md-3 col-4">
                         <img className="container-fluid px-0" src={bitrixData.PHOTO1} alt="Маликов Малик Шарапудинович" />
                         <h3> {bitrixData.NAME1} </h3>

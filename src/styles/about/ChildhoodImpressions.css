@@ -50,6 +50,12 @@
 .child__images {
     z-index: 1;
 }
+.child .default-card__text hr {
+    margin: 40px 0;
+}
+.child .default-card__text p:last-of-type {
+    margin-bottom: 0;
+}
 @media (max-width: 768px) {
     .child {
         /* width: 90%; */

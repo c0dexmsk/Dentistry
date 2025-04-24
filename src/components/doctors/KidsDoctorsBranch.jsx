@@ -22,7 +22,7 @@ function KidsDoctorsBranch ({bitrixData}) {
     const doctorList = [
         {
             photo: aizanat,
-            name: "Абдурахманова Айзанат",
+            name: "Абдурахманова Айзанат Магомедрасуловна",
             profession: "Детский стоматолог",
             link: "abdurakhmanova-aizanat"
         },

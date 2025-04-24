@@ -99,7 +99,7 @@
     margin: 0;
 }
 .kids-services__grid  {
-    padding: 20px;
+    /* padding: 20px; */
     box-sizing: border-box;
 }
 .kids-services__grid > div:last-child a{

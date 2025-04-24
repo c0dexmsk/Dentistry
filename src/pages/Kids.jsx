@@ -42,7 +42,7 @@ export default function Kids() {
     const kidsDoctors = [
         {
             photo: aizanat,
-            name: "Абдурахманова Айзанат",
+            name: "Абдурахманова Айзанат Магомедрасуловна",
             profession: "Детский стоматолог",
             link: "abdurahmanova-aizanat"
         },

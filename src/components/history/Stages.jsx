@@ -17,10 +17,10 @@ export default function Stages ({bitrixData}) {
                         <div className="d-flex flex-row">
                             <div className="col-10">
                                 <h3> {bitrixData.STEP1_H2} </h3>
-                                <p style={{width: '180px'}}> {bitrixData.STEP1_P} </p>
+                                <p style={{width: '200px'}}> {bitrixData.STEP1_P} </p>
                             </div>
                             <div className="col">
-                                <img src={bitrixData.STEP1_ICON} alt="Зубы" />
+                                <img src={bitrixData.STEP1_ICON} alt="Прибор" />
                             </div>
                         </div>
                     </div>
@@ -29,7 +29,7 @@ export default function Stages ({bitrixData}) {
                         <div className="d-flex flex-row">
                             <div className="col-10">
                                 <h3> {bitrixData.STEP2_H2} </h3>
-                                <p> {bitrixData.STEP2_P}</p>
+                                <p style={{width: '215px'}}> {bitrixData.STEP2_P.replace(/\\n/g, '\n')}</p>
                             </div>
                             <div className="col">
                                 <img src={bitrixData.STEP2_ICON} alt="Зубы" />
@@ -41,7 +41,7 @@ export default function Stages ({bitrixData}) {
                         <div className="d-flex flex-row">
                             <div className="col-12">
                                 <h3> {bitrixData.STEP3_H2}</h3>
-                                <p> {bitrixData.STEP3_P}</p>
+                                <p style={{width: '280px'}}> {bitrixData.STEP3_P}</p>
                             </div>
                             <div className="col">
                                 <img src={bitrixData.STEP3_ICON} alt="BL2" />

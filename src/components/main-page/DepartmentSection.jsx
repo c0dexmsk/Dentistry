@@ -7,12 +7,14 @@ import kidPhoto from '../../assets/kid-photo.svg';
 import femalePhoto2 from '../../assets/young-female.svg';
 import kidPhoto2 from '../../assets/baby.svg';
 import { useMediaQuery } from 'react-responsive';
+import { useNavigate } from 'react-router-dom';
 import React from 'react';
 
 export default function DepartmentSection () {
 
     const isDesktop = useMediaQuery ( {minWidth: 768});
     const isDesktop2 = useMediaQuery ( {minWidth: 1000});
+    const navigate = useNavigate();
 
     return (
         <>
@@ -22,7 +24,13 @@ export default function DepartmentSection () {
 
                     <div className='department-inner'>
 
-                        <div className='department__adults'>
+                        <div className='department__adults'
+                        onClick={() => {
+                            window.scrollTo(0, 0);
+                            navigate('/about')
+                        }
+                        }
+                        style={{ cursor: 'pointer' }}>
                             <div className='department__adults__links'>
                                 <Link to="/about">
                                     <h3>
@@ -37,7 +45,12 @@ export default function DepartmentSection () {
                             <img className='img-fluid' src={isDesktop ? femalePhoto : femalePhoto2} alt="Девушка" />
                         </div>
 
-                        <div className='department__kids'>
+                        <div className='department__kids'
+                        onClick={() => {
+                            window.scrollTo(0, 0);
+                            navigate('/kids')
+                        }}
+                        style={{ cursor: 'pointer' }}>
                             <div className='department__kids__links'>
                                 <Link to="/kids">
                                     <h3>

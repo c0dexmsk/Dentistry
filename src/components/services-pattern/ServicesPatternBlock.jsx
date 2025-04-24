@@ -2,11 +2,49 @@ import Accordion from 'react-bootstrap/Accordion';
 import xray from "./images/rentgen-person.png";
 import icon from "./images/block-icon.svg"
 import { Link } from "react-router-dom";
-import test1 from "assets/test-1.png"
+import test1 from "assets/test-3.png"
 import test2 from "assets/test-2.png"
 import { useState } from 'react';
 import MobileTitle from 'components/about/MobileTitle';
 import { useMediaQuery } from 'react-responsive';
+
+const TextWithSplit = ({ text, maxLength = 250, splitAt = 190 }) => {
+    if (!text) return null;
+
+    const trimmedText = text.trim();
+    const isLongText = trimmedText.length > maxLength;
+
+    if (!isLongText) {
+        return <p>{trimmedText}</p>;
+    }
+
+    const findLastSentenceEndBefore = (str, beforeIndex) => {
+        const sentenceEndings = [".", "!", "?"];
+        let lastEndIndex = -1;
+
+        for (const ending of sentenceEndings) {
+        let currentIndex = str.lastIndexOf(ending, beforeIndex);
+        if (currentIndex > 0 && str[currentIndex - 1].match(/[a-zA-Zа-яА-Я]/)) {
+            if (currentIndex > lastEndIndex) {
+            lastEndIndex = currentIndex;
+            }
+        }
+        }
+
+        return lastEndIndex !== -1 ? lastEndIndex + 1 : beforeIndex;
+    };
+
+    const splitIndex = findLastSentenceEndBefore(trimmedText, splitAt);
+    const firstPart = trimmedText.slice(0, splitIndex).trim();
+    const secondPart = trimmedText.slice(splitIndex).trim();
+    
+    return (
+      <>
+        <p>{firstPart}</p>
+        {secondPart && <p style={{ marginTop: "1em" }}>{secondPart}</p>}
+      </>
+    );
+  };
 
 export default function ServicesPatternBlock ({content}) {
 
@@ -31,7 +69,7 @@ export default function ServicesPatternBlock ({content}) {
                     <div className="pattern-block__guide col">
                         <p> Экскурсию по отделению проводит </p>
                         <h3> {content.guideName} </h3>
-                        <p> {content.specialization} стоматолог </p>
+                        <p> {content.specialization}</p>
                     </div>
                 </div>
 
@@ -42,7 +80,7 @@ export default function ServicesPatternBlock ({content}) {
 
                     <div className="col-md-7 col-12">
                         <h1 className='d-none d-md-block'> {content.title_H1} </h1>
-                        <p> {content.description_H1} </p>
+                        <TextWithSplit text={content.description_H1} />
                     </div>
 
                     <div className="col-5 d-none d-md-block">
@@ -68,9 +106,11 @@ export default function ServicesPatternBlock ({content}) {
                 <div className="row align-items-center pattern-block__text block2 margin100">
                 <h2 className='d-block d-md-none mb-3'> {content.title_H2} </h2>
                     <div className="col-md-5 col-12 px-0">
-                        <img src={content.mainImage} alt="фотография 3" />
+                        <img src=
+                        {content.mainImage}
+                        alt="фотография 3" />
                     </div>
-                    <div className="col-md-7 col-12 pr-0 pl-auto pl-md-5">
+                    <div className="col-md-6 col-12 pr-0 pl-auto pl-md-0 blockH2">
                         <h2 className='d-none d-md-block'> {content.title_H2} </h2>
                         <p className='mt-3 mt-md-0'> {content.description1_H2} </p>
                         <button className="mb-3 d-block d-md-none" onClick={() => (setHideText(!hideText))}> {hideText? ("Показать весь текст"): ("Скрыть текст") } </button>
@@ -191,7 +231,7 @@ export default function ServicesPatternBlock ({content}) {
                 <div className="margin100 pattern-block__services">
 
                     <div className="row align-items-center justify-content-between">
-                        <h2 className="col-md-8 col-7"> Услуги и стоимость </h2>
+                        <h2 id="servicesprices" className="col-md-8 col-7 "> Услуги и стоимость </h2>
                         <div className='col-md col-4 d-flex justify-content-end'>
                             <Link to="/full-price" className=" customLink"> Полный прайс </Link>
                         </div>

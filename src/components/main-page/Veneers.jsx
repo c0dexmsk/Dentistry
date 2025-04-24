@@ -40,8 +40,8 @@ function Veneers({bitrixData}) {
                             </div>
                         <h2 className="mt-3 mb-0 d-block d-md-none"> {bitrixData.VTITLE2}</h2>
                         </div>
-                        <div className="col-lg-6 col-md-12">
-                        <h2 className="d-none d-md-block"> {bitrixData.VTITLE2}</h2>
+                        <div className="col-lg-5 col-md-12 VTITLE2">
+                            <h2 className="d-none d-md-block"> {bitrixData.VTITLE2}</h2>
                             <p>
                                 {bitrixData.VDESC2}
                             </p>

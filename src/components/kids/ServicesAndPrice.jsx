@@ -1,6 +1,8 @@
 
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function ServicesAndPrice () {
 
@@ -46,12 +48,19 @@ export default function ServicesAndPrice () {
             price: "от 4000 ₽",
         },
     ]
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.state && location.state.scrollY) {
+            window.scrollTo(0, location.state.scrollY);
+        }
+    }, [location]);
 
     return(
         <section className="container-fluid px-0">
             <div className="kids-services">
                 <div className="new-button">
-                <h2> Услуги и стоимость </h2>
+                <h2 id="servicesprices"> Услуги и стоимость </h2>
                 <a className="button" href="/full-price">Полный прайс-лист</a>
                 </div>
 

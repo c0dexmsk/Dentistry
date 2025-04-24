@@ -11,24 +11,33 @@
 }
 .doctor-profile > div {
     margin: 0;
-    /* margin-top: 200px; */
     padding-top: 30px;
+    position: relative;
 }
 .doctor-profile .container-fluid px-0  {
     height: 100vh;
 }
 .doctor-profile h1 {
     font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 35px;
 }
 .doctor-profile h2 {
-    font-size: 1.25rem;
-    margin-top: 20px;
+    font-size: 1.25rem; 
 }
 .doctor-profile p {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
     margin-top: 10px;
+    margin-bottom: 20px;
     line-height: 150%;
+}
+.doctor-profile .education {
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+.doctor-profile .education > p {
+    margin: 0;
 }
 .doctor-profile p span {
     text-decoration: underline;
@@ -40,11 +49,18 @@
     position: absolute;
 }
 .doctor-profile button:first-child {
-    top: -40px;
+    left: 20px;
+    top: 20px;
 }
 .doctor-profile button:nth-child(2) {
-    top: -40px;
-    left: 190%;
+    right: 20px;
+    top: 20px;
+}
+.doctor-profile .logo {
+    position: absolute;
+    height: 25px;
+    top: 20px;
+    left: 42%;
 }
 .doctor-profile .container-fluid px-0 > div {
     display: flex;
@@ -85,16 +101,18 @@
         padding: 60px 20px;
     }
     .doctor-profile button:first-child {
-        top: -40px;
-        left: -48vw;
+        left: 20px;
+        top: 20px;
     }
     .doctor-profile button:nth-child(2) {
-        top: -40px;
-        left: 43vw;
+        right: 20px;
+        top: 20px;
     }
-    .doctor-profile button > img {
+    .doctor-profile button:first-child > img {
+        height: 12px;
+    }
+    .doctor-profile button:nth-child(2)> img {
         height: 15px;
-
     }
     .doctor-profile > div {
         padding: 0;
@@ -104,47 +122,23 @@
     .doctor-profile > div > div {
         padding: 0;
     }
-/*
-    .doctor-profile > div {
-        padding-top: 65px;
-    }
-
-
-    .doctor-profile button:first-child {
-        top: 35px;
-        left: 35px;
-    }
-
-    .doctor-profile button:nth-child(2) {
-        top: 35px;
-        left: 190%;
-    }
-
-    .doctor-profile button:last-child {
-        height: 60px;
-        width: 360px;
-        margin-top: 35px;
-    }
-
-    .doctor-photo img {
-        max-height: 90vh;
-    }
-
-    .mobile-header {
-        display: none;
-    } */
     .doctor-profile h1 {
         font-size: 1rem;
+        margin-bottom: 15px;
+        margin-top: 0;
     }
 
     .doctor-profile h2 {
         font-size: 0.75rem;
-        margin-top: 20px;
     }
-
+    
     .doctor-profile p {
         font-size: 10px;
-        margin: 5px 0;
+        margin: 15px 0;
+    }
+    .doctor-profile .education {
+        margin-top: 15px;
+        margin-bottom: 20px;
     }
     .doctor-profile button:last-child {
         margin-top: 20px;

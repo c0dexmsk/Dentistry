@@ -1,7 +1,7 @@
 import React , { useState } from "react";
-import { Link } from "react-router-dom";
-import logo from "../../assets/logo.svg";
-import bigLogo from "assets/logoBig.svg"
+import { Link , useNavigate} from "react-router-dom";
+import logo from "../../assets/logotype.png";
+import bigLogo from "assets/logotype.png"
 import glasses from "../../assets/glasses.svg";
 import phone from "../../assets/phone.svg";
 import profile from "../../assets/profile.svg";
@@ -13,6 +13,7 @@ export default function Header () {
     const isDesktop = useMediaQuery({ minWidth: 768 });
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isPhoneMenuOpen, setIsPhoneMenuOpen] = useState(false);
+    const navigate = useNavigate();
 
     return (
         <header className={`header ${isDesktop ? 'container-fluid px-0' : ''}`}>
@@ -36,6 +37,7 @@ export default function Header () {
                                 }}
                             >
                                 <option value="">Услуги</option>
+                                <option value="/services">Все услуги</option>
                                 <option value="/services/94">Гнатология</option>
                                 <option value="/services/93">Детская стоматология</option>
                                 <option value="/services/92">Диагностика</option>

@@ -29,36 +29,56 @@ function Map({bitrixData}) {
 
                                 <h2 className="col-12"> Махачкала </h2>
                                 <div className="col-6">
-                                    <p className="light">  улица Аскерханова, 1В </p>
-                                    <div>
+                                    <p className="light point">  улица Аскерханова, 1В </p>
+                                    <div className="phone_numbers">
                                         <span className="my-1"> {bitrixData[0].NUM1 }</span>
                                         <span >{bitrixData[0].NUM2 }</span>
+                                    </div>
+                                    <div className="mail">
                                         <span >{bitrixData[0].MAIL }</span>
                                     </div>
 
                                     <div>
-                                        <p> Режим работы: </p>
-                                        <span> <span className="light"> будние - </span> {bitrixData[0].DAYS }</span>
-                                        <span>  <span className="light">выходные - </span> {bitrixData[0].ENDS }</span>
-                                        <span> <span className="light">последнее воскресенье месяца -   </span>  {bitrixData[0].SAT }    </span>
+                                        <p className="operating"> Режим работы: </p>
+                                            <div className="d-flex flex-row">
+                                                <div>
+                                                    <span className="light">будни </span> 
+                                                    <span className="light">выходные </span>
+                                                    <span className="light">последнее вс месяца </span>
+                                                </div>
+                                                <div>
+                                                    <span>  {bitrixData[0].DAYS }</span>
+                                                    <span>   {bitrixData[0].ENDS }</span>
+                                                    <span>  {bitrixData[0].SAT }    </span>
+                                                </div>
+                                            </div>
                                     </div>
                                 </div>
 
                                 <div className="col-6">
-                                    <p className="light"> улица Хурукринская, 11 </p>
-
-                                    <div>
+                                    <p className="light point"> улица Хурукринская, 11 </p>
+                                    <div className="phone_numbers">
                                         <span className="my-1"> {bitrixData[1].NUM1 }</span>
                                         <span >{bitrixData[1].NUM2 }</span>
+                                    </div>
+                                    <div className="mail">
                                         <span >{bitrixData[1].MAIL }</span>
                                     </div>
 
                                     <div>
-
-                                        <p> Режим работы: </p>
-                                        <span> <span className="light"> будние - </span> {bitrixData[1].DAYS }</span>
-                                        <span>  <span className="light">выходные - </span> {bitrixData[1].ENDS }</span>
-                                        <span> <span className="light">последнее воскресенье месяца -   </span>  {bitrixData[1].SAT }    </span>
+                                        <p className="operating"> Режим работы: </p>
+                                        <div className="d-flex flex-row">
+                                                <div>
+                                                    <span className="light">будни </span> 
+                                                    <span className="light">выходные </span>
+                                                    <span className="light">последнее вс месяца </span>
+                                                </div>
+                                                <div>
+                                                    <span>  {bitrixData[1].DAYS }</span>
+                                                    <span>   {bitrixData[1].ENDS }</span>
+                                                    <span>  {bitrixData[1].SAT }    </span>
+                                                </div>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -71,14 +91,23 @@ function Map({bitrixData}) {
                             <div className="map-block__block second col-12 col-md-8 row">
                                 <h2 className="col-12"> Город Москва </h2>
                                 <div className="col-12 col-md-6">
-                                        <p className="light"> улица Маршала Новикова, 11 (м. Щукинская)</p>
-                                        <div>
+                                        <p className="light point"> улица Маршала Новикова, 11 (м. Щукинская)</p>
+                                        <div className="phone_numbers">
                                             <span className="my-1"> {bitrixData[2].NUM1 }</span>
                                             <span >{bitrixData[2].NUM2 }</span>
+                                        </div>
+                                        <div className="mail">
                                             <span >{bitrixData[2].MAIL }</span>
                                         <div>
-                                            <p> Режим работы: </p>
-                                            <span> <span className="light"> каждый день - </span> {bitrixData[1].DAYS }</span>
+                                            <p className="operating everyDay"> Режим работы: </p>
+                                            <div className="d-flex flex-row">
+                                                <div>
+                                                    <span className="light"> каждый день -</span> 
+                                                </div>
+                                                <div>
+                                                    <span>  {bitrixData[2].DAYS }</span>
+                                                </div>
+                                            </div>
                                         </div>
                                 </div>
                                 <div className="col-6"></div>

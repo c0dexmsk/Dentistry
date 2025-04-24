@@ -48,7 +48,7 @@
     position: relative;
     left: -16px;
 }
-@media (max-width: 760px) {
+@media (max-width: 768px) {
     .doctors{
         width: 90%;
     }
@@ -87,6 +87,7 @@
         gap: 30px;
         margin-right: 0;
         margin-left: 0;
+        left: auto;
     }
     .doctor-card p {
         font-weight: bold;

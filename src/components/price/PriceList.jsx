@@ -75,12 +75,12 @@ function PriceList ({bitrixData}) {
 
                             <div>
                                 <div className="row price-mobile">
-                                    <div className="col-7">
+                                    <div className="col-md-8 col-8">
                                         <p>
                                         {service.name.replace(/\\n/g, '\n')}
                                         </p>
                                     </div>
-                                    <div className="col-5">
+                                    <div className="col-md-4 col-4">
                                         <p className="bold">
                                         {service.price.replace(/\\n/g, '\n')}
                                         </p>
