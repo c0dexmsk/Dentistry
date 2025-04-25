@@ -14,7 +14,7 @@ export default function Contacts () {
                         <h3> Махачкала </h3>
                         <div className="contacts__makhachkala__numbers">
                             <p> улица Аскерханова, 1В </p>
-                            <span className="my-1">+7 989 877 78 88 </span>
+                            <span >+7 989 877 78 88 </span>
                             <span >+7 988 777 88 87 (Дети)</span>
                         </div>
 
@@ -29,8 +29,8 @@ export default function Contacts () {
 
                         <h3> Москва </h3>
                         <div className="contacts__moscow__numbers">
-                            <p> улица Маршала Новикова, 11 (м. Щукинская) </p>
-                            <span className="my-1">+7 965 365 74 41 </span>
+                            <p> улица Маршала Новикова, 11 <br /> (м. Щукинская) </p>
+                            <span >+7 965 365 74 41 </span>
                             <span> +7 495 790 00 65</span>
                         </div>
                     </div>

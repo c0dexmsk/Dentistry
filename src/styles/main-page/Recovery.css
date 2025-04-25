@@ -85,12 +85,13 @@
     }
     .recovery__content a {
         padding: 10px 13px;
+        background-color: var(--gray);
     }
     .recovery img {
-        height: 220px;
+        height: auto;
         max-width: 100%;
-        top: 55px;
-        position: static;
+        position: relative;
+        width: 100vw;
     }
     .recovery__content {
         width: 90%;
@@ -107,6 +108,7 @@
     .recovery__content p {
         margin-top: 15px;
         margin-bottom: 25px;
+        font-weight: 500;
     }
     .recovery h2 {
         width: 90%;
@@ -117,7 +119,7 @@
         width: max-content;
         height: auto;
         color: white;
-        background-color: var(--dark-gray);
+        background-color: var(--gray);
     }
     .recovery__content button:hover {
         color: var(--dark-gray);

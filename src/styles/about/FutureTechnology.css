@@ -47,4 +47,8 @@
         background-color: transparent;
         color: black;
     }
+    .future .default-card__text hr {
+        border-color: #1F1F1F;
+        opacity: 0.5;
+    }
 }

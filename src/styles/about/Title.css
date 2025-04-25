@@ -52,6 +52,7 @@
         text-align: left;
     }
     .title button {
+        font-weight: 300;
         font-size: 0.75rem;
         text-decoration: underline;
     }

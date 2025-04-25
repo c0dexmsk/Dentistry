@@ -8,7 +8,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4,auto);
-    
+
     position: relative;
     left: -16px;
 }
@@ -121,6 +121,10 @@
         flex-direction: column;
         justify-content: space-between;
     }
+    .kids .default-card__text__icons > div {
+        flex-direction: row;
+        width: auto;
+    }
     .kids-doctors .doctor-card {
         gap: 5px;
     }
@@ -148,6 +152,7 @@
     }
     .kids .default-card__text p {
         font-weight: 500;
+        margin-bottom: 10px;
     }
 
     .details-button{
@@ -169,12 +174,12 @@
         border: none;
     }
 }
-@media (width: 425px) { 
+@media (width: 425px) {
     .kids-doctors__grid {
         margin-left: 8px;
     }
 }
-@media (max-width: 370px) { 
+@media (max-width: 370px) {
     .kids-doctors__grid {
         display: grid;
         grid-template-columns: repeat(2, auto);

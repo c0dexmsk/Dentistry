@@ -48,10 +48,10 @@
     text-decoration: underline;
     line-height: 150%;
     margin-bottom: 10px;
-    
+
 }
 .map-block__block .operating.everyDay {
-    margin-top: 22px;
+    margin-top: 15px;
 }
 .operating.everyDay + div > div:first-child {
     width: 155px;
@@ -86,7 +86,7 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 22px; 
+    width: 22px;
     height: 22px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -97,17 +97,30 @@
 }
 .point::before {
     background-image: url('/src/assets/point.png');
-    width: 32px; 
+    width: 32px;
     height: 32px;
 }
-.clock::before {
-    background-image: url('/src/assets/clock.png');
+.mail::before {
+    background-image: url('/src/assets/mail.png');
 }
 .phone_numbers::before  {
     top: 25%;
     background-image: url('/src/assets/phone.png');
 }
 @media (max-width: 768px) {
+    .operating::before , .point::before , .clock::before , .phone_numbers::before {
+        width: 11px;
+        height: 11px;
+        transform: translateY(-50%);
+        /* left: 10px; */
+    }
+    .operating, .point, .clock, .phone_numbers {
+        padding-left: 15px;
+    }
+    .point::before {
+        height: 15px;
+        width: 15px;
+    }
     .map-block__image img {
         height: 265px;
         width: 362px;
@@ -121,8 +134,13 @@
     .map-block__block > div > div {
         display: flex;
         flex-direction: column;
-        max-height: 32px;
-    } 
+        /* max-height: 32px; */
+        max-height: 42px;
+    }
+    .map-block__block > div {
+        position: relative;
+        /* left: -10px; */
+    }
     .map-block {
         width: 90%;
         margin-top: 45px;
@@ -172,5 +190,11 @@
     .map-block__block.second {
         height: 214px !important;
 
+    }
+    .phone_numbers {
+        max-width: 100px;
+    }
+    .moscow .phone_numbers {
+        height: auto;
     }
 }

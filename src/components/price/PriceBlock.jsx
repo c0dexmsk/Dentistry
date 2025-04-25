@@ -41,7 +41,7 @@ function PriceBlock ({bitrixData}) {
         'gnathology',
         'pediatricDentistry'
     ];
-    const sortedDepartments = orderedDepartmentKeys.filter(key => 
+    const sortedDepartments = orderedDepartmentKeys.filter(key =>
         uniqueDepartments.includes(key)
     );
 
@@ -50,8 +50,8 @@ function PriceBlock ({bitrixData}) {
     return (
         <section>
             <div className='price-block'>
-                <h1 className='text-center margin-bottom-100'> Прайс </h1>
-                <p>При нажатии на стрелочку открывается полный прайс-лист отделения</p>
+                <h1 className='text-center margin-bottom-100 '> Прайс </h1>
+                <p className='d-none d-md-block'>При нажатии на стрелочку открывается полный прайс-лист отделения</p>
                 <Accordion>
                 {sortedDepartments.map((department, index) => (
                         <Accordion.Item key={index} eventKey={String(index)}>
@@ -65,7 +65,7 @@ function PriceBlock ({bitrixData}) {
 
                                             <div className='two-blocks'>
                                                 <h3 className=''> {service.name.replace(/\\n/g, '\n')}</h3>
-                                                <div className='col'> </div>
+                                                <div className='col d-none d-md-block'> </div>
                                             </div>
 
                                             <p className='col-auto price-text'>
@@ -75,24 +75,24 @@ function PriceBlock ({bitrixData}) {
                                         </div>
 
                                         <div className='item-body row'>
-                                            <div className="col-8">
+                                            <div className="col-md-8 col-12">
                                                 <p>
                                                 {service.description}
                                                 </p>
                                             </div>
-                                            <div className="col-3 timeClock d-flex flex-column mt-3">
+                                            <div className="col-md-3 col-12 timeClock d-flex flex-md-column flex-row mt-3">
                                                 <div className='d-flex flex-row specialGap'>
                                                 {service.time && (
                                                     <>
-                                                        <img className="mr-3" src={clock} alt="Часы" />
+                                                        <img className="mr-2 mr-md-3" src={clock} alt="Часы" />
                                                         <p> {service.time} </p>
                                                     </>
                                                 )}
-                                                    
+
                                                 </div>
                                                 { service.count &&
                                                 <div className='d-flex flex-row specialGap'>
-                                                    <img className="mr-3" src={calendar} alt="Календарь" />
+                                                    <img className="mr-md-3 mr-2" src={calendar} alt="Календарь" />
                                                     <p> {service.count} </p>
                                                 </div>
                                                 }

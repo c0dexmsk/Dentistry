@@ -5,6 +5,7 @@ import ZainapSmall from "../../assets/zainapSmall.png";
 import Button from '../general/Button';
 import roundTooth from "../../assets/round-tooth.png"
 import { useMediaQuery } from "react-responsive";
+import zainapMobile from "assets/zainapMobile.png"
 import { useRef } from "react";
 
 export default function MainSlide ({MAIN_SWIPER_TITLE, MAIN_SWIPER_TEXT, MAIN_SWIPER_LINK,
@@ -31,20 +32,20 @@ export default function MainSlide ({MAIN_SWIPER_TITLE, MAIN_SWIPER_TEXT, MAIN_SW
                     </h1>
 
                     <p>
-                        {MAIN_SWIPER_TEXT}
+                        {!isDesktop ? (MAIN_SWIPER_TEXT.split('.')[0] + '.') : (MAIN_SWIPER_TEXT)}
                     </p>
                     <Button ref={buttonRef} onClick={handleClick}> <Link to={MAIN_SWIPER_LINK}>  Посмотреть кейс </Link></Button>
 
                     <div>
                     <img src={TOOTH_SWIPER_ICON} alt="Зубы" />
-                    <p>
+                    <p className="tooth">
                         <span> {PERCENT_VALUE} </span>
                         {PERCENT_TEXT}
                     </p>
                     </div>
                 </div>
 
-            <img className="img-fluid " src={HERO_SWIPER_IMAGE  } alt={MAIN_SWIPER_TITLE} />
+            <img className="img-fluid " src={isDesktop ? HERO_SWIPER_IMAGE : zainapMobile } alt={MAIN_SWIPER_TITLE} />
         </div>
       </div>
     )

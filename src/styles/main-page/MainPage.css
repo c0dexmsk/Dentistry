@@ -75,7 +75,8 @@
     .metrics > div {
         flex-wrap: wrap;
         height: auto;
-        width: 90%;
+        width: 100%;
+        column-gap: 30px;
         /* max-width: 375px; */
     }
     .metrics {
@@ -84,8 +85,9 @@
     }
     .metrics > div > div{
         margin-right: 0;
-        width: 146px;
+        width: 160px;
         gap: 10px;
+        min-width: min-content;
     }
     .metrics > div > div img {
         height: 30px;
@@ -98,6 +100,7 @@
     .metrics p {
         font-size: 0.5rem;
         width: auto;
+        line-height: 140%;
     }
     .metrics .secret {
         gap: 10px;
@@ -137,12 +140,18 @@
     width: 120%;
     bottom: 120px;
 }
-.veneers.v2 .VTITLE2{
-    margin-left: 80px;
-    padding-left: 0;
+@media (min-width: 768px) {
+
+    .veneers.v2 .VTITLE2{
+        margin-left: 80px;
+        padding-left: 0;
+    }
 }
 
 @media (max-width: 768px) {
+    .veneers.v2 .VTITLE2 {
+        margin-left: 0;
+    }
     .veneers {
         width: 90%;
         /* max-width: 375px; */
@@ -152,14 +161,16 @@
     .custom-img {
         object-fit: cover;
         bottom: 0;
-        right: 50px;
-        width: 120%;
+        right: auto;
+        left: 20px;
+        width: 90%;
     }
     .hidden-block{
         position: relative;
         left: -5.5%;
         background-color: var(--dark-gray);
         width: 100vw;
+        min-height: 220px;
     }
     .veneers p {
         margin-top: 15px;
@@ -173,12 +184,13 @@
         font-weight: bold;
         text-transform: uppercase;
         font-size: 10px;
+        background-color: var(--gray);
     }
     .recovery__content a {
         font-size: 10px;
     }
     .veneers.v2 .row{
-        margin-top: 60px;
+        margin-top: 50px;
     }
     .veneers_container {
         height: auto;

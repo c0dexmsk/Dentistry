@@ -85,7 +85,7 @@ export default function Header () {
                         {isMenuOpen && (
                             <div className="mobile-menu d-flex flex-column">
                                 <div className="mobile-menu__container d-flex flex-row justify-content-between align-items-center">
-                                    <a href="/main"><img src={logo} alt="logo" /></a>
+                                    <a href="/main"><img style={{maxWidth: "20%"}} src={logo} alt="logo" /></a>
                                     <button
                                         className="mobile-menu__close"
                                         onClick={() => setIsMenuOpen(false)}

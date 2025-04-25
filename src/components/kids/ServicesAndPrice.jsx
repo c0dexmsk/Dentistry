@@ -61,7 +61,7 @@ export default function ServicesAndPrice () {
             <div className="kids-services">
                 <div className="new-button">
                 <h2 id="servicesprices"> Услуги и стоимость </h2>
-                <a className="button" href="/full-price">Полный прайс-лист</a>
+                <a className="button" href="/full-price">Полный прайс</a>
                 </div>
 
                 <div className="kids-services__grid">

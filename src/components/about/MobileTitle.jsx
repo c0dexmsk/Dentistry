@@ -20,22 +20,22 @@ export default function MobileTitle ({titleh1, titleh2, description1, descriptio
                         <img src={videoPlay} alt="Видео кнопка" />
                     </button>
                 </div>
-            </section>  
+            </section>
 
             <section className="container">
                 <div className="title align-items-start">
                     <p> {description1} </p>
 
-                    <button className="mb-3" onClick={() => (setHideText(!hideText))}> {hideText? ("Показать весь текст"): ("Скрыть текст") } </button>
-                    
+                    <button className="mb-3" style={{textAlign: "left", fontWeight: "300"}} onClick={() => (setHideText(!hideText))}> {hideText? ("Показать весь текст"): ("Скрыть текст") } </button>
+
                     {hideText ? (
                         null
                     ) : (
                         <p> {description2} </p>
                     )}
-                    
+
                 </div>
             </section>
         </>
-    )   
+    )
 }

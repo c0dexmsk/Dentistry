@@ -5,6 +5,7 @@ import img1 from "../../assets/history/img1.svg";
 import img2 from "../../assets/history/img2.svg";
 import img3 from "../../assets/history/img3.svg";
 import img4 from "../../assets/history/img4.svg";
+import img5 from "assets/icon.png";
 
 export default function Diagnostics ({bitrixData}) {
 
@@ -28,7 +29,7 @@ export default function Diagnostics ({bitrixData}) {
                         <div className="col-6 col-md  even-block">
                             <div>
                                 <p> {bitrixData.D2} </p>
-                                <img id="unique-image" src={bitrixData.D2_ICON} alt="Цифровой слепок" />
+                                <img id="unique-image" src={isDesktop ? (bitrixData.D2_ICON) : (img5)} alt="Цифровой слепок" />
                             </div>
                         </div>
 

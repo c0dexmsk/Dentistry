@@ -173,14 +173,24 @@ html {
   @media (max-width: 760px) {
     h1 {
       font-size: 1.5rem;
+      font-weight: 800;
     }
     h2 {
       font-size: 1rem;
+      font-weight: 800;
     }
     h3 {
 
     }
     p {
       font-size: 0.75rem;
+    }
+    a,
+    a:hover,
+    a:focus,
+    a:active,
+    a:visited,
+    Link {
+      text-decoration: none !important;
     }
   }

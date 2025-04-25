@@ -41,10 +41,10 @@
         /* max-width: 375px; */
         position: relative;
         width: 100vw;
-        left: -5%;
+        left: -5.5%;
     }
     .default-card__text__icons {
-        justify-content: center;
+        justify-content: flex-start;
     }
      .card-children button {
         font-size: 10px;

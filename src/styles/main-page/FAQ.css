@@ -131,7 +131,13 @@
         gap: 20px;
         padding: 0 15px;
       }
-
+      .FAQ__dropdown-icon {
+        position: relative;
+        right: -10px;
+      }
+      .FAQ h2 {
+        font-weight: 800;
+      }
       .FAQ > div:first-of-type {
         width: 100%;
         align-items: center;
@@ -158,7 +164,13 @@
       .FAQ > div:last-of-type {
         width: 100%;
       }
-
+      .FAQ__dropdown__header div {
+        position: relative;
+        top: -2px;
+      }
+      .FAQ__dropdown__header div p {
+        font-size: 10px;
+      }
       /* Аккордеон в мобильной версии */
       .FAQ__dropdown {
         margin-bottom: 10px;
@@ -173,19 +185,19 @@
 
     }
     .FAQ__dropdown.accordion-item {
-        border-radius: 5px !important;
+        border-radius: 10px !important;
     }
     .FAQ__dropdown__header .accordion-button {
         /* padding: 10px; */
     }
       .FAQ__dropdown__body {
         padding: 0px 15px 15px 15px ;
-        border-radius: 0 0 5px 5px;
+        border-radius: 0 0 10px 10px;
       }
 
       .FAQ .accordion-item:first-of-type,
       .FAQ .accordion-item:last-of-type {
-        border-radius: 5px !important;
+        border-radius: 10px !important;
         width: 100%;
       }
 

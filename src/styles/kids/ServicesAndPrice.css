@@ -122,16 +122,17 @@
         margin-top: 50px;
     }
     .kids-services .button {
-        padding: 5px 10px;
+        padding: 1px 10px;
         vertical-align: middle;
         font-size: 10px;
         font-weight: 700;
         width: auto;
         height: auto;
+        background-color: #8DA4B5;
     }
     .rocket-picture {
-        left: 210px;
-        top: 460px;
+        left: 240px;
+        top: 470px;
         rotate: 85deg;
     }
     .cat-picture {
@@ -192,8 +193,9 @@
     }
     .kids-services__grid > div > p {
         font-size: 9px;
-        margin: 10px;
+        margin: 15px;
         margin-top: 20px;
+        margin-bottom: 0;
     }
     .kids-services {
         height: auto;
@@ -203,5 +205,10 @@
 
         border-bottom-right-radius: 11px;
         border-bottom-left-radius:11px;
+    }
+}
+@media (max-width: 370px) {
+    .rocket-picture {
+        left: 210px;
     }
 }

@@ -75,7 +75,9 @@
 .swiper-pagination-bullet {
   background-color: white;
 }
-
+.main-swiper-slide__text .tooth {
+  margin-top: 0;
+}
 @media (max-width: 768px) {
   .main-swiper-slide {
     width: 100%;
@@ -92,6 +94,10 @@
   .main-swiper-slide__text p, .main-swiper-slide__text a {
     width: 90%;
     font-size: 0.625rem;
+  }
+  .main-swiper-slide__text p {
+    width: 80%;
+    line-height: 140%;
   }
   .main-swiper-slide__text h1 {
     font-size: 1.5rem;
@@ -148,6 +154,6 @@
 
 @media (max-width: 500px) {
   .main-swiper-slide > .img-fluid {
-    top: -20%;
+    top: auto;
   }
 }

@@ -143,6 +143,7 @@
     font-weight: 600;
     font-size: 1.25rem;
     width: 80%;
+    margin-bottom: 0;
 }
 .bold {
     font-weight: bold !important;
@@ -176,9 +177,81 @@
     line-height: 120%;
     margin-left: 15px;
 }
+.price-mobile {
+    align-items: center;
+}
+
 @media (max-width: 768px) {
+
+    .price-block .accordion-button:not(.collapsed)::before,
+    .price-block .accordion-button::before {
+        content: url("../../assets/price/polygon.svg");
+        transform: scale(0.75) rotate(0deg);
+        transform-origin: left center;
+        position: absolute;
+        left: 1rem;
+        transition: transform 0.3s ease;
+    }
+    .price-block .accordion-button {
+        padding-left: 3rem;
+    }
+    .price-block h1 {
+        margin-top: 45px;
+        font-size: 24px;
+    }
+    .price-block .accordion-header button  ,
+    .accordion-item:first-of-type>.accordion-header .accordion-button{
+        font-size: 1rem;
+    }
     .price-list {
         width: 90%;
+    }
+    .price-block .item-title h3 ,
+    .price-block .item-title p{
+        font-size: 10px;
+    }
+    .price-block .item-body p {
+        font-size: 10px;
+        margin: 10px 0;
+    }
+    .price-block img {
+        width: 20px;
+        height: 20px;
+    }
+    .price-block .item-body p {
+        margin: 0;
+    }
+    .specialGap {
+        align-items: center;
+    }
+    .price-block .timeClock {
+        margin-left: 0;
+        margin-top: 10px;
+        /* gap: 20px; */
+        /* padding-left: 0; */
+        /* padding-right: 0; */
+    }
+    .timeClock div:first-child p {
+        margin-right: 20px;
+    }
+    .specialGap p {
+        width: max-content;
+    }
+    .price-block .specialGap {
+        gap: 0;
+    }
+    .item-title .price-text {
+        position: absolute;
+        right: 10%;
+        transition: 0;
+    }
+
+    .price-block .button {
+        padding: 6px 12px;
+        font-size: 8px;
+    }
+    .price-block .accordion {
+        margin-bottom: 50px;
     }
     .price-list__departments button {
         padding: 0px 20px;
@@ -202,11 +275,24 @@
         margin-bottom: 0;
         width: 100%;
     }
+    .price-list__sections .bold {
+        max-width: 95px;
+    }
     .price-list__sections hr {
         margin: 7px 0;
+        border-width: 1px !important;
     }
     .price-list h1 {
         margin-top: 50px;
         margin-bottom: 25px;
     }
+
+    .price-mobile > .col-md-4  {
+        margin-left: 40px;
+    }
+    /* .price-mobile > .col-md-4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } */
 }

@@ -2,7 +2,51 @@
 import { useMediaQuery } from "react-responsive";
 // import { Link } from "react-router-dom"
 import { HashLink as Link } from 'react-router-hash-link';
+import s0 from "assets/services/Serv (1).png";
+import s1 from "assets/services/Serv (7).png";
+import s2 from "assets/services/Serv (2).png";
+import s3 from "assets/services/Serv (3).png";
+import s4 from "assets/services/Serv (8).png";
+import s5 from "assets/services/Serv (10).png";
+import s6 from "assets/services/Serv (4).png";
+import s7 from "assets/services/Serv (9).png";
+import s8 from "assets/services/Serv (5).png";
+import s9 from "assets/services/Serv (6).png";
+
 export default function Item ({title, backgroundColor, link,description,innerServices}) {
+
+    const sortedSections = [
+        "Гнатология",                // s0
+        "Детство",                   // s1
+        "Консультация и диагностика", // s2
+        "Отбеливание зубов",         // s3
+        "Ортодонтия",                // s4
+        "Ортопедия",                 // s5
+        "Пародонтология",            // s6
+        "Профессиональная гигиена",  // s7
+        "Терапия",                   // s8
+        "Хирургия и имплантация"     // s9
+      ];
+
+      // Массив изображений в соответствии с алфавитным порядком
+      const sectionImages = [
+        s0, // Гнатология
+        s1, // Детство
+        s2, // Консультация и диагностика
+        s5, // Отбеливание зубов
+        s3, // Ортодонтия
+        s4, // Ортопедия
+        s6, // Пародонтология
+        s7, // Профессиональная гигиена
+        s8, // Терапия
+        s9  // Хирургия и имплантация
+      ];
+
+      // Функция для получения изображения
+      const getSectionImage = (title) => {
+        const index = sortedSections.indexOf(title);
+        return index >= 0 ? sectionImages[index] : s0; // fallback
+      };
 
     const styles = {
         brown: {
@@ -31,9 +75,13 @@ export default function Item ({title, backgroundColor, link,description,innerSer
             style={{ backgroundColor: selectedStyle.color2, }}>
                 <div className="row gy-3 item">
                     <div className="special1 col-8 col-md-12">
-                        <h3> {title} </h3>
+                        <div className="d-flex d-md-none icons-mobile">
+                            <img src={getSectionImage(title)} alt={title} />
+                            <h3> {title} </h3>
+                        </div>
+                        <h3 className="d-none d-md-inline"> {title} </h3>
                         <p> {description} </p>
-                    </div> 
+                    </div>
                     <div className="special2 col-3 col-md-12 ">
                         <Link style={{
                         '--color4': selectedStyle.color4,

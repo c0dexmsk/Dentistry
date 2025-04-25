@@ -1,19 +1,19 @@
 import mainPhoto from "../../assets/history/zainap.png"
 import mainPhoto2 from "../../assets/hishis.svg"
 import Zainap2 from "assets/историяЗайнап.png"
-import ZainapMobile from "assets/zainapHistoryMobile.svg"
+import ZainapMobile from "assets/5.png"
 import { useMediaQuery } from "react-responsive"
 
 const TextSplitter = ({ text }) => {
     // Разделяем текст на предложения по точке (можно изменить разделитель)
     const sentences = text.split(/\.\s+/);
-    
+
     // Берем первое предложение (если есть)
     const firstSentence = sentences.length > 0 ? sentences[0] + (sentences.length > 1 ? '.' : '') : '';
-    
+
     // Объединяем остальные предложения (если есть)
     const restText = sentences.length > 1 ? sentences.slice(1).join('. ') + '' : '';
-  
+
     return (
       <div className="split-text">
         {firstSentence && <p className="first-sentence">{firstSentence}</p>}

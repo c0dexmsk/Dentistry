@@ -42,14 +42,18 @@
     }
     .contacts h3 {
         font-size: 1rem;
+        font-weight: 600;
     }
     .contacts p, .contacts span {
         font-size: 0.75rem;
         line-height: 120%;
         margin-bottom: 10px;
     }
+    .contacts span {
+        margin-bottom: 0px;
+    }
     .contacts__makhachkala, .contacts__moscow {
         gap: 20px;
-        max-width: 110px;
+        max-width: 150px;
     }
 }
