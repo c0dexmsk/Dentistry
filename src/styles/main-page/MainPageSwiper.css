@@ -14,7 +14,7 @@
   font-weight: bold;
   position: relative;
 }
-.main-swiper-slide > video {
+.main-swiper-slide > img {
   position: absolute;
   max-height: 834px;
   height: calc(100vh * 0.834);

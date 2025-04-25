@@ -44,8 +44,7 @@ export default function MainSlide ({MAIN_SWIPER_TITLE, MAIN_SWIPER_TEXT, MAIN_SW
                     </p>
                     </div>
                 </div>
-
-            <video autoPlay muted style={{background: 'none'}} loop className="img-fluid " src={HERO_SWIPER_IMAGE} alt={MAIN_SWIPER_TITLE} />
+            <img style={{background: 'none'}} className="img-fluid " src={HERO_SWIPER_IMAGE} alt={MAIN_SWIPER_TITLE} />
         </div>
       </div>
     )
