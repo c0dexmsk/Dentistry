@@ -1,3 +1,4 @@
+import {fetchUrl} from '../config';
 import React, { useEffect, useState } from 'react';
 
 export default function withBitrixServiceData(WrappedComponent) {
@@ -10,7 +11,7 @@ export default function withBitrixServiceData(WrappedComponent) {
       const fetchData = async () => {
         try {
           const response = await fetch(
-            'http://nonscrdk.beget.tech/local/api/?endpoint=get-page-data&pageCode=service_page'
+            `${fetchUrl}/?endpoint=get-page-data&pageCode=service_page`
           );
 
           // Проверяем Content-Type перед парсингом

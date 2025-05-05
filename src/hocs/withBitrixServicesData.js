@@ -1,3 +1,4 @@
+import {fetchUrl} from '../config';
 import React, { useEffect, useState } from 'react';
 
 export default function withBitrixServicesData(WrappedComponent) {
@@ -11,7 +12,7 @@ export default function withBitrixServicesData(WrappedComponent) {
         try {
 
           const response = await fetch(
-            'http://nonscrdk.beget.tech/local/api/?endpoint=get-page-code&pageCode=detailed_services'
+            `${fetchUrl}/?endpoint=get-page-code&pageCode=detailed_services`
           );
 
           const result = await response.json();

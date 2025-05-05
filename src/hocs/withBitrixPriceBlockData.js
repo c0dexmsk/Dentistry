@@ -1,3 +1,4 @@
+import {fetchUrl} from '../config';
 import React, { useEffect, useState } from 'react';
 
 export default function withBitrixPriceBlockData(WrappedComponent) {
@@ -11,7 +12,7 @@ export default function withBitrixPriceBlockData(WrappedComponent) {
         try {
 
           const response = await fetch(
-            'http://nonscrdk.beget.tech/local/api/?endpoint=get-page-code&pageCode=price_block_page'
+            `${fetchUrl}/?endpoint=get-page-code&pageCode=price_block_page`
           );    
 
           const result = await response.json();
