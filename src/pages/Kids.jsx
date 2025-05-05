@@ -49,7 +49,7 @@ export default function Kids() {
         {
             photo: dina,
             name: "Гасанова Дина Абдулгаджиевна",
-            profession: "Подростковый ортопед",
+            profession: "Детский врач",
             link: "hasanova-dina"
         },
         {
@@ -61,7 +61,7 @@ export default function Kids() {
         {
             photo: siadat,
             name: "Ибрагимова Сиядат Магомедовна",
-            profession: "Детский стоматолог",
+            profession: "Подростковый врач, подростковый стоматолог-ортопед",
             link: "ibragimova-siyadat"
         },
         {

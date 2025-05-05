@@ -49,3 +49,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.fade-in-text-left {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.fade-in-text-right {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.fade-in-text-right.active , .fade-in-text-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

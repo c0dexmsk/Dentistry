@@ -23,6 +23,7 @@
 .future hr {
     opacity: 0.5;
     margin: 40px 0;
+    border-color: rgba(255, 255, 255, 0.5);
 }
 .default-card__text__icons {
     display: flex;

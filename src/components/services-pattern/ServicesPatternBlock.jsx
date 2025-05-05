@@ -6,6 +6,8 @@ import test1 from "assets/test-3.png"
 import test2 from "assets/test-2.png"
 import { useState } from 'react';
 import MobileTitle from 'components/about/MobileTitle';
+import { FadeInTextLeft , FadeInTextRight } from "components/FadeInText";
+import { HashLink as Link1 } from 'react-router-hash-link';
 import { useMediaQuery } from 'react-responsive';
 import { useParams } from 'react-router-dom';
 import gnatol from "assets/services/R (1).png";
@@ -175,17 +177,17 @@ export default function ServicesPatternBlock ({content}) {
                 </div>
 
                 <div className="row pattern-block__buttons mt-md-5 mt-2 g-3">
-                    <div className="col-md-3 col-6">
-                        <button> ОПИСАНИЕ УСЛУГИ </button>
+                    <div className="col-md-3 col-6 d-flex align-center justify-content-center">
+                        <Link1 smooth to="#section1"> ОПИСАНИЕ УСЛУГИ </Link1>
                     </div>
-                    <div className="col-md-3 col-6">
-                        <button> ИЗ ЧЕГО СОСТОИТ </button>
+                    <div className="col-md-3 col-6 d-flex align-center justify-content-center">
+                        <Link1 smooth to="#section2"> ИЗ ЧЕГО СОСТОИТ </Link1>
                     </div>
-                    <div className="col-md-3 col-6">
-                        <button> ЦЕНЫ </button>
+                    <div className="col-md-3 col-6 d-flex align-center justify-content-center">
+                        <Link1 smooth to="#section3"> ЦЕНЫ </Link1>
                     </div>
-                    <div  className="col-md-3 col-6">
-                        <button> ВОПРОС/ОТВЕТ</button>
+                    <div  className="col-md-3 col-6 d-flex align-center justify-content-center">
+                        <Link1 smooth to="#section4"> ВОПРОС/ОТВЕТ</Link1>
                     </div>
                 </div>
 
@@ -197,7 +199,7 @@ export default function ServicesPatternBlock ({content}) {
                         alt="фотография 3" />
                     </div>
                     <div className="col-md-6 col-12 pr-0 pl-auto pl-md-0 blockH2">
-                        <h2 className='d-none d-md-block'> {content.title_H2} </h2>
+                        <h2 id='section1' className='d-none d-md-block'> {content.title_H2} </h2>
                         <p className='mt-3 mt-md-0'> {content.description1_H2} </p>
                         <button className="mb-3 d-block d-md-none" style={{textAlign: "left", fontWeight: "300"}} onClick={() => (setHideText(!hideText))}> {hideText? ("Показать весь текст"): ("Скрыть текст") } </button>
                         {hideText ? (
@@ -232,14 +234,16 @@ export default function ServicesPatternBlock ({content}) {
                 </div>
 
                 <div className="margin100 abilities">
-                    <h2> {content.ability_H2} </h2>
+                    <h2 id='section2'> {content.ability_H2} </h2>
                     <div className="row mt-md-5 mt-3 g-4">
 
                         <div className="col-md-12 col-6 col-lg-6 pl-0">
                             <div className="p-md-3 p-0">
                                 <div className="row align-items-center g-4 mb-3 ">
                                     <div className="col-md-2 col-4">
-                                        <img src={content.ICON1} alt="иконка" />
+                                        <FadeInTextLeft>
+                                            <img src={content.ICON1} alt="иконка" />
+                                        </FadeInTextLeft>
                                     </div>
                                     <div className="col-md-10 col-8">
                                         <h3> {content.abilityBlocks[0].title} </h3>
@@ -258,7 +262,10 @@ export default function ServicesPatternBlock ({content}) {
                             <div className="p-md-3 p-0">
                                 <div className="row align-items-center g-4 mb-3">
                                     <div className="col-md-2 col-4">
-                                        <img src={content.ICON2} alt="иконка" />
+                                        <FadeInTextRight>
+                                            <img src={content.ICON2} alt="иконка" />
+
+                                        </FadeInTextRight>
                                     </div>
                                     <div className="col-md-10 col-8">
                                         <h3> {content.abilityBlocks[1].title} </h3>
@@ -276,7 +283,9 @@ export default function ServicesPatternBlock ({content}) {
                             <div className="p-md-3 p-0">
                                 <div className="row align-items-center g-4 mb-3">
                                     <div className="col-md-2 col-4">
-                                        <img src={content.ICON3} alt="иконка" />
+                                        <FadeInTextLeft>
+                                            <img src={content.ICON3} alt="иконка" />
+                                        </FadeInTextLeft>
                                     </div>
                                     <div className="col-md-10 col-8">
                                         <h3> {content.abilityBlocks[2].title} </h3>
@@ -295,7 +304,10 @@ export default function ServicesPatternBlock ({content}) {
                             <div className="p-md-3 p-0">
                                 <div className="row align-items-center g-4 mb-3">
                                     <div className="col-md-2 col-4">
-                                        <img src={content.ICON4} alt="иконка" />
+                                        <FadeInTextRight>
+                                            <img src={content.ICON4} alt="иконка" />
+                                
+                                        </FadeInTextRight>
                                     </div>
                                     <div className="col-md-10 col-8">
                                         <h3> {content.abilityBlocks[3].title} </h3>
@@ -319,7 +331,7 @@ export default function ServicesPatternBlock ({content}) {
                     <div className="row align-items-center justify-content-between">
                         <h2 id="servicesprices" className="col-md-8 col-7 "> Услуги и стоимость </h2>
                         <div className='col-md col-4 d-flex justify-content-end'>
-                            <Link to="/full-price" className=" customLink"> Полный прайс </Link>
+                            <Link to="/full-price" id='section3' className=" customLink"> Полный прайс </Link>
                         </div>
                     </div>
 
@@ -355,7 +367,7 @@ export default function ServicesPatternBlock ({content}) {
                         </button>
                         </div>
                     )}
-                        <div className="col-4 d-none all-price-el">
+                        <div id='section3' className="col-4 d-none all-price-el" >
                             <div>
                                 <Link to="/full-price"> Полный прайс </Link>
                             </div>
@@ -365,7 +377,7 @@ export default function ServicesPatternBlock ({content}) {
                 </div>
 
                 <div className="margin100 pattern-block__questions">
-                    <h2>Ваши вопросы</h2>
+                    <h2 id='section4'>Ваши вопросы</h2>
                     <div className="pattern-block__questions__accordeon mt-md-5 mt-3">
                         <Accordion defaultActiveKey={isDesktop ? ["0", "1", "2"] : []} alwaysOpen>
                             <Accordion.Item eventKey="0">

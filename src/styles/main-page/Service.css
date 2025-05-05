@@ -108,6 +108,10 @@
     margin-top: 60px;
 }
 
+.service__card:hover {
+    transform: scale(1.03);
+}
+
 @media (max-width: 768px) {
     .service-flex {
         height: auto;

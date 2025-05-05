@@ -41,12 +41,6 @@ function Review ({bitrixData}) {
                 spaceBetween={isDesktop ? 20 : -40}
                 slidesPerView={isDesktop ? 3 : 1.2}
                 slidesOffsetBefore={isDesktop ? 0 : 5}
-                // breakpoints={{
-                //     320: {
-                //       spaceBetween: 0,  // Полное отсутствие отступов на маленьких экранах
-                //       slidesOffsetBefore: 0
-                //     },
-                // }}
                 >
 
                 <SwiperButtons />

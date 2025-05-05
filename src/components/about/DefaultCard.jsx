@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
+import { FadeInTextLeft } from "components/FadeInText";
 
 
 export default function DefautCard ({title, description1, description2, image, icon1, icon2, icon3, icon1Title, icon2Title, icon3Title, children}) {
@@ -11,7 +12,7 @@ export default function DefautCard ({title, description1, description2, image, i
     return isDesktop ? (
         <div className="default-card row flex-nowrap justify-content-center">
             <div className="default-card__text px-0 col">
-
+                <FadeInTextLeft>
                 <h2> {title} </h2>
                 <p>
                     {description1}
@@ -21,7 +22,6 @@ export default function DefautCard ({title, description1, description2, image, i
                 </p>
 
                 <hr />
-
                 <div className="default-card__text__icons">
                     <div>
                         <img src={icon1} alt={icon1} />
@@ -39,9 +39,12 @@ export default function DefautCard ({title, description1, description2, image, i
 
                 {children && <div className="card-children">{children}</div>}
 
+                </FadeInTextLeft>
             </div>
             <div className="default-card__photo px-0 col">
-                <img className="container-fluid px-0 px-0" src={image} alt="Фотография" />
+                <FadeInTextLeft>
+                    <img className="container-fluid px-0 px-0" src={image} alt="Фотография" />
+                </FadeInTextLeft>
             </div>
         </div>
 

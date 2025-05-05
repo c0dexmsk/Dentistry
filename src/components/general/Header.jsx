@@ -7,6 +7,78 @@ import phone from "../../assets/phone.svg";
 import profile from "../../assets/profile.svg";
 import "../../styles/general/Header.css";
 import { useMediaQuery } from 'react-responsive';
+import Select from 'react-select';
+
+const customStyles = {
+    control: (provided) => ({
+        ...provided,
+        backgroundColor: 'transparent',
+        border: 'none',
+        boxShadow: 'none',
+        minHeight: 'auto',
+        cursor: 'pointer'
+      }),
+      valueContainer: (provided) => ({
+        ...provided,
+        padding: 0
+      }),
+      dropdownIndicator: (provided) => ({
+        ...provided,
+        padding: 0,
+        color: 'inherit'
+      }),
+      indicatorSeparator: () => ({
+        display: 'none'
+      }),
+      menu: (provided) => ({
+        ...provided,
+        width: '300px', // Ширина выпадающего списка
+        backgroundColor: '#F1EBE8' // Фон для выпадающего списка
+      }),
+      option: (provided, state) => ({
+        ...provided,
+        backgroundColor: state.isFocused ? '#E8DFD8' : '#F1EBE8', // Фон при наведении/обычный
+        color: '#333',
+        padding: '12px 16px',
+        fontSize: '16px'
+      }),
+      singleValue: (provided) => ({
+        ...provided,
+        color: 'inherit',
+        margin: 0,
+        fontSize: '16px'
+      })
+  };
+
+  const ServiceSelect = () => {
+    const options = [
+        { value: '', label: 'Услуги' },
+        { value: '/services', label: 'Все услуги' },
+        { value: '/services/94', label: 'Гнатология' },
+        { value: '/services/93', label: 'Детская стоматология' },
+        { value: '/services/92', label: 'Диагностика' },
+        { value: '/services/73', label: 'Ортодонтия' },
+        { value: '/services/68', label: 'Ортопедия' },
+        { value: '/services/57', label: 'Отбеливание зубов' },
+        { value: '/services/55', label: 'Пародонтология' },
+        { value: '/services/47', label: 'Профессиональная гигиена' },
+        { value: '/services/12', label: 'Терапевтическая стоматология' },
+        { value: '/services/51', label: 'Хирургия и имплантация' }
+      ];
+
+    return (
+      <Select
+        options={options}
+        styles={customStyles}
+        onChange={(selectedOption) => {
+          if (selectedOption.value) {
+            window.location.href = selectedOption.value;
+          }
+        }}
+        defaultValue={options[0]}
+      />
+    );
+  };
 
 export default function Header () {
 
@@ -16,7 +88,7 @@ export default function Header () {
     const navigate = useNavigate();
 
     return (
-        <header className={`header ${isDesktop ? 'container-fluid px-0' : ''}`}>
+        <header id="headerLink" className={`header ${isDesktop ? 'container-fluid px-0' : ''}`}>
             <div className="header__container">
                 <div className="header__container__logo">
                     <Link to="/main">
@@ -31,7 +103,7 @@ export default function Header () {
                             <Link to="/kids">Дети</Link>
                             <Link to="/doctors">Врачи</Link>
                             <Link to="/cases">Кейсы</Link>
-                            <select
+                            {/* <select
                                 onChange={(e) => {
                                     if (e.target.value) window.location.href = e.target.value;
                                 }}
@@ -44,14 +116,15 @@ export default function Header () {
                                 <option value="/services/73">Ортодонтия</option>
                                 <option value="/services/68">Ортопедия</option>
                                 <option value="/services/57">Отбеливание зубов</option>
-                                <option value="/services/55">Пародонтия</option>
+                                <option value="/services/55">Пародонтология</option>
                                 <option value="/services/47">Профессиональная гигиена</option>
                                 <option value="/services/12">Терапевтическая стоматология</option>
                                 <option value="/services/51">Хирургия и имплантация</option>
-                            </select>
+                            </select> */}
+                            <ServiceSelect />
                             <Link to="/price">Прайс</Link>
-                            <Link to="/contacts">Контакты</Link>
-                            <Link onClick={() => {
+                            <Link to="/contacts">Наши филиалы</Link>
+                            <Link className="acent" onClick={() => {
                                 setIsMenuOpen(false);
                                 setIsPhoneMenuOpen(true);
                             }} >Записаться</Link>
@@ -102,7 +175,7 @@ export default function Header () {
                                     <Link to="/services">Услуги</Link>
                                     <Link to="/full-price">Прайс</Link>
                                     <Link to="/contacts">Контакты</Link>
-                                    <Link onClick={() => {
+                                    <Link className="acent" onClick={() => {
                                         setIsMenuOpen(false);
                                         setIsPhoneMenuOpen(true);
                                     }} to="#">Записаться</Link>
@@ -147,3 +220,4 @@ export default function Header () {
         </header>
     );
 }
+

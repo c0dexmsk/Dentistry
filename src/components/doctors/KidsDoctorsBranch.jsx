@@ -29,7 +29,7 @@ function KidsDoctorsBranch ({bitrixData}) {
         {
             photo: dina,
             name: "Гасанова Дина Абдулгаджиевна",
-            profession: "Подростковый ортопед",
+            profession: "Детский врач",
             link: "hasanova-dina"
         },
         {
@@ -41,7 +41,7 @@ function KidsDoctorsBranch ({bitrixData}) {
         {
             photo: siadat,
             name: "Ибрагимова Сиядат Магомедовна",
-            profession: "Детский стоматолог",
+            profession: "Подростковый врач, подростковый стоматолог-ортопед",
             link: "ibragimova-siyadat"
         },
         {
@@ -107,7 +107,7 @@ function KidsDoctorsBranch ({bitrixData}) {
         {
             photo: "malikat",
             name: "Алиев Мурад Гаджимагомедович",
-            profession: "Подростковый ортопед",
+            profession: "Подростковый стоматолог-ортопед",
             link: "aliev-murad"
         }
     ];

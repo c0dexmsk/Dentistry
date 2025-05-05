@@ -6,6 +6,7 @@ import image3 from "./виниры2.png"
 import image4 from "assets/veneers.png"
 import image5 from "assets/veneers2.png"
 import { useMediaQuery } from "react-responsive"
+import{ FadeInTextRight } from "components/FadeInText"
 
 function Veneers({bitrixData}) {
 
@@ -37,6 +38,7 @@ function Veneers({bitrixData}) {
 
             <section className="container-fluid px-0 veneers_container">
                 <div className="veneers v2">
+                    <FadeInTextRight>
                     <div className="row">
                         <div className="col-lg-6 col-md-12">
                             <div className="row">
@@ -55,6 +57,7 @@ function Veneers({bitrixData}) {
                             </a>
                         </div>
                     </div>
+                    </FadeInTextRight>
                 </div>
             </section>
         </>

@@ -4,78 +4,79 @@ import logotype from "../../assets/logotype.png";
 import "../../styles/general/Footer.css";
 import { useMediaQuery } from "react-responsive";
 import { useNavigate } from "react-router-dom";
-
+import { HashLink as Link1 } from 'react-router-hash-link';
 import Select from 'react-select';
 
-// const serviceOptions = [
-//   { value: '/services', label: 'Все услуги' },
-//   { value: '/services/94', label: 'Гнатология' },
-//   { value: '/services/93', label: 'Детская стоматология' },
-//   { value: '/services/92', label: 'Диагностика' },
-//   { value: '/services/73', label: 'Ортодонтия' },
-//   { value: '/services/68', label: 'Ортопедия' },
-//   { value: '/services/57', label: 'Отбеливание зубов' },
-//   { value: '/services/55', label: 'Пародонтия' },
-//   { value: '/services/47', label: 'Профессиональная гигиена' },
-//   { value: '/services/12', label: 'Терапевтическая стоматология' },
-//   { value: '/services/51', label: 'Хирургия и имплантация' }
-// ];
+const customStyles = {
+    control: (provided) => ({
+        ...provided,
+        backgroundColor: 'transparent',
+        border: 'none',
+        boxShadow: 'none',
+        minHeight: 'auto',
+        cursor: 'pointer'
+      }),
+      valueContainer: (provided) => ({
+        ...provided,
+        padding: 0
+      }),
+      dropdownIndicator: (provided) => ({
+        ...provided,
+        padding: 0,
+        color: 'inherit'
+      }),
+      indicatorSeparator: () => ({
+        display: 'none'
+      }),
+      menu: (provided) => ({
+        ...provided,
+        width: '250%',
+        backgroundColor: '#F1EBE8'
+      }),
+      option: (provided, state) => ({
+        ...provided,
+        backgroundColor: state.isFocused ? '#E8DFD8' : '#F1EBE8',
+        color: '#333',
+        padding: '12px 16px',
+        fontSize: '16px'
+      }),
+      singleValue: (provided) => ({
+        ...provided,
+        color: 'inherit',
+        margin: 0,
+        fontSize: '16px'
+      })
+  };
 
-// const customSelectStyles = {
-//     control: (base) => ({
-//       ...base,
-//       backgroundColor: 'transparent',
-//       border: 'none',
-//       boxShadow: 'none',
-//       minHeight: '36px',
-//       cursor: 'pointer'
-//     }),
-//     option: (base, { isFocused, isSelected }) => ({
-//       ...base,
-//       backgroundColor: isSelected
-//         ? '#e6d9d4'
-//         : isFocused
-//           ? '#f8f3f0'
-//           : '#F1EBE8',
-//       color: '#000',
-//       padding: '8px 16px',
-//       fontSize: '16px'
-//     }),
-//     menu: (base) => ({
-//       ...base,
-//       backgroundColor: '#F1EBE8',
-//       width: '400px',
-//       marginTop: '5px',
-//       borderRadius: '4px',
-//       boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
-//     }),
-//     menuList: (base) => ({
-//       ...base,
-//       padding: 0
-//     }),
-//     singleValue: (base) => ({
-//       ...base,
-//       color: '#000',
-//       fontWeight: 500
-//     }),
-//     placeholder: (base) => ({
-//       ...base,
-//       color: '#000',
-//       opacity: 0.7
-//     }),
-//     dropdownIndicator: (base) => ({
-//       ...base,
-//       color: '#000',
-//       padding: '0 8px',
-//       '&:hover': {
-//         color: '#000'
-//       }
-//     }),
-//     indicatorSeparator: () => ({
-//       display: 'none'
-//     })
-//   };
+  const ServiceSelect = () => {
+    const options = [
+        { value: '', label: 'Услуги' },
+        { value: '/services', label: 'Все услуги' },
+        { value: '/services/94', label: 'Гнатология' },
+        { value: '/services/93', label: 'Детская стоматология' },
+        { value: '/services/92', label: 'Диагностика' },
+        { value: '/services/73', label: 'Ортодонтия' },
+        { value: '/services/68', label: 'Ортопедия' },
+        { value: '/services/57', label: 'Отбеливание зубов' },
+        { value: '/services/55', label: 'Пародонтология' },
+        { value: '/services/47', label: 'Профессиональная гигиена' },
+        { value: '/services/12', label: 'Терапевтическая стоматология' },
+        { value: '/services/51', label: 'Хирургия и имплантация' }
+      ];
 
+    return (
+      <Select
+        options={options}
+        styles={customStyles}
+        onChange={(selectedOption) => {
+          if (selectedOption.value) {
+            window.location.href = selectedOption.value;
+          }
+        }}
+        defaultValue={options[0]}
+      />
+    );
+  };
 export default function Footer () {
     const handleServiceChange = (selectedOption) => {
         if (selectedOption && selectedOption.value) {
@@ -105,7 +106,7 @@ export default function Footer () {
 
                 <div className="footer__container__column2">
                     <Link to="/cases"> Кейсы </Link>
-                    <select
+                    {/* <select
                         onChange={(e) => {
                             if (e.target.value) window.location.href = e.target.value;
                         }}
@@ -118,17 +119,18 @@ export default function Footer () {
                         <option value="/services/73">Ортодонтия</option>
                         <option value="/services/68">Ортопедия</option>
                         <option value="/services/57">Отбеливание зубов</option>
-                        <option value="/services/55">Пародонтия</option>
+                        <option value="/services/55">Пародонтология</option>
                         <option value="/services/47">Профессиональная гигиена</option>
                         <option value="/services/12">Терапевтическая стоматология</option>
                         <option value="/services/51">Хирургия и имплантация</option>
-                    </select>
-                    
+                    </select> */}
+                    <ServiceSelect />
                     <Link to="/price"> Прайс </Link>
                 </div>
 
                 <div className="footer__container__column3">
                     <Link to="/contacts"> Контакты </Link>
+                    <Link1 smooth to="#headerLink"> Наверх </Link1>
                 </div>
 
             </div>
@@ -149,7 +151,7 @@ export default function Footer () {
                 </div>
 
                 <div className="footer__container__column2-mobile col-6">
-                        <select
+                        {/* <select
                                 onChange={(e) => {
                                     if (e.target.value) window.location.href = e.target.value;
                                 }}
@@ -162,13 +164,15 @@ export default function Footer () {
                                 <option value="/services/73">Ортодонтия</option>
                                 <option value="/services/68">Ортопедия</option>
                                 <option value="/services/57">Отбеливание зубов</option>
-                                <option value="/services/55">Пародонтия</option>
+                                <option value="/services/55">Пародонтология</option>
                                 <option value="/services/47">Профессиональная гигиена</option>
                                 <option value="/services/12">Терапевтическая стоматология</option>
                                 <option value="/services/51">Хирургия и имплантация</option>
-                            </select>
+                            </select> */}
+                            <ServiceSelect />
                     <Link to="/full-price"> Прайс </Link>
-                    <Link to="/contacts"> Контакты </Link>
+                    <Link to="/contacts"> Наши филиалы</Link>
+                    <Link1 smooth to="#headerLink"> Наверх </Link1>
                 </div>
 
             </div>

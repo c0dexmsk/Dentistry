@@ -194,6 +194,10 @@
     .phone_numbers {
         max-width: 100px;
     }
+    .phone_numbers a , .mail a{
+        font-size: 8px;
+
+    }
     .moscow .phone_numbers {
         height: auto;
     }

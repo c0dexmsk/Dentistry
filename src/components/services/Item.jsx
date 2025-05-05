@@ -1,6 +1,7 @@
 
 import { useMediaQuery } from "react-responsive";
 // import { Link } from "react-router-dom"
+import { FadeInTextLeft , FadeInTextRight } from "components/FadeInText";
 import { HashLink as Link } from 'react-router-hash-link';
 import s0 from "assets/services/Serv (1).png";
 import s1 from "assets/services/Serv (7).png";
@@ -75,12 +76,14 @@ export default function Item ({title, backgroundColor, link,description,innerSer
             style={{ backgroundColor: selectedStyle.color2, }}>
                 <div className="row gy-3 item">
                     <div className="special1 col-8 col-md-12">
+                        <FadeInTextLeft>
                         <div className="d-flex d-md-none icons-mobile">
                             <img src={getSectionImage(title)} alt={title} />
                             <h3> {title} </h3>
                         </div>
                         <h3 className="d-none d-md-inline"> {title} </h3>
                         <p> {description} </p>
+                        </FadeInTextLeft>
                     </div>
                     <div className="special2 col-3 col-md-12 ">
                         <Link style={{
@@ -100,8 +103,11 @@ export default function Item ({title, backgroundColor, link,description,innerSer
                     return (
                         <div className="col-6 h-100 d-flex flex-column">
                             <div className="w-100 h-100 d-flex flex-column align-items-start">
+                                <FadeInTextRight>
+
                                 <h3> {el.title} </h3>
                                 <p> {el.description} </p>
+                                </FadeInTextRight>
                                 {/* <Link to={`/${link}`}> Подробнее </Link> */}
                             </div>
                                 {/* { index===1 ? <Link style={{ backgroundColor: selectedStyle.color3, color: selectedStyle.color4 }} to="/services" className="big-link w-100 text-center mt-4 d-flex justify-content-center align-items-center"> Все услуги </Link> : null} */}
