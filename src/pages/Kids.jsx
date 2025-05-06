@@ -61,7 +61,7 @@ export default function Kids() {
         {
             photo: siadat,
             name: "Ибрагимова Сиядат Магомедовна",
-            profession: "Подростковый врач, подростковый стоматолог-ортопед",
+            profession: "Подростковый врач",
             link: "ibragimova-siyadat"
         },
         {

@@ -7,8 +7,13 @@ import image4 from "assets/veneers.png"
 import image5 from "assets/veneers2.png"
 import { useMediaQuery } from "react-responsive"
 import{ FadeInTextRight } from "components/FadeInText"
+import { useRef } from "react"
+import zainapnotsafari_2 from 'assets/zainapnotsafari_2.mp4';
+import zainapnotsafari_3 from 'assets/zainapnotsafari_3.mp4';
 
 function Veneers({bitrixData}) {
+
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
     const isDesktop = useMediaQuery({minWidth: 768})
 
@@ -41,9 +46,27 @@ function Veneers({bitrixData}) {
                     <FadeInTextRight>
                     <div className="row">
                         <div className="col-lg-6 col-md-12">
-                            <div className="row">
-                                <img className="container-fluid col-6" src={image2} alt="фото 1" />
-                                <img className="container-fluid col-6" src={image3} alt="фото 2" />
+                            <div className="row videoContainer">
+                                {
+                                    !isSafari ? (
+                                        <>
+                                             <div className="container-fluid col-6 videoZainap">
+                                                <video muted autoPlay loop playsInline className="img-fluid" src={zainapnotsafari_2} />
+                                            </div>
+                                            <div className="container-fluid col-6 videoZainap">
+                                                <video muted autoPlay loop playsInline className="img-fluid" src={zainapnotsafari_3} />
+                                            </div>
+                                        </>
+                                    ):
+                                    (
+                                        <>
+                                            <img className="container-fluid col-6 px-0" src={image2} alt="фото 1" />
+                                            <img className="container-fluid col-6 px-0" src={image3} alt="фото 2" />
+                                        </>
+                                    )
+                                }
+
+
                             </div>
                         <h2 className="mt-3 mb-0 d-block d-md-none"> {bitrixData.VTITLE2}</h2>
                         </div>

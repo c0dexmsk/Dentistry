@@ -45,8 +45,12 @@
     font-weight: 700;
 }
 .default-card__text__icons img {
-    height: 43px;
+    height: 35px;
     aspect-ratio: 1/1;
+    transition: 0.3s;
+}
+.default-card__text__icons img:hover {
+    transform: scale(1.2);
 }
 .default-card__photo > img {
     max-width: 550px;

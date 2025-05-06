@@ -141,6 +141,23 @@
     width: 120%;
     bottom: 120px;
 }
+.veneers.v2 .videoZainap {
+    border-radius: 15px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.veneers.v2 .videoZainap video {
+    height: 103%;
+    width: 103%;
+}
+.veneers.v2 .videoContainer {
+    column-gap: 25px;
+    flex-wrap: nowrap;
+}
 @media (min-width: 768px) {
 
     .veneers.v2 .VTITLE2{
@@ -152,6 +169,11 @@
 @media (max-width: 768px) {
     .veneers.v2 .VTITLE2 {
         margin-left: 0;
+    }
+    .veneers.v2 .videoContainer {
+        column-gap: 10px;
+        flex-wrap: nowrap;
+        transform: scale(0.9) translateX(-2%);
     }
     .veneers {
         width: 90%;
