@@ -11,11 +11,12 @@ export default function withBitrixCasesData(WrappedComponent) {
         try {
 
           const response = await fetch(
-            'http://nonscrdk.beget.tech/local/api/?endpoint=get-reviews&pageCode=cases_page'
+            '/local/api/?endpoint=get-reviews&pageCode=cases_page'
+            // 'http://nonscrdk.beget.tech/local/api/?endpoint=get-reviews&pageCode=cases_page'
           );
 
           const result = await response.json();
-            
+
           if (!response.ok || !result.success) {
               throw new Error(result.error || 'Ошибка сервера');
           }
@@ -24,7 +25,7 @@ export default function withBitrixCasesData(WrappedComponent) {
             name: doc.name,
             image: doc.image,
             description: doc.description,
-          }));          
+          }));
           setData(pageData);
 
         } catch (err) {

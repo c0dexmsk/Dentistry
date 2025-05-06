@@ -11,15 +11,16 @@ export default function withBitrixReviewsData(WrappedComponent) {
         try {
 
           const response = await fetch(
-            'http://nonscrdk.beget.tech/local/api/?endpoint=get-reviews&pageCode=reviews_page'
+            '/local/api/?endpoint=get-page-data&pageCode=reviews_page'
+            // 'http://nonscrdk.beget.tech/local/api/?endpoint=get-reviews&pageCode=reviews_page'
           );
 
           const result = await response.json();
-            
+
           if (!response.ok || !result.success) {
               throw new Error(result.error || 'Ошибка сервера');
           }
-            
+
           const reviewData = result.data.map(review => ({
               name: review.author,
               starsCount: review.stars,
@@ -30,7 +31,7 @@ export default function withBitrixReviewsData(WrappedComponent) {
           }));
 
           //console.log(reviewData);
-          
+
           setData(reviewData);
 
         } catch (err) {

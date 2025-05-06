@@ -10,7 +10,8 @@ export default function withBitrixData(WrappedComponent) {
       const fetchData = async () => {
         try {
           const response = await fetch(
-            'http://nonscrdk.beget.tech/local/api/?endpoint=get-page-data&pageCode=main_page'
+            '/local/api/?endpoint=get-page-data&pageCode=main_page'
+            // 'http://nonscrdk.beget.tech/local/api/?endpoint=get-page-data&pageCode=main_page'
             // `/local/api/?endpoint=get-page-data&pageCode='main_page'}`
           );
 

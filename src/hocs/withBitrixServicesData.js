@@ -11,7 +11,8 @@ export default function withBitrixServicesData(WrappedComponent) {
         try {
 
           const response = await fetch(
-            'http://nonscrdk.beget.tech/local/api/?endpoint=get-page-code&pageCode=detailed_services'
+            '/local/api/?endpoint=get-page-data&pageCode=detailed_services'
+            // 'http://nonscrdk.beget.tech/local/api/?endpoint=get-page-code&pageCode=detailed_services'
           );
 
           const result = await response.json();

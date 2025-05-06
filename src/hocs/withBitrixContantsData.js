@@ -11,11 +11,12 @@ export default function withBitrixContactsData(WrappedComponent) {
         try {
 
           const response = await fetch(
-            'http://nonscrdk.beget.tech/local/api/?endpoint=get-page-code&pageCode=contacts_page'
-          );    
+            '/local/api/?endpoint=get-page-data&pageCode=contacts_page'
+            // 'http://nonscrdk.beget.tech/local/api/?endpoint=get-page-code&pageCode=contacts_page'
+          );
 
           const result = await response.json();
-            
+
           if (!response.ok || !result.success) {
               throw new Error(result.error || 'Ошибка сервера');
           }
@@ -30,7 +31,7 @@ export default function withBitrixContactsData(WrappedComponent) {
           }));
 
           //console.log(pageData);
-          
+
           setData(pageData);
 
         } catch (err) {

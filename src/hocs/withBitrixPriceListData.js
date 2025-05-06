@@ -11,11 +11,12 @@ export default function withBitrixPriceListData(WrappedComponent) {
         try {
 
           const response = await fetch(
-            'http://nonscrdk.beget.tech/local/api/?endpoint=get-page-code&pageCode=price_list_page'
-          );    
+            '/local/api/?endpoint=get-page-data&pageCode=price_list_page'
+            // 'http://nonscrdk.beget.tech/local/api/?endpoint=get-page-code&pageCode=price_list_page'
+          );
 
           const result = await response.json();
-            
+
           if (!response.ok || !result.success) {
               throw new Error(result.error || 'Ошибка сервера');
           }
@@ -27,7 +28,7 @@ export default function withBitrixPriceListData(WrappedComponent) {
           }));
 
           //console.log(pageData);
-          
+
           setData(pageData);
 
         } catch (err) {

@@ -10,7 +10,8 @@ export default function withBitrixDoctorsData(WrappedComponent) {
       const fetchData = async () => {
         try {
           const response = await fetch(
-            'http://nonscrdk.beget.tech/local/api/?endpoint=get-page-data&pageCode=person_page'
+            '/local/api/?endpoint=get-page-data&pageCode=person_page'
+            // 'http://nonscrdk.beget.tech/local/api/?endpoint=get-page-data&pageCode=person_page'
           );
 
           const contentType = response.headers.get('content-type');

@@ -11,15 +11,16 @@ export default function withBitrixBranchesDoctorsData(WrappedComponent) {
         try {
 
           const response = await fetch(
-            'http://nonscrdk.beget.tech/local/api/?endpoint=get-reviews&pageCode=branches_page'
+            '/local/api/?endpoint=get-reviews&pageCode=branches_page'
+            // 'http://nonscrdk.beget.tech/local/api/?endpoint=get-reviews&pageCode=branches_page'
           );
 
           const result = await response.json();
-            
+
           if (!response.ok || !result.success) {
               throw new Error(result.error || 'Ошибка сервера');
           }
-            
+
           //Surgery_Implantation - 5
           //Orthopedics - 6
           //Therapy - 7
@@ -36,7 +37,7 @@ export default function withBitrixBranchesDoctorsData(WrappedComponent) {
             link: doc.link,
             departmentId: doc.departmentId
           }));
-          
+
           setData(doctorsData);
 
         } catch (err) {

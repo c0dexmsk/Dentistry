@@ -10,7 +10,8 @@ export default function withBitrixHistoryData(WrappedComponent) {
       const fetchData = async () => {
         try {
           const response = await fetch(
-            'http://nonscrdk.beget.tech/local/api/?endpoint=get-page-data&pageCode=history_page'
+            '/local/api/?endpoint=get-page-data&pageCode=history_page'
+            // 'http://nonscrdk.beget.tech/local/api/?endpoint=get-page-data&pageCode=history_page'
           );
 
           // Проверяем Content-Type перед парсингом
