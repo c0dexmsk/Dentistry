@@ -47,10 +47,11 @@
 .default-card__text__icons img {
     height: 35px;
     aspect-ratio: 1/1;
-    transition: 0.3s;
+    transition: 1s;
 }
 .default-card__text__icons img:hover {
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
+    transform: rotate(360deg);
 }
 .default-card__photo > img {
     max-width: 550px;
